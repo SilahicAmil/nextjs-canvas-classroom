@@ -1,8 +1,11 @@
 import { Avatar } from "@boringer-avatars/react";
 import { CgBell } from "react-icons/cg";
+import Link from "next/link";
+import { useRouter } from "next/router";
 import { useState } from "react";
 
 const Navigation = () => {
+  const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
 
   const openAccountSettingsHandler = () => {
@@ -18,7 +21,12 @@ const Navigation = () => {
               <h1>SCHOLAR</h1>
             </div>
           </li>
-          <li>Dashboard</li>
+          <Link
+            href="/"
+            className={`${router.pathname === "/" ? "underline" : undefined}`}
+          >
+            <li>Dashboard</li>
+          </Link>
           <li>Calendar</li>
           <div className="flex gap-6 items-center">
             {/* onClick Account should show dropdown of like settings, help, and etc */}
