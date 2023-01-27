@@ -1,5 +1,6 @@
 import { Avatar } from "@boringer-avatars/react";
 import { CgBell } from "react-icons/cg";
+import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState } from "react";
@@ -14,11 +15,17 @@ const Navigation = () => {
 
   return (
     <>
-      <nav className="h-16 w-[100vw] font-mono text-xl">
-        <ul className="flex items-center justify-evenly h-full w-full ">
+      <nav className="h-24 w-[100vw] font-mono text-xl">
+        <ul className="flex items-center justify-evenly h-full  ">
           <li>
             <div>
-              <h1>SCHOLAR</h1>
+              <Image
+                className="w-full h-full"
+                alt="logo photo"
+                src="/images/scholar-logo-no-bg.png"
+                width={100}
+                height={100}
+              />
             </div>
           </li>
           <Link
@@ -27,6 +34,7 @@ const Navigation = () => {
           >
             <li>Dashboard</li>
           </Link>
+          <li>Courses</li>
           <li>Calendar</li>
           <div className="flex gap-6 items-center">
             {/* onClick Account should show dropdown of like settings, help, and etc */}
@@ -35,7 +43,7 @@ const Navigation = () => {
                 title={false}
                 size={40}
                 variant="beam"
-                name="testing"
+                name="avatar"
                 square={false}
                 colors={["#FFAD08", "#EDD75A", "#73B06F", "#0C8F8F", "#405059"]}
               />
