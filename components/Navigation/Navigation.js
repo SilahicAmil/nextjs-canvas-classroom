@@ -49,10 +49,16 @@ const Navigation = () => {
               />
             </li>
             {isOpen ? (
-              <div className="absolute flex flex-col justify-center items-center gap-4 h-48 rounded-lg w-48 mt-64 z-10 bg-slate-200">
-                <li>Settings</li>
-                <li>Help</li>
-                <li>Logout</li>
+              <div className="absolute  flex flex-col justify-center items-center gap-2 h-48 rounded-lg w-48 mt-64 z-10 bg-slate-200 ">
+                <span className="hover:cursor-pointer rounded-md bg-red-50 p-2 w-48 flex justify-center">
+                  Settings
+                </span>
+                <span className="hover:cursor-pointer rounded-md bg-red-50 p-2 w-48 flex justify-center">
+                  Help
+                </span>
+                <span className="hover:cursor-pointer rounded-md bg-red-50 p-2 w-48 flex justify-center">
+                  Logout
+                </span>
               </div>
             ) : undefined}
             <li>
