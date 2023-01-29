@@ -7,11 +7,6 @@ import { useState } from "react";
 
 const Navigation = () => {
   const router = useRouter();
-  const [isOpen, setIsOpen] = useState(false);
-
-  const openAccountSettingsHandler = () => {
-    setIsOpen((prevState) => !prevState);
-  };
 
   return (
     <>
@@ -49,7 +44,7 @@ const Navigation = () => {
               </li>
             </ul>
           </div>
-          <Link href="">
+          <Link href="/" className="">
             <Image
               alt="scholar logo"
               src="/images/scholar-logo-no-bg.png"
@@ -58,8 +53,8 @@ const Navigation = () => {
             />
           </Link>
         </div>
-        <div className="navbar-center hidden lg:flex">
-          <ul className=" menu menu-horizontal px-1">
+        <div className="navbar-center hidden  lg:flex">
+          <ul className=" menu menu-horizontal ">
             <li>
               <a>Courses</a>
             </li>
