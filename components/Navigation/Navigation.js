@@ -1,140 +1,78 @@
-import { Avatar } from "@boringer-avatars/react";
-import { CgBell } from "react-icons/cg";
-import Image from "next/image";
-import Link from "next/link";
-import { useRouter } from "next/router";
-import { useState } from "react";
+import { AiOutlineDashboard, AiOutlineInbox } from "react-icons/ai";
 
-const Navigation = () => {
+import { Avatar } from "@boringer-avatars/react";
+import { BsCalendarDate } from "react-icons/bs";
+import Link from "next/link";
+import { VscLibrary } from "react-icons/vsc";
+import { useRouter } from "next/router";
+
+const Navigation = ({ children }) => {
   const router = useRouter();
 
   return (
     <>
-      <div className="navbar ">
-        <div className="navbar-start">
-          <div className="dropdown">
-            <label tabIndex={0} className="btn btn-ghost lg:hidden">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h8m-8 6h16"
-                />
-              </svg>
-            </label>
-            <ul
-              tabIndex={0}
-              className="menu menu-compact dropdown-content mt-3 p-2 shadow  rounded-box w-52"
-            >
-              <li>
-                <a>Courses</a>
-              </li>
-              <li tabIndex={0}>
-                <a className="justify-between">Dashboard</a>
-              </li>
-              <li>
-                <a>Calendar</a>
-              </li>
-            </ul>
-          </div>
-          <Link href="/" className="">
-            <Image
-              alt="scholar logo"
-              src="/images/scholar-logo-no-bg.png"
-              height={100}
-              width={100}
+      <div className="flex">
+        <div className="flex flex-col w-32 h-screen px-4 py-8 overflow-y-auto border-r">
+          <h2 className="text-md font-semibold justify-center items-center flex flex-col text-blue-800">
+            {/* this should open a drawer with info */}
+            <Avatar
+              title={false}
+              size={40}
+              variant="beam"
+              name="testing"
+              square={false}
+              colors={["#FFAD08", "#EDD75A", "#73B06F", "#0C8F8F", "#405059"]}
             />
-          </Link>
-        </div>
-        <div className="navbar-center hidden  lg:flex">
-          <ul className=" menu menu-horizontal ">
-            <li>
-              <a>Courses</a>
-            </li>
-            <li tabIndex={0}>
-              <a>Dashboard</a>
-            </li>
-            <li>
-              <a>Calendar</a>
-            </li>
-          </ul>
-        </div>
-        <div className="flex-none navbar-end navbar">
-          <div className="dropdown dropdown-end">
-            <label tabIndex={0} className="btn btn-ghost btn-circle">
-              <div className="indicator">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
-                  />
-                </svg>
-                <span className="badge badge-sm indicator-item">8</span>
-              </div>
-            </label>
-            <div
-              tabIndex={0}
-              className="mt-3 card card-compact dropdown-content w-52 shadow"
-            >
-              <div className="card-body">
-                <span className="font-bold text-lg">8 Notifications</span>
-                <span className="text-info">
-                  Math 101: Turn in Assignment 12
-                </span>
-              </div>
-            </div>
+            Account
+          </h2>
+
+          <div className="flex flex-col justify-between mt-6">
+            <aside>
+              <ul>
+                <li className="">
+                  <Link
+                    className="flex flex-col items-center py-2 text-gray-700rounded-md "
+                    href="/"
+                  >
+                    <AiOutlineDashboard className="text-3xl" />
+                    <span className=" text-md text-blue-800">Dashboard</span>
+                  </Link>
+                </li>
+
+                <li>
+                  <Link
+                    className="flex flex-col items-center  py-2 mt-5 text-gray-600 rounded-md hover:bg-gray-200"
+                    href="#"
+                  >
+                    <VscLibrary className="text-3xl text-black" />
+                    <span className="mx-4 text-blue-800">Courses</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="flex flex-col items-center  py-2 mt-5 text-gray-600 rounded-md hover:bg-gray-200"
+                    href="#"
+                  >
+                    <BsCalendarDate className="text-3xl text-black" />
+                    <span className="mx-4 text-blue-800">Calendar</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="flex flex-col items-center  py-2 mt-5 text-gray-600 rounded-md hover:bg-gray-200"
+                    href="#"
+                  >
+                    <AiOutlineInbox className="text-3xl text-black" />
+                    <span className="mx-4 text-blue-800">Inbox</span>
+                  </Link>
+                </li>
+              </ul>
+            </aside>
           </div>
-          <div className="dropdown dropdown-end">
-            <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-              <div className="w-10 rounded-full">
-                <Avatar
-                  title={false}
-                  size={40}
-                  variant="beam"
-                  name="testing"
-                  square={false}
-                  colors={[
-                    "#FFAD08",
-                    "#EDD75A",
-                    "#73B06F",
-                    "#0C8F8F",
-                    "#405059",
-                  ]}
-                />
-              </div>
-            </label>
-            <ul
-              tabIndex={0}
-              className="menu menu-compact dropdown-content mt-3 p-2 shadow  rounded-box w-52"
-            >
-              <li>
-                <a className="justify-between">
-                  Profile
-                  <span className="badge">New</span>
-                </a>
-              </li>
-              <li>
-                <a>Settings</a>
-              </li>
-              <li>
-                <a>Logout</a>
-              </li>
-            </ul>
+        </div>
+        <div className="w-full h-full p-4 m-8 overflow-y-auto">
+          <div className="flex items-center justify-center p-40 border-4 border-dotted">
+            Content...
           </div>
         </div>
       </div>
