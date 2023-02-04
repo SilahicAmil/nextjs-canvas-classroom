@@ -14,7 +14,7 @@ const Navigation = ({ children }) => {
     <>
       <div className="flex ">
         <div className="flex flex-col w-24 h-screen px-4 py-8 overflow-y-auto  bg-slate-500">
-          <h2 className="text-md font-semibold justify-center items-center flex  text-blue-800">
+          <h2 className="text-md font-semibold justify-center items-center flex  ">
             <Link href="">
               {/* need a better image for this or make it into an icon or something */}
               <Image
@@ -33,20 +33,19 @@ const Navigation = ({ children }) => {
                   {/* this should open a drawer with info */}
                   <Link
                     href=""
-                    className="flex flex-col items-center justify-center mb-5 py-2"
+                    className="flex flex-col items-center justify-center mb-5 py-2 text-white"
                   >
                     <Avatar
-                      title={false}
                       size={40}
                       variant="beam"
-                      name="testing"
+                      name="account photo"
                       square={false}
                       colors={[
-                        "#FFAD08",
-                        "#EDD75A",
-                        "#73B06F",
-                        "#0C8F8F",
-                        "#405059",
+                        "#92A1C6",
+                        "#146A7C",
+                        "#F0AB3D",
+                        "#C271B4",
+                        "#C20D90",
                       ]}
                     />
                     <span>Account</span>
@@ -54,46 +53,46 @@ const Navigation = ({ children }) => {
                 </li>
                 <li className="">
                   <Link
-                    className="flex flex-col items-center py-2 text-gray-700 rounded-md "
+                    className="flex flex-col items-center py-2 text-white rounded-md "
                     href="/"
                   >
-                    <AiOutlineDashboard className="text-3xl" />
-                    <span className=" text-md text-blue-800">Dashboard</span>
+                    <AiOutlineDashboard className="text-4xl" />
+                    <span className=" text-md ">Dashboard</span>
                   </Link>
                 </li>
 
                 <li>
                   <Link
-                    className="flex flex-col items-center  py-2 mt-5 text-gray-600 rounded-md hover:bg-gray-200"
+                    className="flex flex-col items-center  py-2 mt-5 text-white rounded-md"
                     href="#"
                   >
-                    <VscLibrary className="text-3xl text-black" />
-                    <span className="mx-4 text-blue-800">Courses</span>
+                    <VscLibrary className="text-3xl " />
+                    <span className="mx-4 ">Courses</span>
                   </Link>
                 </li>
                 <li>
                   <Link
-                    className="flex flex-col items-center  py-2 mt-5 text-gray-600 rounded-md hover:bg-gray-200"
+                    className="flex flex-col items-center  py-2 mt-5 text-white rounded-md"
                     href="#"
                   >
-                    <BsCalendarDate className="text-3xl text-black" />
-                    <span className="mx-4 text-blue-800">Calendar</span>
+                    <BsCalendarDate className="text-3xl " />
+                    <span className="mx-4 ">Calendar</span>
                   </Link>
                 </li>
                 <li>
                   <Link
-                    className="flex flex-col items-center  py-2 mt-5 text-gray-600 rounded-md hover:bg-gray-200"
+                    className="flex flex-col items-center  py-2 mt-5 text-white rounded-md "
                     href="#"
                   >
-                    <AiOutlineInbox className="text-3xl text-black" />
-                    <span className="mx-4 text-blue-800">Inbox</span>
+                    <AiOutlineInbox className="text-3xl " />
+                    <span className="mx-4 ">Inbox</span>
                   </Link>
                 </li>
               </ul>
             </aside>
           </div>
         </div>
-        <div className=" m-8 h-full overflow-y-auto">
+        <div className="h-full overflow-y-auto">
           <div className="flex items-center justify-center ">{children}</div>
         </div>
       </div>
