@@ -2,6 +2,7 @@ import { AiOutlineDashboard, AiOutlineInbox } from "react-icons/ai";
 
 import { Avatar } from "@boringer-avatars/react";
 import { BsCalendarDate } from "react-icons/bs";
+import Image from "next/image";
 import Link from "next/link";
 import { VscLibrary } from "react-icons/vsc";
 import { useRouter } from "next/router";
@@ -11,27 +12,49 @@ const Navigation = ({ children }) => {
 
   return (
     <>
-      <div className="flex">
-        <div className="flex flex-col w-32 h-screen px-4 py-8 overflow-y-auto border-r">
-          <h2 className="text-md font-semibold justify-center items-center flex flex-col text-blue-800">
-            {/* this should open a drawer with info */}
-            <Avatar
-              title={false}
-              size={40}
-              variant="beam"
-              name="testing"
-              square={false}
-              colors={["#FFAD08", "#EDD75A", "#73B06F", "#0C8F8F", "#405059"]}
-            />
-            Account
+      <div className="flex ">
+        <div className="flex flex-col w-24 h-screen px-4 py-8 overflow-y-auto  bg-slate-500">
+          <h2 className="text-md font-semibold justify-center items-center flex  text-blue-800">
+            <Link href="">
+              {/* need a better image for this or make it into an icon or something */}
+              <Image
+                src="/images/logo-color.png"
+                alt="scholar logo"
+                width={1000}
+                height={1000}
+              />
+            </Link>
           </h2>
 
-          <div className="flex flex-col justify-between mt-6">
+          <div className="flex flex-col justify-between mt-5">
             <aside>
               <ul>
+                <li>
+                  {/* this should open a drawer with info */}
+                  <Link
+                    href=""
+                    className="flex flex-col items-center justify-center mb-5 py-2"
+                  >
+                    <Avatar
+                      title={false}
+                      size={40}
+                      variant="beam"
+                      name="testing"
+                      square={false}
+                      colors={[
+                        "#FFAD08",
+                        "#EDD75A",
+                        "#73B06F",
+                        "#0C8F8F",
+                        "#405059",
+                      ]}
+                    />
+                    <span>Account</span>
+                  </Link>
+                </li>
                 <li className="">
                   <Link
-                    className="flex flex-col items-center py-2 text-gray-700rounded-md "
+                    className="flex flex-col items-center py-2 text-gray-700 rounded-md "
                     href="/"
                   >
                     <AiOutlineDashboard className="text-3xl" />
