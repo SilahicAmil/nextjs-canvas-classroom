@@ -1,11 +1,17 @@
+import { HiEllipsisVertical } from "react-icons/hi2";
 import Link from "next/link";
+import { useState } from "react";
 
 const DashboardCard = ({ courseName, snippet, department, courseLink }) => {
+  const [colorChanger, setColorChanger] = useState("");
+
   return (
     <>
-      <div className="flex card w-72 h-72 bg-white shadow-xl mt-6 rounded-none hover:scale-105 hover:rounded-lg ">
+      <div className="flex card w-72 h-72 bg-white shadow-xl mt-6 rounded-none  ">
         <div className="bg-red-500 w-full h-full flex">
-          <button className="flex ml-auto text-2xl mr-2">:</button>
+          <button className="flex ml-auto text-2xl mr-2 mt-4">
+            <HiEllipsisVertical />
+          </button>
         </div>
         <div className="card-body w-full">
           <h2 className="text-xl gap-2 flex items-center">
