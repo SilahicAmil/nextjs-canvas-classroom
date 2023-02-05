@@ -17,13 +17,8 @@ const AccountDrawer = ({}) => {
                 colors={["#92A1C6", "#146A7C", "#F0AB3D", "#C271B4", "#C20D90"]}
               />
               <p>Amil Silahic</p>
+              <button>Logout</button>
             </div>
-            <li>
-              <a>Settings</a>
-            </li>
-            <li>
-              <a>Logout</a>
-            </li>
           </ul>
         </div>
       </div>
