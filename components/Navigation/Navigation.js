@@ -15,7 +15,7 @@ const Navigation = ({ children }) => {
       <div className="flex">
         <div className="flex flex-col w-24 h-screen px-4 py-8  bg-slate-500">
           <h2 className="text-md font-semibold justify-center items-center flex">
-            <Link href="">
+            <Link href="/">
               {/* need a better image for this or make it into an icon or something */}
               <Image
                 src="/images/logo-color.png"
@@ -32,10 +32,7 @@ const Navigation = ({ children }) => {
               <ul>
                 <li>
                   {/* this should open a drawer with info */}
-                  <Link
-                    href=""
-                    className="flex flex-col items-center justify-center mb-5 py-2 text-white"
-                  >
+                  <div className="flex flex-col items-center justify-center mb-5 py-2 text-white hover:cursor-pointer">
                     <Avatar
                       size={40}
                       variant="beam"
@@ -50,9 +47,9 @@ const Navigation = ({ children }) => {
                       ]}
                     />
                     <span>Account</span>
-                  </Link>
+                  </div>
                 </li>
-                <li className={``}>
+                <li>
                   <Link
                     className={`${
                       router.pathname === "/" ? "text-black" : "text-white"
@@ -67,7 +64,7 @@ const Navigation = ({ children }) => {
                 <li>
                   <Link
                     className="flex flex-col items-center  py-2 mt-5 text-white rounded-md"
-                    href="#"
+                    href="/courses"
                   >
                     <VscLibrary className="text-3xl " />
                     <span className="mx-4 ">Courses</span>
@@ -76,7 +73,7 @@ const Navigation = ({ children }) => {
                 <li>
                   <Link
                     className="flex flex-col items-center  py-2 mt-5 text-white rounded-md"
-                    href="#"
+                    href="/calendar"
                   >
                     <BsCalendarDate className="text-3xl " />
                     <span className="mx-4 ">Calendar</span>
@@ -85,7 +82,7 @@ const Navigation = ({ children }) => {
                 <li>
                   <Link
                     className="flex flex-col items-center  py-2 mt-5 text-white rounded-md "
-                    href="#"
+                    href="/inbox"
                   >
                     <AiOutlineInbox className="text-3xl " />
                     <span className="mx-4 ">Inbox</span>
