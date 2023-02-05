@@ -92,9 +92,7 @@ const Navigation = ({ children }) => {
             </aside>
           </div>
         </div>
-        <div className="h-full overflow-y-auto">
-          <div className="flex items-center justify-center ">{children}</div>
-        </div>
+        <div className="h-full overflow-y-auto w-full">{children}</div>
       </div>
     </>
   );
