@@ -41,7 +41,9 @@ const Dashboard = ({}) => {
         {/* maybe xtract into own component idk */}
         <div className="m-6">
           <div className="mb-2">
-            <h1 className="text-2xl">Published Courses (5)</h1>
+            <h1 className="text-2xl">
+              Published Courses ({DUMMY_DATA.length})
+            </h1>
           </div>
           <hr className="w-11/12" />
           <div className="">
@@ -61,7 +63,7 @@ const Dashboard = ({}) => {
           </div>
         </div>
 
-        {/* unpublished courses */}
+        {/* unpublished courses - not sure how to handle this */}
         <div className="m-6">
           <div className="mb-2">
             <h1 className="text-2xl">Unpublished Courses (1)</h1>
