@@ -21,7 +21,7 @@ const Navigation = ({ children }) => {
   return (
     <>
       <div className="flex">
-        <div className="flex flex-col w-24 h-screen px-4 py-8  bg-slate-500">
+        <div className="flex flex-col w-24 h-screen px-4 py-8 bg-navbar font-lato">
           <h2 className="text-md font-semibold justify-center items-center flex">
             <Link href="/">
               {/* need a better image for this or make it into an icon or something */}
@@ -63,8 +63,10 @@ const Navigation = ({ children }) => {
                 <li>
                   <Link
                     className={`${
-                      router.pathname === "/" ? "text-black" : "text-white"
-                    } flex flex-col items-center py-2  w-full justify-center`}
+                      router.pathname === "/"
+                        ? "border-b-2 border-white rounded-md"
+                        : null
+                    } text-white flex flex-col items-center py-2  w-full justify-center `}
                     href="/"
                   >
                     <AiOutlineDashboard className="text-4xl" />
@@ -74,7 +76,11 @@ const Navigation = ({ children }) => {
 
                 <li>
                   <Link
-                    className="flex flex-col items-center  py-2 mt-5 text-white rounded-md"
+                    className={`${
+                      router.pathname === "/courses"
+                        ? "border-b-2 border-white rounded-md"
+                        : null
+                    } flex flex-col items-center  py-2 mt-5 text-white `}
                     href="/courses"
                   >
                     <VscLibrary className="text-3xl " />
@@ -83,7 +89,11 @@ const Navigation = ({ children }) => {
                 </li>
                 <li>
                   <Link
-                    className="flex flex-col items-center  py-2 mt-5 text-white rounded-md"
+                    className={`${
+                      router.pathname === "/calendar"
+                        ? "border-b-2 border-white rounded-md "
+                        : null
+                    } flex flex-col items-center  py-2 mt-5 text-white `}
                     href="/calendar"
                   >
                     <BsCalendarDate className="text-3xl" />
@@ -92,7 +102,11 @@ const Navigation = ({ children }) => {
                 </li>
                 <li>
                   <Link
-                    className="flex flex-col items-center  py-2 mt-5 text-white rounded-md"
+                    className={`${
+                      router.pathname === "/inbox"
+                        ? "border-b-2 border-white rounded-md "
+                        : null
+                    } flex flex-col items-center  py-2 mt-5 text-white`}
                     href="/inbox"
                   >
                     <AiOutlineInbox className="text-3xl" />

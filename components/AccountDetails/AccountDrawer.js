@@ -3,7 +3,7 @@ import { Avatar } from "@boringer-avatars/react";
 const AccountDrawer = ({}) => {
   return (
     <>
-      <div className="drawer">
+      <div className="drawer font-lato">
         <div className="drawer-side">
           <label htmlFor="my-drawer" className="drawer-overlay"></label>
           <ul className="menu p-4 z-50 h-full bg-slate-300 flex items-center">

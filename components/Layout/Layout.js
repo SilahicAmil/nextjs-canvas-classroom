@@ -4,7 +4,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Navigation>
-        <main className="font-sans">{children}</main>
+        <main className="text-mainText font-lato">{children}</main>
       </Navigation>
     </>
   );
