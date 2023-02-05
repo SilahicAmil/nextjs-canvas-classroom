@@ -1,7 +1,9 @@
+import DashboadFooter from "./DashboardFooter";
+
 const Dashboard = ({}) => {
   return (
     <>
-      <div className="flex flex-col w-9/12 m-6">
+      <div className="flex flex-col w-9/12 m-6 h-full">
         <div className="flex text-2xl mb-4">
           <h1 className="flex text-2xl">Dashboard</h1>
           <button className="ml-auto">:</button>
@@ -18,6 +20,7 @@ const Dashboard = ({}) => {
           </div>
         </div>
       </div>
+      <DashboadFooter />
     </>
   );
 };

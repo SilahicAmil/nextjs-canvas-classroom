@@ -1,10 +1,19 @@
+import { useRouter } from "next/router";
+
 const LoginPage = ({}) => {
+  const router = useRouter();
+
+  const formSubmitHandler = (e) => {
+    e.preventDefault();
+    router.push("/");
+  };
+
   return (
     <>
       <div className="flex flex-col justify-center items-center h-[100vh]">
-        <h1>Login</h1>
+        <h1>Log In</h1>
         <div className="">
-          <form>
+          <form onSubmit={formSubmitHandler}>
             <div className="flex flex-col">
               <label htmlFor="Email">Email</label>
               <input type="email" id="Email" />
@@ -14,7 +23,7 @@ const LoginPage = ({}) => {
               <input type="passowrd" id="Password" />
             </div>
             <div className="flex justify-center bg-red-50 text-black">
-              <button>Log In</button>
+              <button type="submit">Log In</button>
             </div>
           </form>
         </div>
@@ -22,5 +31,7 @@ const LoginPage = ({}) => {
     </>
   );
 };
+
+LoginPage.displayName = "LoginPage";
 
 export default LoginPage;
