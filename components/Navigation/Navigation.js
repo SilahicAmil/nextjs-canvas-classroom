@@ -39,7 +39,6 @@ const Navigation = ({ children }) => {
             <aside>
               <ul>
                 <li>
-                  {/* this should open a drawer with info */}
                   <div
                     className="flex flex-col items-center justify-center mb-5 py-2 text-white hover:cursor-pointer"
                     onClick={drawerOpenHandler}
@@ -87,16 +86,16 @@ const Navigation = ({ children }) => {
                     className="flex flex-col items-center  py-2 mt-5 text-white rounded-md"
                     href="/calendar"
                   >
-                    <BsCalendarDate className="text-3xl " />
+                    <BsCalendarDate className="text-3xl" />
                     <span className="mx-4 ">Calendar</span>
                   </Link>
                 </li>
                 <li>
                   <Link
-                    className="flex flex-col items-center  py-2 mt-5 text-white rounded-md "
+                    className="flex flex-col items-center  py-2 mt-5 text-white rounded-md"
                     href="/inbox"
                   >
-                    <AiOutlineInbox className="text-3xl " />
+                    <AiOutlineInbox className="text-3xl" />
                     <span className="mx-4 ">Inbox</span>
                   </Link>
                 </li>
@@ -110,7 +109,6 @@ const Navigation = ({ children }) => {
           </div>
         ) : null}
         <div className="h-full overflow-y-auto  w-full z-50">{children}</div>
-        {/* render the aside component here */}
       </div>
     </>
   );
