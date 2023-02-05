@@ -2,7 +2,6 @@ import { AiOutlineDashboard, AiOutlineInbox } from "react-icons/ai";
 
 import { Avatar } from "@boringer-avatars/react";
 import { BsCalendarDate } from "react-icons/bs";
-import DashboadFooter from "../Dashboard/DashboardFooter";
 import Image from "next/image";
 import Link from "next/link";
 import { VscLibrary } from "react-icons/vsc";
@@ -14,7 +13,7 @@ const Navigation = ({ children }) => {
   return (
     <>
       <div className="flex">
-        <div className="flex flex-col w-24 h-screen px-4 py-8 overflow-y-auto bg-slate-500">
+        <div className="flex flex-col w-24 h-screen px-4 py-8  bg-slate-500">
           <h2 className="text-md font-semibold justify-center items-center flex">
             <Link href="">
               {/* need a better image for this or make it into an icon or something */}
@@ -96,10 +95,9 @@ const Navigation = ({ children }) => {
             </aside>
           </div>
         </div>
-        <div className="h-full overflow-y-auto w-full">
-          {children}
-          <DashboadFooter />
-        </div>
+
+        <div className="h-full overflow-y-auto  w-full">{children}</div>
+        {/* render the aside component here */}
       </div>
     </>
   );
