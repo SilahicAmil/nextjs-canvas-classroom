@@ -1,4 +1,5 @@
 import DashboadFooter from "./DashboardFooter";
+import DashboardCard from "./DashboardCard";
 
 const Dashboard = ({}) => {
   return (
@@ -16,7 +17,7 @@ const Dashboard = ({}) => {
           </div>
           <hr className="w-11/12" />
           <div>
-            <h1>Card Component Here</h1>
+            <DashboardCard />
           </div>
         </div>
       </div>
