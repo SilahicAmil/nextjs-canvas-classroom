@@ -1,14 +1,22 @@
 import { AiOutlineDashboard, AiOutlineInbox } from "react-icons/ai";
 
+import AccountDrawer from "../AccountDetails/AccountDrawer";
 import { Avatar } from "@boringer-avatars/react";
 import { BsCalendarDate } from "react-icons/bs";
 import Image from "next/image";
 import Link from "next/link";
 import { VscLibrary } from "react-icons/vsc";
 import { useRouter } from "next/router";
+import { useState } from "react";
 
 const Navigation = ({ children }) => {
   const router = useRouter();
+
+  const [openDrawer, setOpenDrawer] = useState(false);
+
+  const drawerOpenHandler = () => {
+    setOpenDrawer((prevState) => !prevState);
+  };
 
   return (
     <>
@@ -32,7 +40,10 @@ const Navigation = ({ children }) => {
               <ul>
                 <li>
                   {/* this should open a drawer with info */}
-                  <div className="flex flex-col items-center justify-center mb-5 py-2 text-white hover:cursor-pointer">
+                  <div
+                    className="flex flex-col items-center justify-center mb-5 py-2 text-white hover:cursor-pointer"
+                    onClick={drawerOpenHandler}
+                  >
                     <Avatar
                       size={40}
                       variant="beam"
@@ -49,6 +60,7 @@ const Navigation = ({ children }) => {
                     <span>Account</span>
                   </div>
                 </li>
+
                 <li>
                   <Link
                     className={`${
@@ -92,7 +104,11 @@ const Navigation = ({ children }) => {
             </aside>
           </div>
         </div>
-
+        {openDrawer ? (
+          <div className={`w-64 z-50`}>
+            <AccountDrawer />
+          </div>
+        ) : null}
         <div className="h-full overflow-y-auto  w-full">{children}</div>
         {/* render the aside component here */}
       </div>

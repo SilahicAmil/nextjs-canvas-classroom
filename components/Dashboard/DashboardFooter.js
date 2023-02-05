@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const DashboadFooter = ({}) => {
   return (
     <>
@@ -5,8 +7,12 @@ const DashboadFooter = ({}) => {
         <div className="flex justify-between items-center ">
           <div className="gap-4 flex mr-4 ml-auto">
             <span>Privacy Policy</span>
-            <button>Github</button>
-            <button>Portfolio</button>
+            <Link href="https://github.com/silahicamil" target="_blank">
+              Github
+            </Link>
+            <Link href="https://amil.dev" target="_blank">
+              Portfolio
+            </Link>
           </div>
         </div>
       </div>
