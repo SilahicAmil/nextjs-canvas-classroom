@@ -13,7 +13,7 @@ const Navigation = ({ children }) => {
   return (
     <>
       <div className="flex">
-        <div className="flex flex-col w-24 h-screen px-4 py-8  bg-slate-500">
+        <div className="flex flex-col w-24  px-4 py-8  bg-slate-500">
           <h2 className="text-md font-semibold justify-center items-center flex">
             <Link href="">
               {/* need a better image for this or make it into an icon or something */}

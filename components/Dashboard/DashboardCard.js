@@ -1,7 +1,9 @@
+import Link from "next/link";
+
 const DashboardCard = ({}) => {
   return (
     <>
-      <div className="card w-72 h-72 bg-white shadow-xl mt-6 rounded-none hover:scale-105 hover:rounded-lg ">
+      <div className="flex card w-72 h-72 bg-white shadow-xl mt-6 rounded-none hover:scale-105 hover:rounded-lg ">
         <div className="bg-red-500 w-full h-full flex">
           <button className="flex ml-auto text-2xl mr-2">:</button>
         </div>
