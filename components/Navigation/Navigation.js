@@ -105,11 +105,11 @@ const Navigation = ({ children }) => {
           </div>
         </div>
         {openDrawer ? (
-          <div className={`w-64 z-50`}>
+          <div className={`w-64 z-50 bg-blend-overlay`}>
             <AccountDrawer />
           </div>
         ) : null}
-        <div className="h-full overflow-y-auto  w-full">{children}</div>
+        <div className="h-full overflow-y-auto  w-full z-50">{children}</div>
         {/* render the aside component here */}
       </div>
     </>
