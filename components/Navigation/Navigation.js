@@ -2,6 +2,7 @@ import { AiOutlineDashboard, AiOutlineInbox } from "react-icons/ai";
 
 import { Avatar } from "@boringer-avatars/react";
 import { BsCalendarDate } from "react-icons/bs";
+import DashboadFooter from "../Dashboard/DashboardFooter";
 import Image from "next/image";
 import Link from "next/link";
 import { VscLibrary } from "react-icons/vsc";
@@ -51,13 +52,15 @@ const Navigation = ({ children }) => {
                     <span>Account</span>
                   </Link>
                 </li>
-                <li className="">
+                <li className={``}>
                   <Link
-                    className="flex flex-col items-center py-2 text-white rounded-md "
+                    className={`${
+                      router.pathname === "/" ? "text-black" : "text-white"
+                    } flex flex-col items-center py-2  w-full justify-center`}
                     href="/"
                   >
                     <AiOutlineDashboard className="text-4xl" />
-                    <span className=" text-md ">Dashboard</span>
+                    <span className="text-md">Dashboard</span>
                   </Link>
                 </li>
 
@@ -92,7 +95,10 @@ const Navigation = ({ children }) => {
             </aside>
           </div>
         </div>
-        <div className="h-full overflow-y-auto w-full">{children}</div>
+        <div className="h-full overflow-y-auto w-full">
+          {children}
+          <DashboadFooter />
+        </div>
       </div>
     </>
   );
