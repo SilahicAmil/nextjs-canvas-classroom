@@ -15,7 +15,7 @@ const Dashboard = ({}) => {
         {/* maybe xtract into own component idk */}
         <div className="m-6">
           <div className="mb-2">
-            <h1 className="text-2xl">Published Courses (1)</h1>
+            <h1 className="text-2xl">Published Courses (5)</h1>
           </div>
           <hr className="w-11/12" />
           <div className="">
