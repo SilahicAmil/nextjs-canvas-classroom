@@ -1,9 +1,13 @@
 import DashboadFooter from "@/components/Dashboard/DashboardFooter";
 import Dashboard from "@/components/Dashboard/Dashboard";
+import Head from "next/head";
 
 const HomePage = ({}) => {
   return (
     <>
+      <Head>
+        <title>Scholar - Dashboard</title>
+      </Head>
       <div className="w-full h-full">
         <Dashboard />
         <DashboadFooter />
