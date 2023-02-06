@@ -6,7 +6,7 @@ const AccountDrawer = ({}) => {
       <div className="drawer font-lato">
         <div className="drawer-side">
           <label htmlFor="my-drawer" className="drawer-overlay"></label>
-          <ul className="menu p-4 z-50 h-full bg-slate-300 flex items-center">
+          <ul className="menu p-4 z-50 h-full bg-slate-600 flex items-center">
             {/* <!-- Sidebar content here --> */}
             <div className="mb-10 bg-red-50 w-full h-1/6 rounded-md flex flex-col justify-center items-center gap-4">
               <Avatar
