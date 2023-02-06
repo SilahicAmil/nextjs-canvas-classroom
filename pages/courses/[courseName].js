@@ -1,8 +1,10 @@
+import CourseDetails from "@/components/CourseDetails/CourseDetails";
+
 const CourseDetailsPage = ({}) => {
   return (
     <>
       <div className="h-full w-full">
-        <h1>Course Details Page</h1>
+        <CourseDetails />
       </div>
     </>
   );
