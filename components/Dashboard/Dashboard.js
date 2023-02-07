@@ -1,4 +1,5 @@
 import DashboardCard from "./DashboardCard";
+import Header from "../Header/Header";
 import { HiEllipsisVertical } from "react-icons/hi2";
 
 const DUMMY_DATA = [
@@ -31,7 +32,7 @@ const Dashboard = ({}) => {
       {/* dashboard title */}
       <div className="flex flex-col w-10/12 md:w-11/12 m-6 h-full">
         <div className="flex text-2xl mb-4">
-          <h1 className="flex text-2xl">Dashboard</h1>
+          <Header>Dashboard</Header>
           <button className="ml-auto">
             <HiEllipsisVertical />
           </button>

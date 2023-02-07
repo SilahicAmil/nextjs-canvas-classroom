@@ -1,11 +1,12 @@
 import CourseTableHeaders from "./CourseTableHeaders";
 import CourseTableRows from "./CourseTableRows";
+import Header from "../Header/Header";
 
 const Courses = ({}) => {
   return (
     <>
       <div className="m-8 ">
-        <h1 className="text-2xl text-mainText">All Courses</h1>
+        <Header>Courses</Header>
         <hr className="mt-6 border-t border-gray-400" />
 
         <div className="flex m-4 mt-6 items-center">
