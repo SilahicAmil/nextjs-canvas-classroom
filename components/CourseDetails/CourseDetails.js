@@ -16,23 +16,32 @@ const CourseDetails = ({}) => {
         </div>
         <hr className="mb-6 border-t border-gray-400 " />
         <div className="flex gap-12 flex-1 w-11/12 m-auto">
-          <aside className="w-32 flex h-72 bg-red-50 items-center justify-center">
-            <nav className="">
+          <aside className="w-32 flex flex-2 h-72 bg-red-50 items-center justify-center">
+            <nav>
               <ul>
-                <li>home</li>
-                <li>home</li>
-                <li>home</li>
-                <li>home</li>
-                <li>home</li>
-                <li>home</li>
-                <li>home</li>
+                <li>Home</li>
+                <li>Modules</li>
+                <li>Syllabus</li>
+                <li>People</li>
               </ul>
             </nav>
           </aside>
-          <div className=" flex-1 bg-red-500 h-96">
+          <div className=" flex-1 flex bg-red-500 h-96">
             <h1>Hello</h1>
           </div>
-          <div className="flex bg-red-300 w-64">Hi</div>
+          <div className="flex flex-col flex-3 items-center gap-4 bg-red-300 w-64 text-xl underline">
+            <h1>To Do :</h1>
+            <div className="flex flex-col">
+              {/* Should be download able link or open to the module */}
+              <ul>
+                <li>Assignment 32 *</li>
+                <li>Assignment 12</li>
+                <li>Assignment 22</li>
+                <li>Assignment 42</li>
+              </ul>
+            </div>
+            <span className="mt-auto mb-2">* = Recently Updated</span>
+          </div>
         </div>
       </div>
     </>
