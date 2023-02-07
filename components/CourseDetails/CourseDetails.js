@@ -27,6 +27,7 @@ const CourseDetails = ({}) => {
             </nav>
           </aside>
           <div className=" flex-1 flex bg-red-500 h-96">
+            {/* this one is going to take alot of time */}
             <h1>Hello</h1>
           </div>
           <div className="flex flex-col flex-3 items-center gap-4 bg-red-300 w-64 text-xl underline">
