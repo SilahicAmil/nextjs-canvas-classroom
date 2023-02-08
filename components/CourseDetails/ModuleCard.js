@@ -1,6 +1,5 @@
 import { AiOutlineDelete, AiOutlinePlus } from "react-icons/ai";
 
-import { HiEllipsisVertical } from "react-icons/hi2";
 import ModuleContent from "./ModuleContent";
 import { useState } from "react";
 
