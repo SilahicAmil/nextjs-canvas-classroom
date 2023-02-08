@@ -13,10 +13,10 @@ const ModuleCard = ({}) => {
   return (
     <>
       <div
-        className="w-full h-full bg-red-50 rounded-lg flex flex-col mb-12"
+        className="w-full rounded-lg flex flex-col  mb-12 shadow-xl"
         onClick={openContentHandler}
       >
-        <div className="flex w-full justify-between rounded-sm h-12 bg-blue-300 items-center">
+        <div className="flex w-full justify-between rounded-sm h-12 bg-slate-500 items-center">
           <h1 className="ml-8 text-2xl">Sample Module</h1>
           <div className="flex gap-8 items-center h-full ">
             <button className="text-xl">
