@@ -1,7 +1,9 @@
 <!-- -- Add a module component for course details page -->
 
 -- Re-design the left side bar nav on course details
--- Update buttons for course details
+
+<!-- -- Update buttons for course details -->
+
 -- Implement file upload with supabse for modules
 -- Implement file download with supabase
 -- Figure out auth with supabase

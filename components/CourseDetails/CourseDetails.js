@@ -18,10 +18,10 @@ const CourseDetails = ({}) => {
         </div>
         <hr className="mb-6 border-t border-gray-400 " />
         <div className="flex gap-12 flex-1 w-11/12 m-auto">
-          <aside className="w-32 flex flex-2 h-72 bg-red-50 items-center justify-center">
+          <aside className=" -ml-16 flex flex-2 bg-red-50 ">
             <nav>
-              <ul>
-                <li>Home</li>
+              <ul className="flex flex-col gap-8 h-full w-32 items-center">
+                <li className="mt-24">Home</li>
                 <li>Modules</li>
                 <li>Syllabus</li>
                 <li>People</li>
