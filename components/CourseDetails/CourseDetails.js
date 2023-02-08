@@ -7,7 +7,8 @@ const CourseDetails = ({}) => {
     <>
       <div className="m-8 w-11/12">
         <div className="ml-12">
-          <Header>Intro to Science</Header>
+          {/* eventually update name dynamically */}
+          <Header>Course: Intro to Science</Header>
         </div>
         <hr className=" mt-4 border-t border-gray-400" />
 
