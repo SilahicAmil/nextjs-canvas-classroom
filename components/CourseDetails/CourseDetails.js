@@ -16,9 +16,9 @@ const CourseDetails = ({}) => {
             <AiOutlinePlus className="" /> Module
           </button>
         </div>
-        <hr className="mb-6 border-t border-gray-400 " />
+        <hr className="mb-6 border-t border-gray-400" />
         <div className="flex gap-12 flex-1 w-11/12 m-auto">
-          <aside className=" -ml-16 flex flex-2 bg-red-50 ">
+          <aside className="-ml-16 flex flex-2 bg-red-50 ">
             <nav>
               <ul className="flex flex-col gap-8 h-full w-32 items-center">
                 <li className="mt-24">Home</li>
@@ -28,7 +28,7 @@ const CourseDetails = ({}) => {
               </ul>
             </nav>
           </aside>
-          <div className=" flex-1 flex flex-col h-full ">
+          <div className=" flex-1 flex flex-col h-full">
             <ModuleCard />
             <ModuleCard />
             <ModuleCard />
