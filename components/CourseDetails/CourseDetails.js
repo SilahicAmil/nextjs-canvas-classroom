@@ -28,14 +28,15 @@ const CourseDetails = ({}) => {
               </ul>
             </nav>
           </aside>
-          <div className=" flex-1 flex h-full">
-            {/* this one is going to take alot of time */}
+          <div className=" flex-1 flex flex-col h-full ">
+            <ModuleCard />
+            <ModuleCard />
             <ModuleCard />
           </div>
-          <div className="flex flex-col flex-3 items-center gap-4 bg-red-300 w-64 text-xl underline">
+          <div className="flex flex-col h-full flex-3 items-center gap-4 bg-red-300 w-64 text-xl underline">
             <h1>To Do :</h1>
             <div className="flex flex-col">
-              {/* Should be download able link or open to the module */}
+              {/* Should open the related module drop down */}
               <ul>
                 <li>Assignment 32 *</li>
                 <li>Assignment 12</li>
