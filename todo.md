@@ -1,6 +1,6 @@
 <!-- -- Add a module component for course details page -->
 
--- Re-design the left side bar nav on course details
+<!-- -- Re-design the left side bar nav on course details -->
 
 <!-- -- Update buttons for course details -->
 
