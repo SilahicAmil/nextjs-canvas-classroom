@@ -1,6 +1,6 @@
+import { AiOutlinePlus } from "react-icons/ai";
 import Header from "../Header/Header";
 import ModuleCard from "./ModuleCard";
-import ModuleContent from "./ModuleCard";
 
 const CourseDetails = ({}) => {
   return (
@@ -11,10 +11,10 @@ const CourseDetails = ({}) => {
         </div>
         <hr className=" mt-4 border-t border-gray-400" />
 
-        <div className="flex ml-auto items-center justify-center gap-8  mb-6 mt-4 w-1/3">
-          <button className="bg-red-500 w-32 p-2 rounded-lg">+ Module</button>
-          <button className="bg-red-500 w-32 p-2 rounded-lg">+ Module</button>
-          <button className="bg-red-500 w-32 p-2 rounded-lg">+ Module</button>
+        <div className="flex items-center w-full mla-tuo gap-8  mb-6 mt-4">
+          <button className="bg-green-300 flex items-center justify-center ml-auto w-32 p-2 rounded-lg gap-4 text-md">
+            <AiOutlinePlus className="" /> Module
+          </button>
         </div>
         <hr className="mb-6 border-t border-gray-400 " />
         <div className="flex gap-12 flex-1 w-11/12 m-auto">

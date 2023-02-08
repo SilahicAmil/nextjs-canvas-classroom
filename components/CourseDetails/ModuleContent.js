@@ -25,7 +25,7 @@ const ModuleContent = ({}) => {
           <p className="text-xl">First Assignment</p>
           {/* if student show download button */}
           <div className="flex ml-auto items-center gap-4 mr-6 ">
-            <button className="h-1/2 bg-blue-100 p-2 flex items-center rounded-sm">
+            <button className="h-1/2 bg-blue-100 p-2 flex items-center rounded-md">
               Download
             </button>
             {/* if teacher show edit/remove dropdown */}
