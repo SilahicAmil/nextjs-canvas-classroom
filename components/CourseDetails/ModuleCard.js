@@ -25,12 +25,12 @@ const ModuleCard = ({}) => {
           )}
           <h1 className="ml-8 text-2xl mr-auto">Sample Module</h1>
           <div className="flex gap-8 items-center justify-center h-full ">
-            <button className="text-xl">
-              <AiOutlinePlus />
+            <button className="">
+              <AiOutlinePlus className="text-white text-xl" />
             </button>
 
             <button className="mr-6">
-              <AiOutlineDelete className="text-xl" />
+              <AiOutlineDelete className="text-xl text-white" />
             </button>
           </div>
         </div>
