@@ -1,4 +1,6 @@
 import Header from "../Header/Header";
+import ModuleCard from "./ModuleCard";
+import ModuleContent from "./ModuleCard";
 
 const CourseDetails = ({}) => {
   return (
@@ -26,9 +28,9 @@ const CourseDetails = ({}) => {
               </ul>
             </nav>
           </aside>
-          <div className=" flex-1 flex bg-red-500 h-96">
+          <div className=" flex-1 flex h-full">
             {/* this one is going to take alot of time */}
-            <h1>Hello</h1>
+            <ModuleCard />
           </div>
           <div className="flex flex-col flex-3 items-center gap-4 bg-red-300 w-64 text-xl underline">
             <h1>To Do :</h1>
