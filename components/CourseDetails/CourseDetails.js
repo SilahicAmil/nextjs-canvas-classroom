@@ -10,14 +10,14 @@ const CourseDetails = ({}) => {
 
   return (
     <>
-      <div className="m-8 w-11/12">
+      <div className={`m-8 ${openModal ? " opacity-50" : "opacity-100"}`}>
         <div className="ml-12">
           {/* eventually update name dynamically */}
           <Header>Course: Intro to Science</Header>
         </div>
-        <hr className=" mt-4 border-t border-gray-400" />
+        <hr className="mt-4 border-t border-gray-400" />
 
-        <div className="flex items-center w-full mla-tuo gap-8  mb-6 mt-4">
+        <div className="flex items-center w-full gap-8 mb-6 mt-4">
           <button
             className="bg-green-300 flex items-center justify-center ml-auto w-32 p-2 rounded-lg gap-4 text-md"
             onClick={() => setOpenModal(true)}
