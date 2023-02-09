@@ -10,14 +10,13 @@ const CourseDetails = ({}) => {
 
   return (
     <>
-      <div className={`m-8 ${openModal ? " opacity-50" : "opacity-100"}`}>
-        <div className="ml-12">
+      <div
+        className={`m-8 w-11/12 ${openModal ? " opacity-50" : "opacity-100"}`}
+      >
+        <div className="ml-12 flex mb-6">
           {/* eventually update name dynamically */}
           <Header>Course: Intro to Science</Header>
-        </div>
-        <hr className="mt-4 border-t border-gray-400" />
 
-        <div className="flex items-center w-full gap-8 mb-6 mt-4">
           <button
             className="bg-green-300 flex items-center justify-center ml-auto w-32 p-2 rounded-lg gap-4 text-md"
             onClick={() => setOpenModal(true)}
@@ -25,9 +24,12 @@ const CourseDetails = ({}) => {
             <AiOutlinePlus /> Module
           </button>
         </div>
-        <hr className="mb-6 border-t border-gray-400" />
-        <div className="flex gap-12 flex-1 w-11/12 m-auto h-full">
-          <aside className="-ml-16 flex mt-12 flex-2 shadow-xl h-96 items-center ">
+        <div>
+          <hr className="mt-4 mb-12 border-t border-gray-400" />
+        </div>
+
+        <div className="flex gap-12 flex-1  m-auto h-full w-full">
+          <aside className=" flex mt-12 flex-2 shadow-xl h-96 items-center ">
             <nav>
               <ul className="flex text-white flex-col gap-8 w-32 items-center">
                 <li className=" text-[#60A8D0]">Home</li>
@@ -37,7 +39,7 @@ const CourseDetails = ({}) => {
               </ul>
             </nav>
           </aside>
-          <div className=" flex-1 flex flex-col h-full">
+          <div className=" flex-1 flex flex-col h-full ">
             <ModuleCard />
             <ModuleCard />
             <ModuleCard />
