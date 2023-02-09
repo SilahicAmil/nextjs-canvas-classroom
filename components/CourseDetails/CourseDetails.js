@@ -48,7 +48,7 @@ const CourseDetails = ({}) => {
           <div className="flex flex-col h-96 flex-3 items-center gap-4 bg-red-300 w-64 text-xl">
             <h1>To Do :</h1>
             <div className="flex flex-col">
-              {/* Should open the related module drop down */}
+              {/* Should open the related module drop down (idk about this) */}
               <ul>
                 <li>Assignment 32 *</li>
                 <li>Assignment 12</li>
