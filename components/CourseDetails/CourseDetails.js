@@ -29,9 +29,9 @@ const CourseDetails = ({}) => {
         </div>
 
         <div className="flex gap-12 flex-1  m-auto h-full w-full">
-          <aside className=" flex mt-12 flex-2 shadow-xl h-96 items-center ">
+          <aside className="flex flex-2 shadow-xl h-96 items-center border border-black">
             <nav>
-              <ul className="flex text-white flex-col gap-8 w-32 items-center">
+              <ul className="flex text-white flex-col gap-8 w-32 items-center ">
                 <li className=" text-[#60A8D0]">Home</li>
                 <li className="text-[#60A8D0]">Modules</li>
                 <li className="text-[#60A8D0]">Syllabus</li>
