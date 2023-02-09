@@ -4,6 +4,8 @@
 
 <!-- -- Update buttons for course details -->
 
+-- Add a landing page on /landing (maybe)
+
 -- Implement file upload with supabse for modules
 -- Implement file download with supabase
 -- Figure out auth with supabase
@@ -12,8 +14,5 @@
 -- Inboxing will probably be the hardest thing (so save best for last lol)
 -- Also update avatar for profile based on auth name so everyone has a unique avatar
 -- Find a better logo for the nav bar OmegaLUL
--- Possibly add footer to every page (like a proper one)
 
 <!-- -- Design the login page -->
-
--- Implement a landing page (mmaybe idk)
