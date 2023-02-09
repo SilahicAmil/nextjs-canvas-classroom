@@ -22,18 +22,18 @@ const CourseDetails = ({}) => {
             className="bg-green-300 flex items-center justify-center ml-auto w-32 p-2 rounded-lg gap-4 text-md"
             onClick={() => setOpenModal(true)}
           >
-            <AiOutlinePlus className="" /> Module
+            <AiOutlinePlus /> Module
           </button>
         </div>
         <hr className="mb-6 border-t border-gray-400" />
-        <div className="flex gap-12 flex-1 w-11/12 m-auto">
-          <aside className="-ml-16 flex flex-2 bg-slate-500 ">
+        <div className="flex gap-12 flex-1 w-11/12 m-auto h-full">
+          <aside className="-ml-16 flex mt-12 flex-2 shadow-xl h-96 items-center ">
             <nav>
-              <ul className="flex text-white flex-col gap-8 h-full w-32 items-center">
-                <li className="mt-24">Home</li>
-                <li>Modules</li>
-                <li>Syllabus</li>
-                <li>People</li>
+              <ul className="flex text-white flex-col gap-8 w-32 items-center">
+                <li className=" text-[#60A8D0]">Home</li>
+                <li className="text-[#60A8D0]">Modules</li>
+                <li className="text-[#60A8D0]">Syllabus</li>
+                <li className="text-[#60A8D0]">People</li>
               </ul>
             </nav>
           </aside>
@@ -43,7 +43,7 @@ const CourseDetails = ({}) => {
             <ModuleCard />
           </div>
 
-          <div className="flex flex-col h-full flex-3 items-center gap-4 bg-red-300 w-64 text-xl underline">
+          <div className="flex flex-col h-96 flex-3 items-center gap-4 bg-red-300 w-64 text-xl">
             <h1>To Do :</h1>
             <div className="flex flex-col">
               {/* Should open the related module drop down */}
@@ -54,7 +54,7 @@ const CourseDetails = ({}) => {
                 <li>Assignment 42</li>
               </ul>
             </div>
-            <span className="mt-auto mb-2">* = Recently Updated</span>
+            <span className="mt-auto mb-2 underline">* = Recently Updated</span>
           </div>
         </div>
       </div>

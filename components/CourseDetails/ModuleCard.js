@@ -13,7 +13,7 @@ const ModuleCard = ({}) => {
   return (
     <>
       <div
-        className="w-full rounded-lg flex flex-col  mb-12 shadow-xl hover:cursor-pointer"
+        className="w-full h-full rounded-lg flex flex-col  mb-12 shadow-xl hover:cursor-pointer"
         onClick={openContentHandler}
       >
         <div className="flex w-full justify-between rounded-sm h-12 bg-slate-500 items-center">
