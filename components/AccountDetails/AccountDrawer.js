@@ -1,6 +1,13 @@
 import { Avatar } from "@boringer-avatars/react";
+import { useRouter } from "next/router";
 
 const AccountDrawer = ({}) => {
+  const router = useRouter();
+
+  const logoutHandler = () => {
+    router.push("/login");
+  };
+
   return (
     <>
       <div className="drawer font-lato">
@@ -15,7 +22,9 @@ const AccountDrawer = ({}) => {
                 colors={["#92A1C6", "#146A7C", "#F0AB3D", "#C271B4", "#C20D90"]}
               />
               <p>Amil Silahic</p>
-              <button>Logout</button>
+              <button type="button" onClick={logoutHandler}>
+                Logout
+              </button>
             </div>
           </ul>
         </div>

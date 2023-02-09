@@ -13,5 +13,7 @@
 -- Also update avatar for profile based on auth name so everyone has a unique avatar
 -- Find a better logo for the nav bar OmegaLUL
 -- Possibly add footer to every page (like a proper one)
--- Design the login page
+
+<!-- -- Design the login page -->
+
 -- Implement a landing page (mmaybe idk)
