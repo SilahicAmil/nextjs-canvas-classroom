@@ -25,7 +25,7 @@ const CourseDetails = ({}) => {
           </button>
         </div>
         <div>
-          <hr className="mt-4 mb-12 border-t border-gray-400" />
+          <hr className="mt-4 mb-12 border-t border-black" />
         </div>
 
         <div className="flex gap-12 flex-1  m-auto h-full w-full">
