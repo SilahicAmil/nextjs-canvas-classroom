@@ -20,11 +20,12 @@ suvject: Math
 description: lorem ipsum
 published: True
 
-moduleCreate will upset or insert idk which one yet into the above course
-based off of object ID
+<!-- true by default for now -->
 
-<!-- this way makes it easier for it to be mapped over -->
-<!-- all have to do is modules.map() or for module in modules  -->
+--moduleCreate will upset or insert idk which one yet into the above course
+based off of object ID
+--this way makes it easier for it to be mapped over
+--all have to do is modules.map() or for module in modules
 
 modules: [
 Intro: file1.pdf
