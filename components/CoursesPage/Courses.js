@@ -10,7 +10,11 @@ const Courses = ({}) => {
 
   return (
     <>
-      <div className="m-8 ">
+      <div
+        className={`m-8 ${
+          openCoursesModal ? "opacity-50 pointer-events-none" : "visible"
+        }`}
+      >
         <Header>Courses</Header>
         <hr className="mt-6 border-t border-gray-400" />
 

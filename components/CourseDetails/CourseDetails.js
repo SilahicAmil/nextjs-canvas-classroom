@@ -11,7 +11,9 @@ const CourseDetails = ({}) => {
   return (
     <>
       <div
-        className={`m-8 w-11/12 ${openModal ? " opacity-50" : "opacity-100"}`}
+        className={`m-8 w-11/12 ${
+          openModal ? "opacity-50 pointer-events-none" : "opacity-100"
+        }`}
       >
         <div className="ml-12 flex mb-6">
           {/* eventually update name dynamically */}
