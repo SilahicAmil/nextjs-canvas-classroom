@@ -1,7 +1,7 @@
 import { AiOutlineDelete, AiOutlinePlus } from "react-icons/ai";
-import { use, useState } from "react";
 
 import ModuleContent from "./ModuleContent";
+import { useState } from "react";
 
 const ModuleCard = ({}) => {
   const [openContent, setOpenContent] = useState(true);

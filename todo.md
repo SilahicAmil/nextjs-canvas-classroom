@@ -6,6 +6,8 @@
 
 -- Add a landing page on /landing (maybe)
 
+<!-- -- Implement createCourse modal -->
+
 -- Implement mongoDB createCourse
 
 -- Implement mongoDB update course with module and attach files in there

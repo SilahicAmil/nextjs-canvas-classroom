@@ -1,6 +1,4 @@
 import CourseTable from "./CourseTable";
-import CourseTableHeaders from "./CourseTableHeaders";
-import CourseTableRows from "./CourseTableRows";
 import CoursesModal from "./CoursesModal/CoursesModal";
 import Header from "../Header/Header";
 import { createPortal } from "react-dom";
