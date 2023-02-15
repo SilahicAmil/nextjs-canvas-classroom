@@ -1,11 +1,12 @@
 import CourseTableHeaders from "./CourseTableHeaders";
 import CourseTableRows from "./CourseTableRows";
+import CoursesModal from "./CoursesModal/CoursesModal";
 import Header from "../Header/Header";
+import { createPortal } from "react-dom";
+import { useState } from "react";
 
 const Courses = ({}) => {
-  const createCourseHandler = () => {
-    console.log("clicked");
-  };
+  const [openCoursesModal, setOpenCoursesModal] = useState(false);
 
   return (
     <>
@@ -21,7 +22,7 @@ const Courses = ({}) => {
             {/* this should create a supabase DB of the name of the course */}
             <button
               className="p-4 h-full flex items-center bg-gray-300 rounded-md border border-black"
-              onClick={createCourseHandler}
+              onClick={() => setOpenCoursesModal(true)}
             >
               + Create Course
             </button>
@@ -46,6 +47,15 @@ const Courses = ({}) => {
           </div>
         </div>
       </div>
+
+      {openCoursesModal
+        ? createPortal(
+            <CoursesModal>
+              <button onClick={() => setOpenCoursesModal(false)}>Close</button>
+            </CoursesModal>,
+            document.getElementById("courses-modal")
+          )
+        : null}
     </>
   );
 };

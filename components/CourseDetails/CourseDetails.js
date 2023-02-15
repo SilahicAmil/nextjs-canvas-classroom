@@ -61,7 +61,12 @@ const CourseDetails = ({}) => {
         </div>
       </div>
       {openModal &&
-        createPortal(<ModuleModal />, document.getElementById("module-modal"))}
+        createPortal(
+          <ModuleModal>
+            <button onClick={() => setOpenModal(false)}>Close</button>
+          </ModuleModal>,
+          document.getElementById("module-modal")
+        )}
     </>
   );
 };
