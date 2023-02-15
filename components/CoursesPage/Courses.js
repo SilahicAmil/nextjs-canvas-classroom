@@ -3,6 +3,10 @@ import CourseTableRows from "./CourseTableRows";
 import Header from "../Header/Header";
 
 const Courses = ({}) => {
+  const createCourseHandler = () => {
+    console.log("clicked");
+  };
+
   return (
     <>
       <div className="m-8 ">
@@ -15,19 +19,22 @@ const Courses = ({}) => {
               Browse More Courses
             </button>
             {/* this should create a supabase DB of the name of the course */}
-            <button className="p-4 h-full flex items-center bg-gray-300 rounded-md border border-black">
+            <button
+              className="p-4 h-full flex items-center bg-gray-300 rounded-md border border-black"
+              onClick={createCourseHandler}
+            >
               + Create Course
             </button>
           </div>
         </div>
         {/* extract table components to own file l8r */}
 
-        <div class="flex flex-col">
-          <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
-            <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
-              <div class="overflow-hidden">
-                <table class="min-w-full ">
-                  <thead class="border-b">
+        <div className="flex flex-col">
+          <div className="overflow-x-auto sm:-mx-6 lg:-mx-8">
+            <div className="py-2 inline-block min-w-full sm:px-6 lg:px-8">
+              <div className="overflow-hidden">
+                <table className="min-w-full ">
+                  <thead className="border-b">
                     <CourseTableHeaders />
                   </thead>
                   <tbody>
