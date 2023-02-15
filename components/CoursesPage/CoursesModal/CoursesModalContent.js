@@ -1,20 +1,23 @@
 const CoursesModalContent = ({ children }) => {
   return (
     <>
-      <div className="h-full w-full flex flex-col">
-        <h1>Course Creation</h1>
+      <div className="h-full w-full flex flex-col font-lato">
+        <div className="flex justify-center items-center h-12">
+          <h1 className="text-2xl font-bold">Course Creation</h1>
+        </div>
         <form>
           <div>
             <label htmlFor="name">Course Name</label>
             <input type="text" required />
           </div>
           <div>
-            <label htmlFor="tag">Tag(s)</label>
+            <label htmlFor="tag">Course Tag</label>
             <select id="tag">
-              <option value="Math">Select From Dropdown</option>
+              <option value="null">Select From Dropdown</option>
               <option value="Math">Math</option>
               <option value="Science">Science</option>
               <option value="English">English</option>
+              <option value="English">Computer Science</option>
             </select>
           </div>
           <div>
