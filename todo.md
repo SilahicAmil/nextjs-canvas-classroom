@@ -7,6 +7,7 @@
 -- Add a landing page on /landing (maybe)
 
 -- Implement mongoDB createCourse
+
 -- Implement mongoDB update course with module and attach files in there
 something like
 
@@ -15,6 +16,7 @@ id: 1231
 courseName: Calc 101
 suvject: Math
 description: lorem ipsum
+published: True
 
 moduleCreate will upset or insert idk which one yet into the above course
 based off of object ID
