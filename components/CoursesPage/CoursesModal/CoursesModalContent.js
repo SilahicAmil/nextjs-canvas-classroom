@@ -8,7 +8,7 @@ const CoursesModalContent = ({ children }) => {
         <form>
           <div>
             <label htmlFor="name">Course Name</label>
-            <input type="text" required />
+            <input type="text" id="name" required />
           </div>
           <div>
             <label htmlFor="tag">Course Tag</label>
