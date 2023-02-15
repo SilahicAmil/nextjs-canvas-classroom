@@ -3,7 +3,7 @@ const CoursesModalContent = ({ children }) => {
     <>
       <div className="h-full w-full flex flex-col font-lato">
         <div className="flex justify-center items-center h-12">
-          <h1 className="text-2xl font-bold">Course Creation</h1>
+          <h1 className="text-2xl font-semibold">Course Creation</h1>
         </div>
         <form>
           <div>
