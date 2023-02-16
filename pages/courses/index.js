@@ -1,6 +1,7 @@
 import Courses from "@/components/CoursesPage/Courses";
+import { MongoClient } from "mongodb";
 
-const CoursesPage = ({}) => {
+const CoursesPage = ({ course }) => {
   const addNewCourseHandler = async (enteredCourseData) => {
     const response = await fetch("/api/create-course", {
       method: "POST",
@@ -17,10 +18,33 @@ const CoursesPage = ({}) => {
   return (
     <>
       <div className="w-full h-full">
-        <Courses onAddCourse={addNewCourseHandler} />
+        <Courses onAddCourse={addNewCourseHandler} courseData={course} />
       </div>
     </>
   );
+};
+
+export const getStaticProps = async () => {
+  const client = await MongoClient.connect(process.env.NEXT_PUBLIC_DB_URL);
+
+  const db = client.db();
+
+  const coursesCollection = db.collection("courses");
+
+  const courses = await coursesCollection.find().toArray();
+
+  client.close();
+
+  return {
+    props: {
+      course: courses.map((course) => ({
+        courseName: course.courseName,
+        term: course.term,
+        id: course._id.toString(),
+      })),
+    },
+    revalidate: 3600,
+  };
 };
 
 export default CoursesPage;

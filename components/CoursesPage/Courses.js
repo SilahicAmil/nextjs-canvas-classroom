@@ -4,7 +4,7 @@ import Header from "../Header/Header";
 import { createPortal } from "react-dom";
 import { useState } from "react";
 
-const Courses = ({ onAddCourse }) => {
+const Courses = ({ onAddCourse, courseData }) => {
   const [openCoursesModal, setOpenCoursesModal] = useState(false);
 
   return (
@@ -32,7 +32,7 @@ const Courses = ({ onAddCourse }) => {
           </div>
         </div>
 
-        <CourseTable />
+        <CourseTable courseData={courseData} />
       </div>
 
       {openCoursesModal

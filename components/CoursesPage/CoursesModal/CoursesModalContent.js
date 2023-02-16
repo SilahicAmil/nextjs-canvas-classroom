@@ -1,6 +1,8 @@
 import { useRef } from "react";
+import { useRouter } from "next/router";
 
 const CoursesModalContent = ({ children, onAddCourse }) => {
+  const router = useRouter();
   const courseNameRef = useRef();
   const tagRef = useRef();
   const descriptionRef = useRef();
@@ -19,6 +21,7 @@ const CoursesModalContent = ({ children, onAddCourse }) => {
       published: true,
       term: "2023-2024",
     };
+
     e.target.reset();
 
     onAddCourse(courseData);

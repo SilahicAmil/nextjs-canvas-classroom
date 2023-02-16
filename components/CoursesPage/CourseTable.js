@@ -1,7 +1,7 @@
 import CourseTableHeaders from "./CourseTableHeaders";
 import CourseTableRows from "./CourseTableRows";
 
-const CourseTable = () => {
+const CourseTable = ({ courseData }) => {
   return (
     <div className="flex flex-col">
       <div className="overflow-x-auto sm:-mx-6 lg:-mx-8">
@@ -12,7 +12,7 @@ const CourseTable = () => {
                 <CourseTableHeaders />
               </thead>
               <tbody>
-                <CourseTableRows />
+                <CourseTableRows courseData={courseData} />
               </tbody>
             </table>
           </div>

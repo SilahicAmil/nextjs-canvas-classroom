@@ -36,6 +36,7 @@ Module 3: [file1.pdf, file2.pdf ...]
 ]
 
 -- Figure out auth with next auth
+-- Add Hooks
 
 -- Add Calendar component to display assignments due( fetch from supabase probably make a field like DueDate)
 -- Inboxing will probably be the hardest thing (so save best for last lol)
