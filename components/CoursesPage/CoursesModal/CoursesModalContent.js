@@ -17,6 +17,7 @@ const CoursesModalContent = ({ children, onAddCourse }) => {
       tag: tagRefValue,
       description: descriptionRefValue,
       published: true,
+      term: "2023-2024",
     };
     // e.target.reset();
 
