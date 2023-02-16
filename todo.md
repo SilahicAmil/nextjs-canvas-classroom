@@ -48,6 +48,7 @@ Module 3: [file1.pdf, file2.pdf ...]
 -- MVP (Minimum Viable Product)
 
 - Able to Login as a Teacher or Student and switch modes
+- Able to create student acount
 - Able to create a course as a teacher
 - Within the course have the ability to upload modules (as a teacher)
 - Students can view the courses and enroll into it
