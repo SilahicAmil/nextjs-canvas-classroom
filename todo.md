@@ -56,3 +56,4 @@ Module 3: [file1.pdf, file2.pdf ...]
 - Ability for two way messaging between students and teachers - kind of like and email
 - Calendar should show dates when modules are due
 - Able to publish/unpublish courses
+- Minimum 3 Courses that are always there and unable to be deleted
