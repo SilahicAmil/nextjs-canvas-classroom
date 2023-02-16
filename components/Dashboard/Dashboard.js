@@ -56,6 +56,7 @@ const Dashboard = ({}) => {
                     courseName={card.courseName}
                     snippet={card.snippet}
                     department={card.department}
+                    // course link will be courseName also but to lowercase (maybe)
                     courseLink={card.courseLink}
                   />
                 );
