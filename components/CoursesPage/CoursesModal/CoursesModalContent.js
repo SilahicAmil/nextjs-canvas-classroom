@@ -19,10 +19,9 @@ const CoursesModalContent = ({ children, onAddCourse }) => {
       published: true,
       term: "2023-2024",
     };
-    // e.target.reset();
+    e.target.reset();
 
     onAddCourse(courseData);
-    // console.log(courseData);
   };
 
   return (
