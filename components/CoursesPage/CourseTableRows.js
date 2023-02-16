@@ -6,7 +6,9 @@ const CourseTableRows = ({ courseData }) => {
       <tr className="border-b" key={course.id}>
         <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 ">
           {/* eventually use the courseLink prop here */}
-          <Link href="/courses/intro-to-science">{course.courseName}</Link>
+          <Link href={`/courses/${course.courseName}`}>
+            {course.courseName}
+          </Link>
         </td>
         <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap text-right">
           {course.term}
