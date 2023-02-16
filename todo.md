@@ -8,24 +8,27 @@
 
 <!-- -- Implement createCourse modal -->
 
--- Implement mongoDB createCourse
+<!-- -- Implement mongoDB createCourse -->
+
+<!-- Create Course:
+id: ObjectID
+courseName: Calc 101
+subject: Math
+description: lorem ipsums
+published: True
+term: "2023-2024" -->
+
+-- Form shouldn't allow for spaces in the name only "-" between words (makes routing look nicer)
+
+-- Fetch DB Data for Dashboard
+-- Update routing for the courses/[course-name]
+-- Show default initial sample module as first module
+-- Subsequent modules will be the DB ones
 
 -- Implement mongoDB update course with module and attach files in there
-something like
-
-Create Course:
-id: 1231
-courseName: Calc 101
-suvject: Math
-description: lorem ipsum
-published: True
-
-<!-- true by default for now -->
-
---moduleCreate will upset or insert idk which one yet into the above course
-based off of object ID
---this way makes it easier for it to be mapped over
---all have to do is modules.map() or for module in modules
+something like. moduleCreate will upset or insert idk which one yet into the above course
+based off of object ID. this way makes it easier for it to be mapped over
+all have to do is modules.map() or for module in modules
 
 modules: [
 Intro: file1.pdf
