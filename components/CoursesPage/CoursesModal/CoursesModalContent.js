@@ -25,6 +25,7 @@ const CoursesModalContent = ({ children, onAddCourse }) => {
     e.target.reset();
 
     onAddCourse(courseData);
+    router.push(`/courses/${courseNameRefValue}`);
   };
 
   return (
