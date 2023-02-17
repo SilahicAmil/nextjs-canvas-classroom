@@ -1,13 +1,17 @@
+import { useEffect, useState } from "react";
+
 import { HiEllipsisVertical } from "react-icons/hi2";
 import Link from "next/link";
-import { useState } from "react";
 
 const DashboardCard = ({ courseName, snippet, department, courseLink }) => {
   const [colorChanger, setColorChanger] = useState("");
 
-  const colorChangeHandler = () => {
-    setColorChanger("#2D6F45");
-  };
+  useEffect(() => {
+    let randomColor = "#000000".replace(/0/g, function () {
+      return (~~(Math.random() * 16)).toString(16);
+    });
+    setColorChanger(randomColor);
+  }, []);
 
   return (
     <>
@@ -17,7 +21,7 @@ const DashboardCard = ({ courseName, snippet, department, courseLink }) => {
           style={{ backgroundColor: colorChanger }}
         >
           <button className="flex ml-auto text-2xl mr-2 mt-4">
-            <HiEllipsisVertical onClick={colorChangeHandler} />
+            <HiEllipsisVertical />
           </button>
         </div>
         <div className="card-body w-full">
