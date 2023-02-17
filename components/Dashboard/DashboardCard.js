@@ -8,6 +8,7 @@ const DashboardCard = ({ courseName, snippet, department, courseLink }) => {
 
   useEffect(() => {
     let randomColor = "#000000".replace(/0/g, function () {
+      // ~~ = double NOT bitwise operator - basically a faster math.floor
       return (~~(Math.random() * 16)).toString(16);
     });
     setColorChanger(randomColor);
