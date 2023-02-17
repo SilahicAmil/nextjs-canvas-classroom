@@ -39,13 +39,16 @@ const CoursesModalContent = ({ children, onAddCourse }) => {
             Course Creation
           </h1>
         </div>
-
+        {/* maybe move form into its own component */}
         <form
           onSubmit={createCourseSubmitHandler}
-          className="flex flex-col items-center h-full w-full  justify-center"
+          className="flex flex-col items-center h-full w-full  justify-center gap-4"
         >
-          <div className="w-full flex flex-col items-center form-control">
-            <label htmlFor="name" className="text-xl tracking-wide">
+          <div className="w-full flex flex-col items-center appearance-none">
+            <label
+              htmlFor="name"
+              className="text-left w-1/3 text-lg tracking-wide mb-1"
+            >
               Course Name
             </label>
             <input
@@ -53,16 +56,19 @@ const CoursesModalContent = ({ children, onAddCourse }) => {
               id="name"
               required
               ref={courseNameRef}
-              className="w-1/3 bg-black text-white text-lg rounded-md"
+              placeholder="Intro-To-Science"
+              className="w-1/3 h-9 bg-[#555358] text-white text-lg rounded-md"
             />
           </div>
-          <div className="w-full flex flex-col h-16 items-center text-lg appearance-none">
-            <label htmlFor="tag">Course Tag</label>
+          <div className="w-full flex flex-col items-center text-lg ">
+            <label htmlFor="tag" className="text-left w-1/3 tracking-wide mb-1">
+              Course Tag
+            </label>
             <select
               id="tag"
               required
               ref={tagRef}
-              className="w-1/3 bg-black text-white  rounded-md"
+              className="w-1/3 h-9 bg-[#555358] text-white  rounded-md"
             >
               <option value="null">Select From Dropdown</option>
               <option value="Math">Math</option>
@@ -71,18 +77,24 @@ const CoursesModalContent = ({ children, onAddCourse }) => {
               <option value="Computer Science">Computer Science</option>
             </select>
           </div>
-          <div className="w-full flex flex-col items-center">
-            <label htmlFor="description">Description</label>
+          <div className="w-full flex flex-col  items-center text-lg ">
+            <label
+              htmlFor="description"
+              className="text-left w-1/3 tracking-wide mb-2"
+            >
+              Description
+            </label>
             <textarea
               id="description"
               cols="30"
               rows="5"
               required
               ref={descriptionRef}
-              className="w-1/3 bg-black text-white  text-lg rounded-md"
+              placeholder="Description..."
+              className="w-1/3 h-full bg-[#555358] text-white  text-lg rounded-md appearance-none"
             />
           </div>
-          <div className="mt-4 flex items-center justify-center w-24  ">
+          <div className="mt-4 flex  items-center justify-center w-24  ">
             <button
               type="submit"
               className="w-full h-full p-3 bg-sky-500 rounded-md"
