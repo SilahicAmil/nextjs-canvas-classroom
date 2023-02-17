@@ -11,13 +11,15 @@ const DashboardCard = ({ courseName, snippet, department, courseLink }) => {
       return (~~(Math.random() * 16)).toString(16);
     });
     setColorChanger(randomColor);
-  }, []);
+    // dont need to add dependency since useState is automatically used as a dependency
+    // but YOLO I suppose
+  }, [setColorChanger]);
 
   return (
     <>
       <div className="flex card w-72 h-72 bg-white shadow-2xl mt-6 rounded-lg  ">
         <div
-          className={` bg-red-500  w-full h-full flex`}
+          className={` bg-red-500 w-full h-full flex`}
           style={{ backgroundColor: colorChanger }}
         >
           <button className="flex ml-auto text-2xl mr-2 mt-4">
