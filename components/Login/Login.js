@@ -6,7 +6,7 @@ const Login = ({}) => {
 
   const formSubmitHandler = (e) => {
     e.preventDefault();
-    router.push("/");
+    router.push("/dashboard");
   };
 
   return (
