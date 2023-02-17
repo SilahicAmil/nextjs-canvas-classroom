@@ -11,7 +11,7 @@ const Courses = ({ onAddCourse, courseData }) => {
     <>
       <div
         className={`m-8 ${
-          openCoursesModal ? "opacity-50 pointer-events-none" : "visible"
+          openCoursesModal ? "opacity-30 pointer-events-none" : "visible"
         }`}
       >
         <Header>Courses</Header>

@@ -30,19 +30,19 @@ const CoursesModalContent = ({ children, onAddCourse }) => {
 
   return (
     <>
-      <div className="h-full w-full flex flex-col font-lato">
-        <div className="flex justify-center items-center h-12 w-full">
+      <div className="h-full w-full flex flex-col font-lato bg-[#FAF9F6]">
+        <div className="flex justify-center items-center h-12 w-full bg-[#424B54] border-b border-black">
           <div className="flex mr-auto w-6 ml-1 p-1 bg-red-500 items-center justify-center rounded-full h-6">
             {children}
           </div>
-          <h1 className="text-2xl w-full items-center justify-center flex font-semibold tracking-widest">
+          <h1 className="text-2xl text-white w-full items-center justify-center flex font-semibold tracking-wide">
             Course Creation
           </h1>
         </div>
 
         <form
           onSubmit={createCourseSubmitHandler}
-          className="flex flex-col items-center w-full h-full bg-slate-400 justify-center"
+          className="flex flex-col items-center h-full w-full  justify-center"
         >
           <div className="w-full flex flex-col items-center form-control">
             <label htmlFor="name" className="text-xl tracking-wide">
@@ -53,7 +53,7 @@ const CoursesModalContent = ({ children, onAddCourse }) => {
               id="name"
               required
               ref={courseNameRef}
-              className="w-1/3 bg-white text-black text-lg"
+              className="w-1/3 bg-black text-white text-lg rounded-md"
             />
           </div>
           <div className="w-full flex flex-col h-16 items-center text-lg appearance-none">
@@ -62,13 +62,13 @@ const CoursesModalContent = ({ children, onAddCourse }) => {
               id="tag"
               required
               ref={tagRef}
-              className="w-1/3 bg-white text-black"
+              className="w-1/3 bg-black text-white  rounded-md"
             >
               <option value="null">Select From Dropdown</option>
               <option value="Math">Math</option>
               <option value="Science">Science</option>
               <option value="English">English</option>
-              <option value="English">Computer Science</option>
+              <option value="Computer Science">Computer Science</option>
             </select>
           </div>
           <div className="w-full flex flex-col items-center">
@@ -79,11 +79,14 @@ const CoursesModalContent = ({ children, onAddCourse }) => {
               rows="5"
               required
               ref={descriptionRef}
-              className="w-1/3 bg-white text-black text-lg"
+              className="w-1/3 bg-black text-white  text-lg rounded-md"
             />
           </div>
-          <div className="w-1/12 p-2 flex">
-            <button type="submit" className="p-4 w-full bg-sky-500">
+          <div className="mt-4 flex items-center justify-center w-24  ">
+            <button
+              type="submit"
+              className="w-full h-full p-3 bg-sky-500 rounded-md"
+            >
               Create
             </button>
           </div>
