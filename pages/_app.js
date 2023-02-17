@@ -33,6 +33,12 @@ export default function App({ Component, pageProps }) {
     case "LoginPage":
       return <Component {...pageProps} />;
 
+    case "HomeLandingPage":
+      return <Component {...pageProps} />;
+
+    case "ErrorPage":
+      return <Component {...pageProps} />;
+
     default: {
       return isLoading ? (
         <Layout>
