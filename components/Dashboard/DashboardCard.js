@@ -8,7 +8,7 @@ const DashboardCard = ({ courseName, snippet, department, courseLink }) => {
 
   useEffect(() => {
     let randomColor = "#000000".replace(/0/g, function () {
-      // ~~ = double NOT bitwise operator - basically a faster math.floor
+      // ~~ = double NOT bitwise operator - basically a faster Math.floor
       return (~~(Math.random() * 16)).toString(16);
     });
     setColorChanger(randomColor);
@@ -24,7 +24,7 @@ const DashboardCard = ({ courseName, snippet, department, courseLink }) => {
           style={{ backgroundColor: colorChanger }}
         >
           <button className="flex ml-auto text-2xl mr-2 mt-4">
-            <HiEllipsisVertical />
+            <HiEllipsisVertical className="text-white" />
           </button>
         </div>
         <div className="card-body w-full">
