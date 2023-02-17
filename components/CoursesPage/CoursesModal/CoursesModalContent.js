@@ -31,15 +31,32 @@ const CoursesModalContent = ({ children, onAddCourse }) => {
   return (
     <>
       <div className="h-full w-full flex flex-col font-lato">
-        <div className="flex justify-center items-center h-12">
-          <h1 className="text-2xl font-semibold">Course Creation</h1>
-        </div>
-        <form onSubmit={createCourseSubmitHandler}>
-          <div>
-            <label htmlFor="name">Course Name</label>
-            <input type="text" id="name" required ref={courseNameRef} />
+        <div className="flex justify-center items-center h-12 w-full">
+          <div className="flex mr-auto w-8 ml-1 p-1 bg-red-500 items-center justify-center rounded-full h-1/2">
+            {children}
           </div>
-          <div>
+          <h1 className="text-2xl w-full items-center justify-center flex font-semibold">
+            Course Creation
+          </h1>
+        </div>
+
+        <form
+          onSubmit={createCourseSubmitHandler}
+          className="flex flex-col items-center w-full h-full bg-slate-400 justify-center"
+        >
+          <div className="w-full flex flex-col items-center form-control">
+            <label htmlFor="name" className="">
+              Course Name
+            </label>
+            <input
+              type="text"
+              id="name"
+              required
+              ref={courseNameRef}
+              className=""
+            />
+          </div>
+          <div className="w-full flex flex-col items-center">
             <label htmlFor="tag">Course Tag</label>
             <select id="tag" required ref={tagRef}>
               <option value="null">Select From Dropdown</option>
@@ -49,7 +66,7 @@ const CoursesModalContent = ({ children, onAddCourse }) => {
               <option value="English">Computer Science</option>
             </select>
           </div>
-          <div>
+          <div className="w-full flex flex-col items-center">
             <label htmlFor="description">Description</label>
             <textarea
               id="description"
@@ -59,13 +76,12 @@ const CoursesModalContent = ({ children, onAddCourse }) => {
               ref={descriptionRef}
             />
           </div>
-          <div>
+          <div className="w-1/3 flex flex-col ">
             <button type="submit" className="p-2 bg-sky-500">
               Create
             </button>
           </div>
         </form>
-        {children}
       </div>
     </>
   );
