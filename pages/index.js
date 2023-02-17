@@ -1,19 +1,18 @@
-import DashboadFooter from "@/components/Dashboard/DashboardFooter";
-import Dashboard from "@/components/Dashboard/Dashboard";
-import Head from "next/head";
-
 const HomePage = ({}) => {
   return (
     <>
-      <Head>
-        <title>Scholar - Dashboard</title>
-      </Head>
-      <div className="w-full h-full">
-        <Dashboard />
-        <DashboadFooter />
-      </div>
+      <>
+        {/* add like a typical landing page */}
+        {/* something similiar to this */}
+        {/* https://www.frontendmentor.io/challenges/meet-landing-page-rbTDS6OUR */}
+        <div>
+          <h1>Landing Page</h1>
+        </div>
+      </>
     </>
   );
 };
+
+HomePage.displayName = "HomePage";
 
 export default HomePage;

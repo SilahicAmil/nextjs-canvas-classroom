@@ -63,7 +63,7 @@ const Navigation = ({ children }) => {
                 <li>
                   <Link
                     className={`${
-                      router.pathname === "/"
+                      router.pathname === "/dashboard"
                         ? "border-b-2 border-white rounded-md"
                         : null
                     } text-white flex flex-col items-center py-2  w-full justify-center `}

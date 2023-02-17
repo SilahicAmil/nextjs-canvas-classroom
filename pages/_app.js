@@ -33,7 +33,7 @@ export default function App({ Component, pageProps }) {
     case "LoginPage":
       return <Component {...pageProps} />;
 
-    case "HomeLandingPage":
+    case "HomePage":
       return <Component {...pageProps} />;
 
     case "ErrorPage":
