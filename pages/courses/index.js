@@ -1,4 +1,5 @@
 import Courses from "@/components/CoursesPage/Courses";
+import Head from "next/head";
 import { MongoClient } from "mongodb";
 
 const CoursesPage = ({ course }) => {
@@ -17,6 +18,9 @@ const CoursesPage = ({ course }) => {
 
   return (
     <>
+      <Head>
+        <title>Scholar - Courses</title>
+      </Head>
       <div className="w-full h-full">
         <Courses onAddCourse={addNewCourseHandler} courseData={course} />
       </div>
