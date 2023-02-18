@@ -4,8 +4,8 @@ import Link from "next/link";
 const LandingHeader = ({}) => {
   return (
     <>
-      <nav className="bg-[#003049] w-full ">
-        <div className="container h-24  flex justify-between items-center">
+      <nav className="bg-[#003049] w-full sticky top-0 z-50 ">
+        <div className=" h-24  flex justify-between items-center">
           <div className="font-bold text-2xl w-32 h-full flex items-center ml-8">
             <Image
               src="/images/scholar-logo-no-bg.png"
@@ -15,12 +15,16 @@ const LandingHeader = ({}) => {
             />
           </div>
           <div className="flex">
-            <ul className="flex gap-12 text-white">
+            <ul className="flex gap-12 text-white lg:visible md:visible sm:visible invisble">
               <li>
-                <Link href="/dashboard">Features</Link>
+                <Link href="#who-we-help" scroll={false}>
+                  Who We Help
+                </Link>
               </li>
               <li>
-                <Link href="/dashboard">Pricing</Link>
+                <Link href="#pricing" scroll={false}>
+                  Pricing
+                </Link>
               </li>
             </ul>
           </div>
@@ -28,7 +32,7 @@ const LandingHeader = ({}) => {
             <ul className="flex">
               <li>
                 <Link
-                  className="px-4 font-bold bg-sky-300 h-full p-3 rounded-md text-black"
+                  className="px-4 mr-4 font-bold bg-sky-300 h-full p-3 rounded-md text-black"
                   href="/login"
                 >
                   Sign Up

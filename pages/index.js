@@ -1,17 +1,17 @@
 import LandingContent from "@/components/LandingPage/LandingContent";
 import LandingHeader from "@/components/LandingPage/LandingHeader";
 import LandingHero from "@/components/LandingPage/LandingHero";
-import LandingTestimonials from "@/components/LandingPage/LandingTestimonials";
+import LandingPricing from "@/components/LandingPage/LandingPricing";
 
 const HomePage = ({}) => {
   return (
     <>
-      <>
+      <div className="font-lato">
         <LandingHeader />
         <LandingHero />
         <LandingContent />
-        <LandingTestimonials />
-      </>
+        <LandingPricing />
+      </div>
     </>
   );
 };
