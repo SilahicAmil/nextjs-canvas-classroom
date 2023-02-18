@@ -15,7 +15,7 @@ const LandingHeader = ({}) => {
             />
           </div>
           <div className="flex">
-            <ul className="flex gap-12 text-white lg:visible md:visible sm:visible invisble">
+            <ul className="flex gap-12 text-white invisible lg:visible md:visible sm:visible ">
               <li>
                 <Link href="#who-we-help" scroll={false}>
                   Who We Help
