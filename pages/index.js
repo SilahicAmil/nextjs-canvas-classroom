@@ -1,7 +1,10 @@
+import LandingHeader from "@/components/LandingPage/LandingHeader";
+
 const HomePage = ({}) => {
   return (
     <>
       <>
+        <LandingHeader />
         {/* add like a typical landing page */}
         {/* something similiar to this */}
         {/* https://www.frontendmentor.io/challenges/meet-landing-page-rbTDS6OUR */}
