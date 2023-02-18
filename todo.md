@@ -4,11 +4,12 @@
 
 <!-- -- Update buttons for course details -->
 
--- Add a landing page on /landing (maybe)
+<!-- -- Add a landing page on /landing (maybe) -->
 
 <!-- -- Implement createCourse modal -->
 
 <!-- -- Implement mongoDB createCourse -->
+<!-- -- Design the login page -->
 
 <!-- Create Course:
 id: ObjectID
@@ -41,11 +42,15 @@ Module 3: [file1.pdf, file2.pdf ...]
 -- Add Calendar component to display assignments due( fetch from supabase probably make a field like DueDate)
 -- Inboxing will probably be the hardest thing (so save best for last lol)
 -- Also update avatar for profile based on auth name so everyone has a unique avatar
+
+-- Add descriptions for Who We Help
+-- Update Pricing Cards to reflect Who We Help
+
 -- Find a better logo for the nav bar OmegaLUL
 
-<!-- -- Design the login page -->
+<!--  #####################################################-->
 
--- MVP (Minimum Viable Product)
+## MVP (Minimum Viable Product)
 
 - Able to Login as a Teacher or Student and switch modes
 - Able to create student acount
