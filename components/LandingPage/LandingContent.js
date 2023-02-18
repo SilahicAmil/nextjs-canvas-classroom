@@ -7,6 +7,7 @@ const LandingContent = ({}) => {
         <h2 className="text-3xl tracking-wide font-bold text-center text-gray-800 mb-12">
           WHO WE HELP
         </h2>
+
         <div className="flex items-center flex-wrap mb-20">
           <div className="w-full md:w-1/2">
             <h4 className="text-3xl text-gray-800 font-bold mb-3">Higher Ed</h4>
@@ -35,11 +36,11 @@ const LandingContent = ({}) => {
               alt="Education"
               width={500}
               height={1000}
-              className="w-full rounded-md mr-8 h-1/2 flex  items-center justify-center"
+              className="w-full  rounded-md mr-8 h-1/2 flex  items-center justify-center"
             />
           </div>
-          <div className="w-full md:w-1/2 pl-10">
-            <h4 className="text-3xl text-gray-800 font-bold mb-3">
+          <div className="w-full md:w-1/2  pl-10">
+            <h4 className="text-3xl text-gray-800 font-bold mb-3 mt-4">
               Independent Ed
             </h4>
             <p className="text-gray-600 mb-8">
@@ -53,7 +54,9 @@ const LandingContent = ({}) => {
 
         <div className="flex items-center flex-wrap mb-20">
           <div className="w-full md:w-1/2">
-            <h4 className="text-3xl text-gray-800 font-bold mb-3">Corp Ed</h4>
+            <h4 className="text-3xl text-gray-800 font-bold mb-3">
+              Corporate Ed
+            </h4>
             <p className="text-gray-600 mb-8">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed id
               assumenda optio laborum esse iste, harum exercitationem quaerat

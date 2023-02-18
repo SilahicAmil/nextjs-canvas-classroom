@@ -1,17 +1,17 @@
 const LandingHero = ({}) => {
   return (
     <>
-      <div className="h-96 w-screen bg-gradient-to-l from-sky-600 to-sky-400">
+      <div className="lg:h-96 md:h-64 w-screen bg-gradient-to-l from-sky-600 to-sky-400">
         <div className=" pt-24 flex flex-col items-center justify-center">
-          <h2 className="text-3xl font-bold mb-4 text-white">
+          <h2 className="text-3xl font-bold mb-4 text-white text-center">
             Scholar the #1 Educational Software
           </h2>
 
-          <h3 className="text-xl  text-gray-200">
+          <h3 className="text-xl  text-gray-200 text-center">
             Connecting educators and students since 2023.
           </h3>
         </div>
-        <div className="flex">
+        <div className=" invisible lg:flex lg:h-full lg:visible">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
             <path
               fill="#A2D9FF"

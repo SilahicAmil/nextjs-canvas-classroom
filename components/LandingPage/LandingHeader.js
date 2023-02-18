@@ -28,11 +28,11 @@ const LandingHeader = ({}) => {
               </li>
             </ul>
           </div>
-          <div className=" lg:block">
+          <div className="">
             <ul className="flex">
               <li>
                 <Link
-                  className="px-4 mr-4 uppercase font-bold bg-sky-300 h-full p-3 rounded-md text-black"
+                  className="w-32 flex items-center justify-center mr-4 uppercase font-bold bg-sky-300 h-full p-3 rounded-md text-black"
                   href="/login"
                 >
                   Log In
