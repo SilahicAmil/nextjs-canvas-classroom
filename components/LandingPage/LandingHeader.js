@@ -24,7 +24,7 @@ const LandingHeader = ({}) => {
               </li>
             </ul>
           </div>
-          <div className="hidden lg:block">
+          <div className=" lg:block">
             <ul className="flex">
               <li>
                 <Link
