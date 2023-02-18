@@ -67,7 +67,7 @@ const Navigation = ({ children }) => {
                         ? "border-b-2 border-white rounded-md"
                         : null
                     } text-white flex flex-col items-center py-2  w-full justify-center `}
-                    href="/"
+                    href="/dashboard"
                   >
                     <AiOutlineDashboard className="text-4xl" />
                     <span className="text-md">Dashboard</span>

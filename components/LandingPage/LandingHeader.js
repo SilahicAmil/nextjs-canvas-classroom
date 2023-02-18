@@ -1,29 +1,38 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const LandingHeader = ({}) => {
   return (
     <>
-      <nav className="bg-slate-400 w-full">
-        <div class="container h-24  flex justify-between items-center">
-          <div class="font-bold text-2xl">
+      <nav className="bg-[#003049] w-full ">
+        <div className="container h-24  flex justify-between items-center">
+          <div className="font-bold text-2xl w-32 h-full flex items-center ml-8">
             <Image
-              src="/images/logo-color.png"
-              alt="Scholar Logo Image"
-              width={128}
-              height={128}
-              className="h-full w-full ml-4 rounded-full"
+              src="/images/scholar-logo-no-bg.png"
+              alt="Scholar Logo"
+              width={1000}
+              height={1000}
             />
           </div>
-          <div class="block lg:hidden"></div>
-          <div class="hidden lg:block">
-            <ul class="inline-flex">
+          <div className="flex">
+            <ul className="flex gap-12 text-white">
               <li>
-                <button
-                  class="px-4 font-bold bg-sky-300 h-full p-3 rounded-md"
-                  href="/"
+                <Link href="/dashboard">Features</Link>
+              </li>
+              <li>
+                <Link href="/dashboard">Pricing</Link>
+              </li>
+            </ul>
+          </div>
+          <div className="hidden lg:block">
+            <ul className="flex">
+              <li>
+                <Link
+                  className="px-4 font-bold bg-sky-300 h-full p-3 rounded-md text-black"
+                  href="/login"
                 >
-                  Sign In
-                </button>
+                  Sign Up
+                </Link>
               </li>
             </ul>
           </div>
