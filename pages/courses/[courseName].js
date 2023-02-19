@@ -1,9 +1,13 @@
 import CourseDetails from "@/components/CourseDetails/CourseDetails";
+import Head from "next/head";
 import { MongoClient } from "mongodb";
 
 const CourseDetailsPage = ({ courseData }) => {
   return (
     <>
+      <Head>
+        <title>Scholar - Course - {courseData.name}</title>
+      </Head>
       <div className="h-full w-full">
         <CourseDetails courseData={courseData} />
       </div>
@@ -12,9 +16,7 @@ const CourseDetailsPage = ({ courseData }) => {
 };
 
 export const getStaticPaths = async () => {
-  const client = await MongoClient.connect(
-    "mongodb+srv://ScholarAdmin:zwPJO9oMHGxJ4u0u@scholar-cluster.c8ih0h2.mongodb.net/?retryWrites=true&w=majority"
-  );
+  const client = await MongoClient.connect(process.env.NEXT_PUBLIC_DB_URL);
 
   const db = client.db();
 
@@ -25,7 +27,7 @@ export const getStaticPaths = async () => {
   return {
     fallback: "blocking",
     paths: courses.map((course) => ({
-      params: { courseName: course._id.toString() },
+      params: { courseName: course.courseName },
     })),
   };
 };
