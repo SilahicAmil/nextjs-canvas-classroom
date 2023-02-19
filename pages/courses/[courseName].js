@@ -6,7 +6,7 @@ const CourseDetailsPage = ({ courseData }) => {
   return (
     <>
       <Head>
-        <title>Scholar - Course - {courseData.name}</title>
+        <title>Scholar - Course: {courseData.name}</title>
       </Head>
       <div className="h-full w-full">
         <CourseDetails courseData={courseData} />
