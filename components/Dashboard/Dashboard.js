@@ -28,7 +28,7 @@ const Dashboard = ({ courseData }) => {
               {courseData.map((card) => {
                 return (
                   <DashboardCard
-                    key={card.id}
+                    key={card.courseId}
                     courseName={card.courseName}
                     description={card.description}
                     tag={card.tag}
