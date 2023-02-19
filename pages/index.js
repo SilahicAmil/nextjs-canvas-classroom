@@ -10,7 +10,7 @@ const HomePage = ({}) => {
       <Head>
         <title>Scholar - #1 Educator Platform </title>
       </Head>
-      <div className="font-lato">
+      <div className="font-lato w-full">
         <LandingHeader />
         <LandingHero />
         <LandingContent />

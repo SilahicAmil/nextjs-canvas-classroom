@@ -11,8 +11,12 @@ const LandingHero = ({}) => {
             Connecting educators and students since 2023.
           </h3>
         </div>
-        <div className=" invisible lg:flex lg:h-full lg:visible">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <div className="w-full invisible lg:flex lg:h-full lg:visible bg-gradient-to-l from-sky-600 to-sky-400">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1440 320"
+            className="w-full"
+          >
             <path
               fill="#A2D9FF"
               fill-opacity="1"

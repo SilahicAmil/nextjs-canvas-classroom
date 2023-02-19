@@ -3,7 +3,10 @@ import Image from "next/image";
 const LandingContent = ({}) => {
   return (
     <>
-      <section className="container mx-auto px-6 p-10 z-50" id="who-we-help">
+      <section
+        className="container w-screen mx-auto px-6 p-10 z-50"
+        id="who-we-help"
+      >
         <h2 className="text-3xl tracking-wide font-bold text-center text-gray-800 mb-12">
           WHO WE HELP
         </h2>
