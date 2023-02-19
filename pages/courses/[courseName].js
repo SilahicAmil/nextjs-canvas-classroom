@@ -21,7 +21,7 @@ export const getStaticPaths = async () => {
   const courses = await coursesCollection.find({}, { _id: 1 }).toArray();
 
   return {
-    fallback: "blocking",
+    fallback: false,
     paths: courses.map((course) => ({
       params: { courseName: course._id.toString() },
     })),
@@ -30,7 +30,6 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async (context) => {
   const courseName = context.params.courseName;
-  console.log("course ID", courseName);
 
   const client = await MongoClient.connect(process.env.NEXT_PUBLIC_DB_URL);
 
