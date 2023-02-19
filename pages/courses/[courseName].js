@@ -12,7 +12,9 @@ const CourseDetailsPage = ({ courseData }) => {
 };
 
 export const getStaticPaths = async () => {
-  const client = await MongoClient.connect(process.env.NEXT_PUBLIC_DB_URL);
+  const client = await MongoClient.connect(
+    "mongodb+srv://ScholarAdmin:zwPJO9oMHGxJ4u0u@scholar-cluster.c8ih0h2.mongodb.net/?retryWrites=true&w=majority"
+  );
 
   const db = client.db();
 
