@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { HiEllipsisVertical } from "react-icons/hi2";
 import Link from "next/link";
 
-const DashboardCard = ({ courseName, snippet, department, courseLink }) => {
+const DashboardCard = ({ courseName, description, tag }) => {
   const [colorChanger, setColorChanger] = useState("");
 
   useEffect(() => {
@@ -29,13 +29,13 @@ const DashboardCard = ({ courseName, snippet, department, courseLink }) => {
         </div>
         <div className="card-body w-full">
           <h2 className="text-xl gap-2 flex items-center">
-            <Link href={`/courses/${courseLink}`} className="underline">
+            <Link href={`/courses/${courseName}`} className="underline">
               {courseName}
             </Link>
-            <div className="badge badge-primary">{department}</div>
+            <div className="badge badge-primary flex items-center">{tag}</div>
           </h2>
           <div className="text-sm">
-            <p className="">{snippet}</p>
+            <p className="">{description}</p>
           </div>
         </div>
       </div>

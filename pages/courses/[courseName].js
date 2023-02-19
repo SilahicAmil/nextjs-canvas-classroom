@@ -32,9 +32,7 @@ export const getStaticProps = async (context) => {
   const courseName = context.params.courseName;
   console.log("course ID", courseName);
 
-  const client = await MongoClient.connect(
-    "mongodb+srv://ScholarAdmin:zwPJO9oMHGxJ4u0u@scholar-cluster.c8ih0h2.mongodb.net/?retryWrites=true&w=majority"
-  );
+  const client = await MongoClient.connect(process.env.NEXT_PUBLIC_DB_URL);
 
   const db = client.db();
 

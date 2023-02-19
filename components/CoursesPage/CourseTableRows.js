@@ -3,7 +3,7 @@ import Link from "next/link";
 const CourseTableRows = ({ courseData }) => {
   return courseData.map((course) => {
     return (
-      <tr className="border-b" key={course.id}>
+      <tr className="border-b" key={course.courseId}>
         <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 ">
           <Link href={`/courses/${course.courseName}`}>
             {course.courseName}

@@ -31,7 +31,7 @@ const CourseDetails = ({ courseData }) => {
         </div>
 
         <div className="flex gap-12 flex-1  m-auto h-full w-full">
-          <aside className="flex flex-2 shadow-xl h-96 items-center border border-black">
+          {/* <aside className="flex flex-2 shadow-xl h-96 items-center border border-black">
             <nav>
               <ul className="flex text-white flex-col gap-8 w-32 items-center ">
                 <li className=" text-[#60A8D0]">Home</li>
@@ -40,7 +40,7 @@ const CourseDetails = ({ courseData }) => {
                 <li className="text-[#60A8D0]">People</li>
               </ul>
             </nav>
-          </aside>
+          </aside> */}
           <div className=" flex-1 flex flex-col h-full ">
             <ModuleCard />
           </div>

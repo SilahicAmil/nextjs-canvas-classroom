@@ -1,5 +1,7 @@
 import { HiEllipsisVertical } from "react-icons/hi2";
 
+// create this into SampleModuleContent component
+// and create another copy of this for real modules
 const ModuleContent = ({}) => {
   return (
     <>
