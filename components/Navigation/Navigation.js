@@ -18,6 +18,11 @@ const Navigation = ({ children }) => {
     setOpenDrawer((prevState) => !prevState);
   };
 
+  let randomWord = Math.random()
+    .toString(36)
+    .replace(/[^a-z]+/g, "")
+    .substr(0, 5);
+
   return (
     <>
       <div className="flex h-screen">
@@ -46,7 +51,7 @@ const Navigation = ({ children }) => {
                     <Avatar
                       size={40}
                       variant="beam"
-                      name="account avatar"
+                      name={randomWord}
                       square={false}
                       colors={[
                         "#92A1C6",

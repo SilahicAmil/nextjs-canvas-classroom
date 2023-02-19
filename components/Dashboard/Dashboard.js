@@ -19,7 +19,7 @@ const Dashboard = ({ courseData }) => {
         <div className="m-6">
           <div className="mb-2">
             <h1 className="text-2xl">
-              Published Courses ({DUMMY_DATA.length})
+              Published Courses ({courseData.length})
             </h1>
           </div>
           <hr className="w-11/12" />

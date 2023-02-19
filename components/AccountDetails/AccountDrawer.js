@@ -8,6 +8,11 @@ const AccountDrawer = ({}) => {
     router.push("/login");
   };
 
+  let randomWord = Math.random()
+    .toString(36)
+    .replace(/[^a-z]+/g, "")
+    .substr(0, 5);
+
   return (
     <>
       <div className="drawer font-lato">
@@ -17,7 +22,7 @@ const AccountDrawer = ({}) => {
               <Avatar
                 size={40}
                 variant="beam"
-                name="account avatar"
+                name={randomWord}
                 square={false}
                 colors={["#92A1C6", "#146A7C", "#F0AB3D", "#C271B4", "#C20D90"]}
               />

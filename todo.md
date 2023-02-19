@@ -19,10 +19,13 @@ description: lorem ipsums
 published: True
 term: "2023-2024" -->
 
+<!-- -- Fetch DB Data for Dashboard -->
+<!-- -- Update routing for the courses/[course-name] -->
+
+<!-- ---------------------------------TODO BELOW--------------------------------- -->
+
 -- Form shouldn't allow for spaces in the name only "-" between words (makes routing look nicer)
 
--- Fetch DB Data for Dashboard
--- Update routing for the courses/[course-name]
 -- Show default initial sample module as first module
 -- Subsequent modules will be the DB ones
 
