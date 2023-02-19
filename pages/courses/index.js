@@ -2,7 +2,7 @@ import Courses from "@/components/CoursesPage/Courses";
 import Head from "next/head";
 import { MongoClient } from "mongodb";
 
-const CoursesPage = ({ course }) => {
+const CoursesPage = ({ courseData }) => {
   const addNewCourseHandler = async (enteredCourseData) => {
     const response = await fetch("/api/create-course", {
       method: "POST",
@@ -22,7 +22,7 @@ const CoursesPage = ({ course }) => {
         <title>Scholar - Courses</title>
       </Head>
       <div className="w-full h-full">
-        <Courses onAddCourse={addNewCourseHandler} courseData={course} />
+        <Courses onAddCourse={addNewCourseHandler} courseData={courseData} />
       </div>
     </>
   );
@@ -41,10 +41,10 @@ export const getStaticProps = async () => {
 
   return {
     props: {
-      course: courses.map((course) => ({
+      courseData: courses.map((course) => ({
         courseName: course.courseName,
         term: course.term,
-        id: course._id.toString(),
+        courseId: course._id.toString(),
       })),
     },
     revalidate: 3600,

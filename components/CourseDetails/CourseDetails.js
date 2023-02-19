@@ -5,7 +5,7 @@ import ModuleModal from "./ModuleModal/ModuleModal";
 import { createPortal } from "react-dom";
 import { useState } from "react";
 
-const CourseDetails = ({}) => {
+const CourseDetails = ({ courseData }) => {
   const [openModal, setOpenModal] = useState(false);
 
   return (
@@ -15,10 +15,10 @@ const CourseDetails = ({}) => {
           openModal ? "opacity-50 pointer-events-none" : "opacity-100"
         }`}
       >
-        <div className="ml-12 flex mb-6">
-          {/* eventually update name dynamically */}
-          <Header>Course: Intro to Science</Header>
-
+        <div className="ml-12 flex mb-6 gap-4 items-center">
+          <Header>Course: {courseData.name}</Header>
+          <span className="text-lg ">&gt;</span>
+          <span className="text-lg"> {courseData.term}</span>
           <button
             className="bg-green-300 flex items-center justify-center ml-auto w-32 p-2 rounded-lg gap-4 text-md"
             onClick={() => setOpenModal(true)}
@@ -42,8 +42,6 @@ const CourseDetails = ({}) => {
             </nav>
           </aside>
           <div className=" flex-1 flex flex-col h-full ">
-            <ModuleCard />
-            <ModuleCard />
             <ModuleCard />
           </div>
 
