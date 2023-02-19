@@ -23,7 +23,7 @@ export const getStaticPaths = async () => {
   const courses = await coursesCollection.find({}, { _id: 1 }).toArray();
 
   return {
-    fallback: false,
+    fallback: "blocking",
     paths: courses.map((course) => ({
       params: { courseName: course._id.toString() },
     })),
