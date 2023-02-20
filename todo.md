@@ -29,15 +29,9 @@ term: "2023-2024" -->
 -- Show default initial sample module as first module
 -- Subsequent modules will be the DB ones
 
--- Implement mongoDB update course with module and attach files in there
-something like. moduleCreate will upset or insert idk which one yet into the above course
-based off of object ID. this way makes it easier for it to be mapped over
-all have to do is modules.map() or for module in modules
+-- Use S3 for the files - File structure something like below
 
-modules: [
-Intro: file1.pdf
-Module 3: [file1.pdf, file2.pdf ...]
-]
+-- Bucket-> Modules-> ModuleName-> FileData
 
 -- Figure out auth with next auth
 -- Add Hooks
