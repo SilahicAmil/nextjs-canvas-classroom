@@ -14,7 +14,7 @@ const helper = async (req, res) => {
       const options = { upsert: false };
 
       const updateDoc = {
-        $set: {
+        $push: {
           modules: data.moduleName,
         },
       };
