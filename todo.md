@@ -52,10 +52,10 @@ term: "2023-2024" -->
 - Able to Login as a Teacher or Student and switch modes
 - Able to create student acount
 - Able to create a course as a teacher
-- Within the course have the ability to upload modules (as a teacher)
+- Within the course have the ability to add/delete modules (as a teacher)
 - Students can view the courses and enroll into it
 - Student can only download files from modules and cant edit the course/create any
-- Ability for two way messaging between students and teachers - kind of like and email
-- Calendar should show dates when modules are due
+- Ability for two way messaging between students and teachers - kind of like an email
+- Calendar should be modifiable by students to organize their time
 - Able to publish/unpublish courses
 - Minimum 3 Courses that are always there and unable to be deleted
