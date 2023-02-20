@@ -1,6 +1,9 @@
 import { useRef, useState } from "react";
 
+import { useRouter } from "next/router";
+
 const ModuleModal = ({ children, onAddModule, courseData }) => {
+  const router = useRouter();
   const moduleNameRef = useRef();
   const inputFileRef = useRef();
 
@@ -14,6 +17,8 @@ const ModuleModal = ({ children, onAddModule, courseData }) => {
       fileData: inputFileRefValue,
       courseName: courseData.name,
     });
+
+    router.push(`/courses/${courseData.name}`);
   };
 
   return (

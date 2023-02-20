@@ -27,17 +27,17 @@ const DashboardCard = ({ courseName, description, tag }) => {
             <HiEllipsisVertical className="text-white" />
           </button>
         </div>
-        <div className="card-body w-full">
+        <div className="card-body h-full  overflow-hidden">
           <h2 className="text-xl gap-2 flex items-center">
-            <Link href={`/courses/${courseName}`} className="underline">
+            <Link href={`/courses/${courseName}`} className="underline w-full">
               {courseName}
             </Link>
-            <div className="badge badge-primary flex w-1/3 items-center h-full">
-              {tag}
+            <div className="badge badge-primary flex items-center h-fit">
+              <span className="text-sm">{tag}</span>
             </div>
           </h2>
-          <div className="text-sm">
-            <p className="">{description}</p>
+          <div className="">
+            <p className="text-sm">{description}</p>
           </div>
         </div>
       </div>

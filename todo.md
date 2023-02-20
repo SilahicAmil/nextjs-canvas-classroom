@@ -29,9 +29,9 @@ term: "2023-2024" -->
 -- Show default initial sample module as first module
 -- Subsequent modules will be the DB ones
 
--- Use S3 for the files - File structure something like below
+-- Use Supabase for the files - File structure something like below
 
--- Bucket-> Modules-> ModuleName-> FileData
+-- modules -> courseName -> moduleName -> fileData
 
 -- Figure out auth with next auth
 -- Add Hooks
