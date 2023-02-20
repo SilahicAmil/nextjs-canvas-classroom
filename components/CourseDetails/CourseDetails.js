@@ -5,7 +5,7 @@ import ModuleModal from "./ModuleModal/ModuleModal";
 import { createPortal } from "react-dom";
 import { useState } from "react";
 
-const CourseDetails = ({ courseData }) => {
+const CourseDetails = ({ courseData, onAddModule }) => {
   const [openModal, setOpenModal] = useState(false);
 
   return (
@@ -42,7 +42,7 @@ const CourseDetails = ({ courseData }) => {
             </nav>
           </aside> */}
           <div className=" flex-1 flex flex-col h-full ">
-            <ModuleCard />
+            <ModuleCard courseData={courseData} />
           </div>
 
           <div className="flex flex-col h-96 flex-3 items-center gap-4 bg-red-300 w-64 text-xl">
@@ -62,7 +62,7 @@ const CourseDetails = ({ courseData }) => {
       </div>
       {openModal &&
         createPortal(
-          <ModuleModal>
+          <ModuleModal onAddModule={onAddModule} courseData={courseData}>
             <button onClick={() => setOpenModal(false)}>Close</button>
           </ModuleModal>,
           document.getElementById("module-modal")

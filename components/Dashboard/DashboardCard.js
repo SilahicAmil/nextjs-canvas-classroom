@@ -32,7 +32,9 @@ const DashboardCard = ({ courseName, description, tag }) => {
             <Link href={`/courses/${courseName}`} className="underline">
               {courseName}
             </Link>
-            <div className="badge badge-primary flex items-center">{tag}</div>
+            <div className="badge badge-primary flex w-1/3 items-center h-full">
+              {tag}
+            </div>
           </h2>
           <div className="text-sm">
             <p className="">{description}</p>

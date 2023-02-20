@@ -2,6 +2,19 @@ import CourseDetails from "@/components/CourseDetails/CourseDetails";
 import Head from "next/head";
 import { MongoClient } from "mongodb";
 
+const addNewModuleHandler = async (enteredModuleName) => {
+  const result = await fetch("/api/add-module", {
+    method: "PUT",
+    body: JSON.stringify(enteredModuleName),
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+
+  const data = await result.json();
+  console.log(data);
+};
+
 const CourseDetailsPage = ({ courseData }) => {
   return (
     <>
@@ -9,7 +22,10 @@ const CourseDetailsPage = ({ courseData }) => {
         <title>Scholar - Course: {courseData.name}</title>
       </Head>
       <div className="h-full w-full">
-        <CourseDetails courseData={courseData} />
+        <CourseDetails
+          courseData={courseData}
+          onAddModule={addNewModuleHandler}
+        />
       </div>
     </>
   );
@@ -25,7 +41,7 @@ export const getStaticPaths = async () => {
   const courses = await coursesCollection.find({}, { _id: 1 }).toArray();
 
   return {
-    fallback: "blocking",
+    fallback: false,
     paths: courses.map((course) => ({
       params: { courseName: course.courseName },
     })),
@@ -54,7 +70,9 @@ export const getStaticProps = async (context) => {
         name: selectedCourse.courseName,
         description: selectedCourse.description,
         term: selectedCourse.term,
+        modules: selectedCourse.modules,
       },
+      moduleData: {},
     },
   };
 };
