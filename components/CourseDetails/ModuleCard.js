@@ -3,7 +3,7 @@ import { AiOutlineDelete, AiOutlinePlus } from "react-icons/ai";
 import ModuleContent from "./ModuleContent";
 import { useState } from "react";
 
-const ModuleCard = ({ courseData }) => {
+const ModuleCard = ({ moduleName, moduleFiles }) => {
   const [openContent, setOpenContent] = useState(true);
   const [moduleList, setModuleList] = useState([]);
 
@@ -34,7 +34,9 @@ const ModuleCard = ({ courseData }) => {
               &gt;
             </div>
           )}
-          <h1 className="ml-8 text-2xl mr-auto">{courseData.modules}</h1>
+          <h1 className="ml-8 text-2xl mr-auto">
+            {moduleName ? moduleName : "Sample Module"}
+          </h1>
           <div className="flex gap-8 items-center justify-center h-full ">
             {/* when clicking plus here it should upload the files to the related db module folder name  */}
             <button className="">

@@ -2,13 +2,16 @@ import { useRef, useState } from "react";
 
 const ModuleModal = ({ children, onAddModule, courseData }) => {
   const moduleNameRef = useRef();
+  const inputFileRef = useRef();
 
   const moduleNameHandler = (e) => {
     e.preventDefault();
     const moduleNameRefValue = moduleNameRef.current.value;
+    const inputFileRefValue = inputFileRef.current.files[0];
 
     onAddModule({
       moduleName: moduleNameRefValue,
+      fileData: inputFileRefValue,
       courseName: courseData.name,
     });
   };
@@ -19,7 +22,8 @@ const ModuleModal = ({ children, onAddModule, courseData }) => {
         <form className="flex flex-col" onSubmit={moduleNameHandler}>
           <label htmlFor="name">Module Name:</label>
           <input type="text" ref={moduleNameRef} />
-
+          <label htmlFor="File Input">File Input</label>
+          <input type="file" ref={inputFileRef} />
           <button type="submit">Submit</button>
         </form>
         {children}

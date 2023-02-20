@@ -15,7 +15,7 @@ const helper = async (req, res) => {
 
       const updateDoc = {
         $push: {
-          modules: data.moduleName,
+          modules: { moduleName: data.moduleName, fileData: data.fileData },
         },
       };
 

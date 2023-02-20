@@ -72,7 +72,6 @@ export const getStaticProps = async (context) => {
         term: selectedCourse.term,
         modules: selectedCourse.modules,
       },
-      moduleData: {},
     },
   };
 };

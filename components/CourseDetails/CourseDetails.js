@@ -7,6 +7,7 @@ import { useState } from "react";
 
 const CourseDetails = ({ courseData, onAddModule }) => {
   const [openModal, setOpenModal] = useState(false);
+  const [moduleData, setModuleData] = useState(courseData.modules);
 
   return (
     <>
@@ -42,7 +43,15 @@ const CourseDetails = ({ courseData, onAddModule }) => {
             </nav>
           </aside> */}
           <div className=" flex-1 flex flex-col h-full ">
-            <ModuleCard courseData={courseData} />
+            {moduleData.map((module, idx) => {
+              return (
+                <ModuleCard
+                  key={idx}
+                  moduleName={module.moduleName}
+                  moduleFiles={module.fileData}
+                />
+              );
+            })}
           </div>
 
           <div className="flex flex-col h-96 flex-3 items-center gap-4 bg-red-300 w-64 text-xl">
