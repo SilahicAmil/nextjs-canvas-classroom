@@ -12,6 +12,7 @@ const ModuleModal = ({ children, onAddModule, courseData }) => {
     e.preventDefault();
     const moduleNameRefValue = moduleNameRef.current.value;
     const inputFileRefValue = inputFileRef.current.files[0];
+    const inputFileName = inputFileRef.current.files[0].name;
 
     // onAddModule({
     //   moduleName: moduleNameRefValue,
@@ -22,7 +23,7 @@ const ModuleModal = ({ children, onAddModule, courseData }) => {
     const { data, error } = await supabase.storage
       .from("modules")
       .upload(
-        `${courseData.name}/${moduleNameRefValue}/data`,
+        `${courseData.name}/${moduleNameRefValue}/${inputFileName}`,
         inputFileRefValue
       );
 
