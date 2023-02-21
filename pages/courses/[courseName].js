@@ -1,6 +1,7 @@
 import CourseDetails from "@/components/CourseDetails/CourseDetails";
 import Head from "next/head";
 import { MongoClient } from "mongodb";
+import { useState } from "react";
 
 const addNewModuleHandler = async (enteredModuleName) => {
   const result = await fetch("/api/add-module", {
@@ -15,7 +16,19 @@ const addNewModuleHandler = async (enteredModuleName) => {
   console.log(data);
 };
 
+const downloadFileHandler = async () => {
+  const result = await fetch("/api/fetch-file", {
+    method: "GET",
+  });
+
+  const data = await result.json();
+
+  console.log(data);
+  setFileData(data);
+};
+
 const CourseDetailsPage = ({ courseData }) => {
+  const [fileData, setFileData] = useState();
   return (
     <>
       <Head>
@@ -27,6 +40,11 @@ const CourseDetailsPage = ({ courseData }) => {
           onAddModule={addNewModuleHandler}
         />
       </div>
+      <button onClick={downloadFileHandler}>
+        <a href={fileData} download>
+          Download
+        </a>
+      </button>
     </>
   );
 };

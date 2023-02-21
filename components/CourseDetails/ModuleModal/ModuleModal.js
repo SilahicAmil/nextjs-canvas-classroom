@@ -1,5 +1,6 @@
 import { useRef, useState } from "react";
 
+import { supabase } from "@/lib/supabaseClient";
 import { useRouter } from "next/router";
 
 const ModuleModal = ({ children, onAddModule, courseData }) => {
@@ -7,16 +8,23 @@ const ModuleModal = ({ children, onAddModule, courseData }) => {
   const moduleNameRef = useRef();
   const inputFileRef = useRef();
 
-  const moduleNameHandler = (e) => {
+  const moduleNameHandler = async (e) => {
     e.preventDefault();
     const moduleNameRefValue = moduleNameRef.current.value;
     const inputFileRefValue = inputFileRef.current.files[0];
 
-    onAddModule({
-      moduleName: moduleNameRefValue,
-      fileData: inputFileRefValue,
-      courseName: courseData.name,
-    });
+    // onAddModule({
+    //   moduleName: moduleNameRefValue,
+    //   fileData: inputFileRefValue,
+    //   courseName: courseData.name,
+    // });
+
+    const { data, error } = await supabase.storage
+      .from("modules")
+      .upload(
+        `${courseData.name}/${moduleNameRefValue}/data`,
+        inputFileRefValue
+      );
 
     router.push(`/courses/${courseData.name}`);
   };
@@ -31,6 +39,7 @@ const ModuleModal = ({ children, onAddModule, courseData }) => {
           <input type="file" ref={inputFileRef} />
           <button type="submit">Submit</button>
         </form>
+
         {children}
       </div>
     </>

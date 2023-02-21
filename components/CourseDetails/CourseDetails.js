@@ -9,7 +9,7 @@ const CourseDetails = ({ courseData, onAddModule }) => {
   const [openModal, setOpenModal] = useState(false);
   const [moduleData, setModuleData] = useState(courseData.modules);
 
-  console.log(moduleData.fileData);
+  // console.log(moduleData.fileData);
 
   return (
     <>

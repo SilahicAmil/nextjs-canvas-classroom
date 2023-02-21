@@ -1,8 +1,23 @@
 import { HiEllipsisVertical } from "react-icons/hi2";
+import Link from "next/link";
+import { supabase } from "@/lib/supabaseClient";
+import { useState } from "react";
 
 // create this into SampleModuleContent component
 // and create another copy of this for real modules
 const ModuleContent = ({}) => {
+  const [downloadFile, setDownloadFile] = useState("");
+
+  const downloadFileHandler = async () => {
+    const { data, error } = await supabase.storage
+      .from("modules")
+      .getPublicUrl("Math-101/Module-8/data");
+
+    console.log(data);
+    console.log(error);
+    setDownloadFile(data["publicUrl"]);
+  };
+
   return (
     <>
       <div className="flex gap-4 bg-[#FEFFFE] h-16 items-center shadow-2xl border-t border-black w-full">
@@ -27,8 +42,13 @@ const ModuleContent = ({}) => {
           <p className="text-xl">First Assignment</p>
           {/* if student show download button */}
           <div className="flex ml-auto items-center gap-4 mr-6 ">
-            <button className="h-1/2 bg-blue-100 p-2 flex items-center rounded-md">
-              Download
+            <button
+              className="h-1/2 bg-blue-100 p-2 flex items-center rounded-md"
+              onClick={downloadFileHandler}
+            >
+              <Link href={downloadFile} target="_blank" download>
+                Download
+              </Link>
             </button>
             {/* if teacher show edit/remove dropdown */}
             <span>
