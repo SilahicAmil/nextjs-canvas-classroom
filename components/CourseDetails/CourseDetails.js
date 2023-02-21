@@ -5,7 +5,7 @@ import ModuleModal from "./ModuleModal/ModuleModal";
 import { createPortal } from "react-dom";
 import { useState } from "react";
 
-const CourseDetails = ({ courseData, onAddModule }) => {
+const CourseDetails = ({ courseData }) => {
   const [openModal, setOpenModal] = useState(false);
   const [moduleData, setModuleData] = useState(courseData.modules);
 
@@ -34,16 +34,6 @@ const CourseDetails = ({ courseData, onAddModule }) => {
         </div>
 
         <div className="flex gap-12 flex-1  m-auto h-full w-full">
-          {/* <aside className="flex flex-2 shadow-xl h-96 items-center border border-black">
-            <nav>
-              <ul className="flex text-white flex-col gap-8 w-32 items-center ">
-                <li className=" text-[#60A8D0]">Home</li>
-                <li className="text-[#60A8D0]">Modules</li>
-                <li className="text-[#60A8D0]">Syllabus</li>
-                <li className="text-[#60A8D0]">People</li>
-              </ul>
-            </nav>
-          </aside> */}
           <div className=" flex-1 flex flex-col h-full ">
             {moduleData.map((module, idx) => {
               return (
@@ -73,7 +63,7 @@ const CourseDetails = ({ courseData, onAddModule }) => {
       </div>
       {openModal &&
         createPortal(
-          <ModuleModal onAddModule={onAddModule} courseData={courseData}>
+          <ModuleModal courseData={courseData}>
             <button onClick={() => setOpenModal(false)}>Close</button>
           </ModuleModal>,
           document.getElementById("module-modal")

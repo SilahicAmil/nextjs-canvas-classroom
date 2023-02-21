@@ -3,7 +3,7 @@ import { useRef, useState } from "react";
 import { supabase } from "@/lib/supabaseClient";
 import { useRouter } from "next/router";
 
-const ModuleModal = ({ children, onAddModule, courseData }) => {
+const ModuleModal = ({ children, courseData }) => {
   const router = useRouter();
   const moduleNameRef = useRef();
   const inputFileRef = useRef();
@@ -13,12 +13,6 @@ const ModuleModal = ({ children, onAddModule, courseData }) => {
     const moduleNameRefValue = moduleNameRef.current.value;
     const inputFileRefValue = inputFileRef.current.files[0];
     const inputFileName = inputFileRef.current.files[0].name;
-
-    // onAddModule({
-    //   moduleName: moduleNameRefValue,
-    //   fileData: inputFileRefValue,
-    //   courseName: courseData.name,
-    // });
 
     const { data, error } = await supabase.storage
       .from("modules")
