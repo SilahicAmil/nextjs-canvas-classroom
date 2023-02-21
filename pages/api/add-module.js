@@ -1,32 +1,42 @@
 import { MongoClient } from "mongodb";
+import { supabase } from "@/lib/supabaseClient";
 
 const helper = async (req, res) => {
   if (req.method === "PUT") {
     try {
-      const data = req.body;
-      const client = await MongoClient.connect(process.env.NEXT_PUBLIC_DB_URL);
+      const compData = req.body;
 
-      const db = client.db();
+      const { data, error } = await supabase.storage
+        .from("modules")
+        .upload(
+          `${compData.courseName}/${compData.moduleName}`,
+          compData.fileData
+        );
 
-      const coursesCollection = db.collection("courses");
+      //   const client = await MongoClient.connect(process.env.NEXT_PUBLIC_DB_URL);
 
-      const filter = { courseName: data.courseName };
-      const options = { upsert: false };
+      //   const db = client.db();
 
-      const updateDoc = {
-        $push: {
-          modules: { moduleName: data.moduleName, fileData: data.fileData },
-        },
-      };
+      //   const coursesCollection = db.collection("courses");
 
-      const result = await coursesCollection.updateOne(
-        filter,
-        updateDoc,
-        options
-      );
+      //   const filter = { courseName: data.courseName };
+      //   const options = { upsert: false };
 
-      console.log(result);
-      client.close();
+      //   const updateDoc = {
+      //     $push: {
+      //       modules: [...data],
+      //     },
+      //   };
+
+      //   const result = await coursesCollection.updateOne(
+      //     filter,
+      //     updateDoc,
+      //     options
+      //   );
+
+      console.log(data);
+      console.log(error);
+      //   client.close();
       //   res.status(201).json({ message: "data posted", result });
     } catch (error) {
       console.log(error);

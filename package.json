@@ -11,6 +11,7 @@
   "dependencies": {
     "@boringer-avatars/react": "^0.1.0",
     "@next/font": "13.1.4",
+    "@supabase/supabase-js": "^2.8.0",
     "@tabler/icons": "^1.119.0",
     "daisyui": "^2.49.0",
     "eslint": "8.32.0",
