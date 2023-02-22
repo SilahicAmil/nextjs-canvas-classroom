@@ -1,17 +1,40 @@
 import { AiOutlineDelete, AiOutlinePlus } from "react-icons/ai";
+import { useRef, useState } from "react";
 
 import ModuleContent from "./ModuleContent";
-import { useState } from "react";
+import { supabase } from "@/lib/supabaseClient";
+import { useRouter } from "next/router";
 
-const ModuleCard = ({ moduleName }) => {
+const ModuleCard = ({ moduleName, courseData }) => {
   const [openContent, setOpenContent] = useState(true);
+  const fileRef = useRef();
+  const router = useRouter();
 
   const openContentHandler = () => {
     setOpenContent((prevState) => !prevState);
   };
 
   // HANDLE SUPBASE UPLOAD HERE
+
+  const supabaseFileUploadHndler = async (e) => {
+    e.preventDefault();
+    const fileRefValue = fileRef.current.files[0];
+    const fileRefName = fileRef.current.files[0].name;
+
+    const { data, error } = await supabase.storage
+      .from("modules")
+      .upload(`${courseData.name}/${moduleName}/${fileRefName}`, fileRefValue, {
+        cacheControl: "3600",
+        upsert: false,
+      });
+
+    console.log(data);
+
+    router.push(`/courses/${courseData.name}`);
+  };
+
   // HANDLE DOWNLOAD HERE ALSO - PASS PROPS TO MODULE CONTENT
+  // List all items in courseData.name bucket and download that way
 
   return (
     <>
@@ -37,9 +60,15 @@ const ModuleCard = ({ moduleName }) => {
           </h1>
           <div className="flex gap-8 items-center justify-center h-full ">
             {/* when clicking plus here it should upload the files to the related db module folder name  */}
-            <button className="">
-              <AiOutlinePlus className="text-white text-xl" />
-            </button>
+            <form
+              className="flex items-center"
+              onSubmit={supabaseFileUploadHndler}
+            >
+              <input type="file" ref={fileRef} />
+              <button className="" type="submit">
+                <AiOutlinePlus className="text-white text-xl" />
+              </button>
+            </form>
 
             <button className="mr-6">
               <AiOutlineDelete className="text-xl text-white" />
