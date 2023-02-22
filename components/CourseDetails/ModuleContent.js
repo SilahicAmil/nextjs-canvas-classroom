@@ -1,19 +1,8 @@
 import { HiEllipsisVertical } from "react-icons/hi2";
 import Link from "next/link";
 import ModuleItem from "./ModuleItem";
-import { supabase } from "@/lib/supabaseClient";
-import { useState } from "react";
 
-// create this into SampleModuleContent component
-// and create another copy of this for real modules
-const ModuleContent = ({
-  courseData,
-  moduleName,
-
-  fileName,
-}) => {
-  const [downloadFile, setDownloadFile] = useState("");
-
+const ModuleContent = ({ courseData, moduleName, fileName }) => {
   if (fileName.length === 0) {
     return (
       <p className="h-16 text-lg flex items-center justify-center">
@@ -30,9 +19,8 @@ const ModuleContent = ({
           <p className="text-xl text-gray-400">
             A module is typically one unit or one week of content.
           </p>
-          {/* if student show download button */}
+
           <div className="flex ml-auto items-center gap-4 mr-6">
-            {/* if teacher show edit/remove dropdown */}
             <span>
               <HiEllipsisVertical className="text-2xl" />
             </span>

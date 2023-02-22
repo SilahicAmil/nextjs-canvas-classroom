@@ -2,7 +2,6 @@ import { AiOutlineDelete, AiOutlinePlus } from "react-icons/ai";
 import { useEffect, useRef, useState } from "react";
 
 import ModuleContent from "./ModuleContent";
-import ModuleItem from "./ModuleItem";
 import { supabase } from "@/lib/supabaseClient";
 import { useRouter } from "next/router";
 
@@ -81,12 +80,12 @@ const ModuleCard = ({ moduleName, courseData }) => {
           )}
           <h1 className="ml-8 text-2xl mr-auto">{moduleName}</h1>
           <div className="flex gap-8 items-center justify-center h-full ">
-            {/* when clicking plus here it should upload the files to the related db module folder name  */}
             <form
               className="flex items-center"
               onSubmit={supabaseFileUploadHandler}
             >
               {/* eventually have this pop up as a modal or something  */}
+              {/* if teacher show this only */}
               <input type="file" ref={fileRef} />
               <button type="submit">
                 <AiOutlinePlus className="text-white text-xl" />

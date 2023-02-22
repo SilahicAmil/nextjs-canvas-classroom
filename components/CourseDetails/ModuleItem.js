@@ -33,7 +33,7 @@ const ModuleItem = ({ name, courseData, moduleName }) => {
               </Link>
             </button>
 
-            {/* if teacher show edit/remove dropdown */}
+            {/* if teacher show remove dropdown */}
             <span>
               <HiEllipsisVertical className="text-2xl" />
             </span>
