@@ -86,12 +86,16 @@ const ModuleCard = ({ moduleName, courseData }) => {
             </button>
           </div>
         </div>
-
+        {/* !isUploading kinda of doesnt make sense
+            basically saying if isUploading is true
+            probably change loading to a string eventually
+            that says "loading", "finished", "error" and etc
+         */}
         {openContent && !isUploading ? (
           <ModuleContent />
         ) : (
-          <p className="flex items-center justify-center text-xl">
-            Uploading File(s)...
+          <p className="flex animate-pulse h-16 items-center justify-center text-xl">
+            Uploading File...
           </p>
         )}
       </div>
