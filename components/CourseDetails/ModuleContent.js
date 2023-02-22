@@ -5,7 +5,7 @@ import { useState } from "react";
 
 // create this into SampleModuleContent component
 // and create another copy of this for real modules
-const ModuleContent = ({}) => {
+const ModuleContent = ({ courseData, moduleName }) => {
   const [downloadFile, setDownloadFile] = useState("");
 
   const downloadFileHandler = async () => {
