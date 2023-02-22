@@ -36,7 +36,7 @@ term: "2023-2024" -->
 -- Create upload module modal or something (not really sure what I want to do with)
 
 -- Figure out auth with next auth
--- Add Hooks
+-- Add Hooks - mainly for the supabase stuf probably
 
 -- Add Calendar component to display assignments due( fetch from supabase probably make a field like DueDate)
 -- Inboxing will probably be the hardest thing (so save best for last lol)
