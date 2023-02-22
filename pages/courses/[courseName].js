@@ -59,6 +59,9 @@ export const getStaticProps = async (context) => {
 
   client.close();
 
+  // use supabase to list all items within the selected module
+  // and pass it to ModuleItem
+
   return {
     props: {
       courseData: {

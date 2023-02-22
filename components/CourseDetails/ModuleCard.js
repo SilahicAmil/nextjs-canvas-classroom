@@ -2,6 +2,7 @@ import { AiOutlineDelete, AiOutlinePlus } from "react-icons/ai";
 import { useRef, useState } from "react";
 
 import ModuleContent from "./ModuleContent";
+import ModuleItem from "./ModuleItem";
 import { supabase } from "@/lib/supabaseClient";
 import { useRouter } from "next/router";
 

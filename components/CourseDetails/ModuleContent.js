@@ -1,5 +1,6 @@
 import { HiEllipsisVertical } from "react-icons/hi2";
 import Link from "next/link";
+import ModuleItem from "./ModuleItem";
 import { supabase } from "@/lib/supabaseClient";
 import { useState } from "react";
 
@@ -8,9 +9,7 @@ import { useState } from "react";
 const ModuleContent = ({ courseData, moduleName, onDownloadFile }) => {
   const [downloadFile, setDownloadFile] = useState("");
 
-  const listFilesHandler = () => {
-    // list all files from moduleName
-    // add to useState and map over for each item
+  const downloadFilesHandler = () => {
     // take the fileName and add pass it to onDownloadFile()
   };
 
@@ -50,6 +49,8 @@ const ModuleContent = ({ courseData, moduleName, onDownloadFile }) => {
           </div>
         </div>
       </div>
+      {/* map over this with the files names */}
+      <ModuleItem />
     </>
   );
 };
