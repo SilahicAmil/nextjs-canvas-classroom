@@ -50,7 +50,7 @@ const ModuleContent = ({ courseData, moduleName, onDownloadFile }) => {
         </div>
       </div>
       {/* map over this with the files names */}
-      <ModuleItem />
+      {/* <ModuleItem /> */}
     </>
   );
 };

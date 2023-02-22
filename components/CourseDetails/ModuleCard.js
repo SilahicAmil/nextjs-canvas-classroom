@@ -1,14 +1,14 @@
 import { AiOutlineDelete, AiOutlinePlus } from "react-icons/ai";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import ModuleContent from "./ModuleContent";
-import ModuleItem from "./ModuleItem";
 import { supabase } from "@/lib/supabaseClient";
 import { useRouter } from "next/router";
 
 const ModuleCard = ({ moduleName, courseData }) => {
   const [openContent, setOpenContent] = useState(true);
   const [isUploading, setIsUploading] = useState(false);
+
   const fileRef = useRef();
   const router = useRouter();
 
@@ -17,11 +17,10 @@ const ModuleCard = ({ moduleName, courseData }) => {
   };
 
   // HANDLE SUPBASE UPLOAD HERE
-  const supabaseFileUploadHndler = async (e) => {
+  const supabaseFileUploadHandler = async (e) => {
     e.preventDefault();
     const fileRefValue = fileRef.current.files[0];
     const fileRefName = fileRef.current.files[0].name;
-    // handle errors eventually and loading
 
     try {
       setIsUploading(true);
@@ -75,7 +74,7 @@ const ModuleCard = ({ moduleName, courseData }) => {
             {/* when clicking plus here it should upload the files to the related db module folder name  */}
             <form
               className="flex items-center"
-              onSubmit={supabaseFileUploadHndler}
+              onSubmit={supabaseFileUploadHandler}
             >
               {/* eventually have this pop up as a modal or something  */}
               <input type="file" ref={fileRef} />

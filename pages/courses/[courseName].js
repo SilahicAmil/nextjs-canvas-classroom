@@ -20,6 +20,7 @@ const CourseDetailsPage = ({ courseData }) => {
       <Head>
         <title>Scholar - Course: {courseData.name}</title>
       </Head>
+
       <div className="h-full w-full">
         <CourseDetails courseData={courseData} onAddModule={addModuleHandler} />
       </div>
@@ -58,10 +59,6 @@ export const getStaticProps = async (context) => {
   });
 
   client.close();
-
-  // use supabase to list all items within the selected module
-  // and pass it to ModuleItem
-  // something like .from("modules").list(`${courseName}/${selectedCourse.modules}`)
 
   return {
     props: {
