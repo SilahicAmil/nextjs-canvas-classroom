@@ -18,6 +18,14 @@ const ModuleContent = ({
     // take the fileName and add pass it to onDownloadFile()
   };
 
+  if (fileName.length === 0) {
+    return (
+      <p className="h-16 text-lg flex items-center justify-center">
+        Files will be displayed here
+      </p>
+    );
+  }
+
   return (
     <>
       <div className="flex gap-4 bg-[#FEFFFE] h-16 items-center shadow-2xl border-t border-black w-full">

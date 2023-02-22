@@ -57,7 +57,6 @@ const ModuleCard = ({ moduleName, courseData }) => {
           sortBy: { column: "name", order: "asc" },
         });
       setFileContent(data);
-      console.log(data);
     };
     fetchFiles();
   }, []);
