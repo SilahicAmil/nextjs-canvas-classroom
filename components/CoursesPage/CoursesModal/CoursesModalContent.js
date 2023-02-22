@@ -20,7 +20,7 @@ const CoursesModalContent = ({ children, onAddCourse }) => {
       description: descriptionRefValue,
       published: true,
       term: "2023-2024",
-      modules: [],
+      modules: [{ moduleName: "Sample Module" }],
     };
 
     e.target.reset();
