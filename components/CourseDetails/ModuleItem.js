@@ -1,9 +1,21 @@
-import { use, useState } from "react";
-
 import { HiEllipsisVertical } from "react-icons/hi2";
 import Link from "next/link";
+import { supabase } from "@/lib/supabaseClient";
+import { useState } from "react";
 
-const ModuleItem = ({ name }) => {
+const ModuleItem = ({ name, courseData, moduleName }) => {
+  const [downloadFileLink, setDownloadFileLink] = useState("");
+
+  const downloadFileHandler = async () => {
+    const { data } = supabase.storage
+      .from("modules")
+      .getPublicUrl(`${courseData.name}/${moduleName}/${name}`, {
+        download: true,
+      });
+    setDownloadFileLink(data["publicUrl"]);
+    console.log(data);
+  };
+
   return (
     <>
       <div className="flex gap-4 bg-[#FEFFFE] h-16 items-center border-black">
@@ -12,8 +24,11 @@ const ModuleItem = ({ name }) => {
           <p className="text-xl">{name ? name : "Please Upload a File"}</p>
           {/* if student show download button */}
           <div className="flex ml-auto items-center gap-4 mr-6 ">
-            <button className="h-1/2 bg-blue-100 p-2 flex items-center rounded-md">
-              <Link href="#" target="_blank" download>
+            <button
+              className="h-1/2 bg-blue-100 p-2 flex items-center rounded-md"
+              onClick={downloadFileHandler}
+            >
+              <Link href={downloadFileLink} target="_blank" download>
                 Download
               </Link>
             </button>

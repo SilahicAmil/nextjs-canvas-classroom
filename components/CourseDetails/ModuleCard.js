@@ -11,8 +11,6 @@ const ModuleCard = ({ moduleName, courseData }) => {
   const [isUploading, setIsUploading] = useState(false);
   const [fileContent, setFileContent] = useState([]);
 
-  console.log("file content", fileContent);
-
   const fileRef = useRef();
   const router = useRouter();
 
@@ -59,13 +57,8 @@ const ModuleCard = ({ moduleName, courseData }) => {
       setFileContent(data);
     };
     fetchFiles();
-  }, []);
-
-  // HANDLE DOWNLOAD HERE ALSO - PASS PROPS TO MODULE CONTENT
-  const fileDownloadHandler = (selectedFile) => {
-    // pass the selected file through onDownloadFile
-    // create a public URL and open it in a new tab
-  };
+    // dont think I need the dependency array but YOLO
+  });
 
   return (
     <>
@@ -116,7 +109,6 @@ const ModuleCard = ({ moduleName, courseData }) => {
             fileName={fileContent}
             courseData={courseData}
             moduleName={moduleName}
-            onDownloadFile={fileDownloadHandler}
           />
         ) : (
           <p className="flex animate-pulse h-16 items-center justify-center text-xl">

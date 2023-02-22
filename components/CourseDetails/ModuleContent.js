@@ -9,14 +9,10 @@ import { useState } from "react";
 const ModuleContent = ({
   courseData,
   moduleName,
-  onDownloadFile,
+
   fileName,
 }) => {
   const [downloadFile, setDownloadFile] = useState("");
-
-  const downloadFilesHandler = () => {
-    // take the fileName and add pass it to onDownloadFile()
-  };
 
   if (fileName.length === 0) {
     return (
@@ -44,8 +40,15 @@ const ModuleContent = ({
         </div>
       </div>
 
-      {fileName.map((item) => {
-        return <ModuleItem key={item} name={item.name} />;
+      {fileName.map((item, idx) => {
+        return (
+          <ModuleItem
+            key={idx}
+            name={item.name}
+            courseData={courseData}
+            moduleName={moduleName}
+          />
+        );
       })}
     </>
   );
