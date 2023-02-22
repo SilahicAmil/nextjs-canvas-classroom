@@ -7,6 +7,7 @@ import { useRouter } from "next/router";
 
 const ModuleCard = ({ moduleName, courseData }) => {
   const [openContent, setOpenContent] = useState(true);
+  const [isUploading, setIsUploading] = useState(false);
   const fileRef = useRef();
   const router = useRouter();
 
@@ -15,20 +16,29 @@ const ModuleCard = ({ moduleName, courseData }) => {
   };
 
   // HANDLE SUPBASE UPLOAD HERE
-
   const supabaseFileUploadHndler = async (e) => {
     e.preventDefault();
     const fileRefValue = fileRef.current.files[0];
     const fileRefName = fileRef.current.files[0].name;
+    // handle errors eventually and loading
 
-    const { data, error } = await supabase.storage
-      .from("modules")
-      .upload(`${courseData.name}/${moduleName}/${fileRefName}`, fileRefValue, {
-        cacheControl: "3600",
-        upsert: false,
-      });
+    try {
+      setIsUploading(true);
+      const { data, error } = await supabase.storage
+        .from("modules")
+        .upload(
+          `${courseData.name}/${moduleName}/${fileRefName}`,
+          fileRefValue,
+          {
+            cacheControl: "3600",
+            upsert: false,
+          }
+        );
 
-    console.log(data);
+      setIsUploading(false);
+    } catch (error) {
+      console.log(error);
+    }
 
     router.push(`/courses/${courseData.name}`);
   };
@@ -64,8 +74,9 @@ const ModuleCard = ({ moduleName, courseData }) => {
               className="flex items-center"
               onSubmit={supabaseFileUploadHndler}
             >
+              {/* eventually have this pop up as a modal or something  */}
               <input type="file" ref={fileRef} />
-              <button className="" type="submit">
+              <button type="submit">
                 <AiOutlinePlus className="text-white text-xl" />
               </button>
             </form>
@@ -75,7 +86,14 @@ const ModuleCard = ({ moduleName, courseData }) => {
             </button>
           </div>
         </div>
-        {openContent ? <ModuleContent /> : null}
+
+        {openContent && !isUploading ? (
+          <ModuleContent />
+        ) : (
+          <p className="flex items-center justify-center text-xl">
+            Uploading File(s)...
+          </p>
+        )}
       </div>
     </>
   );
