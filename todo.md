@@ -33,7 +33,7 @@ term: "2023-2024" -->
 -- Form shouldn't allow for spaces in the name only "-" between words (makes routing look nicer)
 
 -- Nicer Module Name form
--- Create upload module modal or something (not really sure what I want to do with this)
+-- Create upload module modal or something (not really sure what I want to do with)
 
 -- Figure out auth with next auth
 -- Add Hooks
@@ -55,8 +55,8 @@ term: "2023-2024" -->
 
 - Able to Login as a Teacher or Student and switch modes
 - Able to create student acount
-  <!-- - Able to create a course as a teacher -->
-  <!-- - Within the course have the ability to add/delete modules (as a teacher) -->
+  - Able to create a course as a teacher
+  - Within the course have the ability to add/delete modules (as a teacher)
 - Students can view the courses and enroll into it
 - Student can only download files from modules and cant edit the course/create any
 - Ability for two way messaging between students and teachers - kind of like an email
