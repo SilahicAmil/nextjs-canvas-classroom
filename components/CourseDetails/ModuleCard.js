@@ -44,7 +44,11 @@ const ModuleCard = ({ moduleName, courseData }) => {
   };
 
   // HANDLE DOWNLOAD HERE ALSO - PASS PROPS TO MODULE CONTENT
-  // List all items in courseData.name bucket and download that way
+
+  const fileDownloadHandler = (selectedFile) => {
+    // pass the selected file through onDownloadFile
+    // create a public URL and open it in a new tab
+  };
 
   return (
     <>
@@ -65,9 +69,7 @@ const ModuleCard = ({ moduleName, courseData }) => {
               &gt;
             </div>
           )}
-          <h1 className="ml-8 text-2xl mr-auto">
-            {moduleName ? moduleName : "Sample Module"}
-          </h1>
+          <h1 className="ml-8 text-2xl mr-auto">{moduleName}</h1>
           <div className="flex gap-8 items-center justify-center h-full ">
             {/* when clicking plus here it should upload the files to the related db module folder name  */}
             <form
@@ -92,7 +94,11 @@ const ModuleCard = ({ moduleName, courseData }) => {
             that says "loading", "finished", "error" and etc
          */}
         {openContent && !isUploading ? (
-          <ModuleContent />
+          <ModuleContent
+            courseData={courseData}
+            moduleName={moduleName}
+            onDownloadFile={fileDownloadHandler}
+          />
         ) : (
           <p className="flex animate-pulse h-16 items-center justify-center text-xl">
             Uploading File...

@@ -5,17 +5,13 @@ import { useState } from "react";
 
 // create this into SampleModuleContent component
 // and create another copy of this for real modules
-const ModuleContent = ({ courseData, moduleName }) => {
+const ModuleContent = ({ courseData, moduleName, onDownloadFile }) => {
   const [downloadFile, setDownloadFile] = useState("");
 
-  const downloadFileHandler = async () => {
-    const { data, error } = await supabase.storage
-      .from("modules")
-      .getPublicUrl("Math-101/Module-8/data");
-
-    console.log(data);
-    console.log(error);
-    setDownloadFile(data["publicUrl"]);
+  const listFilesHandler = () => {
+    // list all files from moduleName
+    // add to useState and map over for each item
+    // take the fileName and add pass it to onDownloadFile()
   };
 
   return (
@@ -42,10 +38,7 @@ const ModuleContent = ({ courseData, moduleName }) => {
           <p className="text-xl">First Assignment</p>
           {/* if student show download button */}
           <div className="flex ml-auto items-center gap-4 mr-6 ">
-            <button
-              className="h-1/2 bg-blue-100 p-2 flex items-center rounded-md"
-              onClick={downloadFileHandler}
-            >
+            <button className="h-1/2 bg-blue-100 p-2 flex items-center rounded-md">
               <Link href={downloadFile} target="_blank" download>
                 Download
               </Link>
