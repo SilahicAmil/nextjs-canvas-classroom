@@ -1,20 +1,20 @@
 import CourseDetails from "@/components/CourseDetails/CourseDetails";
 import Head from "next/head";
 import { MongoClient } from "mongodb";
-import { supabase } from "@/lib/supabaseClient";
-import { useState } from "react";
 
 const CourseDetailsPage = ({ courseData }) => {
-  const [fileData, setFileData] = useState([]);
-  console.log(fileData);
+  const addModuleHandler = async (enteredModuleName) => {
+    const response = await fetch("/api/add-module", {
+      method: "PUT",
+      body: JSON.stringify(enteredModuleName),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
 
-  const listFiles = async () => {
-    const { data, error } = await supabase.storage
-      .from("modules")
-      .list(`${courseData.name}/Module-10`, {});
+    const data = await response.json();
 
-    console.log(data);
-    setFileData(data);
+    console.log("module", data);
   };
 
   return (
@@ -23,12 +23,8 @@ const CourseDetailsPage = ({ courseData }) => {
         <title>Scholar - Course: {courseData.name}</title>
       </Head>
       <div className="h-full w-full">
-        <CourseDetails courseData={courseData} />
+        <CourseDetails courseData={courseData} onAddModule={addModuleHandler} />
       </div>
-      <button onClick={listFiles}>Get List</button>
-      {fileData.map((item, idx) => {
-        return <p key={idx}>{item.name}</p>;
-      })}
     </>
   );
 };

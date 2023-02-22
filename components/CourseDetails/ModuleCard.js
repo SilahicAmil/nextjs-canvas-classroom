@@ -3,17 +3,15 @@ import { AiOutlineDelete, AiOutlinePlus } from "react-icons/ai";
 import ModuleContent from "./ModuleContent";
 import { useState } from "react";
 
-const ModuleCard = ({ moduleName, moduleFiles }) => {
+const ModuleCard = ({ moduleName }) => {
   const [openContent, setOpenContent] = useState(true);
-  const [moduleList, setModuleList] = useState([]);
 
   const openContentHandler = () => {
     setOpenContent((prevState) => !prevState);
   };
 
-  const addModuleHandler = () => {
-    setModuleList(moduleList.concat(<ModuleContent key={moduleList.length} />));
-  };
+  // HANDLE SUPBASE UPLOAD HERE
+  // HANDLE DOWNLOAD HERE ALSO - PASS PROPS TO MODULE CONTENT
 
   return (
     <>
@@ -49,7 +47,6 @@ const ModuleCard = ({ moduleName, moduleFiles }) => {
           </div>
         </div>
         {openContent ? <ModuleContent /> : null}
-        {moduleList}
       </div>
     </>
   );

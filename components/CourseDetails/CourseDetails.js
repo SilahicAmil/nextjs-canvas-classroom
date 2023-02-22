@@ -5,11 +5,9 @@ import ModuleModal from "./ModuleModal/ModuleModal";
 import { createPortal } from "react-dom";
 import { useState } from "react";
 
-const CourseDetails = ({ courseData }) => {
+const CourseDetails = ({ courseData, onAddModule }) => {
   const [openModal, setOpenModal] = useState(false);
   const [moduleData, setModuleData] = useState(courseData.modules);
-
-  // console.log(moduleData.fileData);
 
   return (
     <>
@@ -36,13 +34,7 @@ const CourseDetails = ({ courseData }) => {
         <div className="flex gap-12 flex-1  m-auto h-full w-full">
           <div className=" flex-1 flex flex-col h-full ">
             {moduleData.map((module, idx) => {
-              return (
-                <ModuleCard
-                  key={idx}
-                  moduleName={module.moduleName}
-                  moduleFiles={module.fileData}
-                />
-              );
+              return <ModuleCard key={idx} moduleName={module.moduleName} />;
             })}
           </div>
 
@@ -63,7 +55,7 @@ const CourseDetails = ({ courseData }) => {
       </div>
       {openModal &&
         createPortal(
-          <ModuleModal courseData={courseData}>
+          <ModuleModal courseData={courseData} onAddModule={onAddModule}>
             <button onClick={() => setOpenModal(false)}>Close</button>
           </ModuleModal>,
           document.getElementById("module-modal")
