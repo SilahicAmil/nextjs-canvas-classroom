@@ -13,8 +13,6 @@ const CourseDetailsPage = ({ courseData }) => {
     });
 
     const data = await response.json();
-
-    console.log("module", data);
   };
 
   return (

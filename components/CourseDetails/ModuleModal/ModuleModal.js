@@ -1,6 +1,5 @@
 import { useRef, useState } from "react";
 
-import { supabase } from "@/lib/supabaseClient";
 import { useRouter } from "next/router";
 
 const ModuleModal = ({ children, courseData, onAddModule }) => {

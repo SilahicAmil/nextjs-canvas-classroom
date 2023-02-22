@@ -33,7 +33,7 @@ const CourseDetails = ({ courseData, onAddModule }) => {
 
         <div className="flex gap-12 flex-1  m-auto h-full w-full">
           <div className=" flex-1 flex flex-col h-full ">
-            {moduleData.map((module, idx) => {
+            {courseData.modules.map((module, idx) => {
               return <ModuleCard key={idx} moduleName={module.moduleName} />;
             })}
           </div>
