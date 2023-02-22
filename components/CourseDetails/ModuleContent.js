@@ -6,7 +6,12 @@ import { useState } from "react";
 
 // create this into SampleModuleContent component
 // and create another copy of this for real modules
-const ModuleContent = ({ courseData, moduleName, onDownloadFile }) => {
+const ModuleContent = ({
+  courseData,
+  moduleName,
+  onDownloadFile,
+  fileName,
+}) => {
   const [downloadFile, setDownloadFile] = useState("");
 
   const downloadFilesHandler = () => {
@@ -31,26 +36,9 @@ const ModuleContent = ({ courseData, moduleName, onDownloadFile }) => {
         </div>
       </div>
 
-      <div className="flex gap-4 bg-[#FEFFFE] h-16 items-center border-black">
-        <div className="flex w-full gap-4 h-full items-center border-b border-black">
-          <span className="ml-2 text-xl">::</span>
-          <p className="text-xl">First Assignment</p>
-          {/* if student show download button */}
-          <div className="flex ml-auto items-center gap-4 mr-6 ">
-            <button className="h-1/2 bg-blue-100 p-2 flex items-center rounded-md">
-              <Link href={downloadFile} target="_blank" download>
-                Download
-              </Link>
-            </button>
-            {/* if teacher show edit/remove dropdown */}
-            <span>
-              <HiEllipsisVertical className="text-2xl" />
-            </span>
-          </div>
-        </div>
-      </div>
-      {/* map over this with the files names */}
-      {/* <ModuleItem /> */}
+      {fileName.map((item) => {
+        return <ModuleItem key={item} name={item.name} />;
+      })}
     </>
   );
 };

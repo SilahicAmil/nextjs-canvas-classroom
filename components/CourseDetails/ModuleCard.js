@@ -2,12 +2,16 @@ import { AiOutlineDelete, AiOutlinePlus } from "react-icons/ai";
 import { useEffect, useRef, useState } from "react";
 
 import ModuleContent from "./ModuleContent";
+import ModuleItem from "./ModuleItem";
 import { supabase } from "@/lib/supabaseClient";
 import { useRouter } from "next/router";
 
 const ModuleCard = ({ moduleName, courseData }) => {
   const [openContent, setOpenContent] = useState(true);
   const [isUploading, setIsUploading] = useState(false);
+  const [fileContent, setFileContent] = useState([]);
+
+  console.log("file content", fileContent);
 
   const fileRef = useRef();
   const router = useRouter();
@@ -43,8 +47,22 @@ const ModuleCard = ({ moduleName, courseData }) => {
     router.push(`/courses/${courseData.name}`);
   };
 
-  // HANDLE DOWNLOAD HERE ALSO - PASS PROPS TO MODULE CONTENT
+  useEffect(() => {
+    const fetchFiles = async () => {
+      const { data, error } = await supabase.storage
+        .from("modules")
+        .list(`${courseData.name}/${moduleName}`, {
+          limit: 100,
+          offset: 0,
+          sortBy: { column: "name", order: "asc" },
+        });
+      setFileContent(data);
+      console.log(data);
+    };
+    fetchFiles();
+  }, []);
 
+  // HANDLE DOWNLOAD HERE ALSO - PASS PROPS TO MODULE CONTENT
   const fileDownloadHandler = (selectedFile) => {
     // pass the selected file through onDownloadFile
     // create a public URL and open it in a new tab
@@ -93,8 +111,10 @@ const ModuleCard = ({ moduleName, courseData }) => {
             probably change loading to a string eventually
             that says "loading", "finished", "error" and etc
          */}
+
         {openContent && !isUploading ? (
           <ModuleContent
+            fileName={fileContent}
             courseData={courseData}
             moduleName={moduleName}
             onDownloadFile={fileDownloadHandler}
