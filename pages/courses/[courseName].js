@@ -61,6 +61,7 @@ export const getStaticProps = async (context) => {
 
   // use supabase to list all items within the selected module
   // and pass it to ModuleItem
+  // something like .from("modules").list(`${courseName}/${selectedCourse.modules}`)
 
   return {
     props: {
