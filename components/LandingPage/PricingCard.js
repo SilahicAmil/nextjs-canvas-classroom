@@ -1,15 +1,15 @@
 import { FcCheckmark } from "react-icons/fc";
 
-const PricingCard = ({}) => {
+const PricingCard = ({ name, pricing, features }) => {
   return (
     <div className="mb-6 lg:mb-0 ">
       <div className="block  rounded-lg shadow-lg bg-white h-full">
         <div className="p-6 border-b border-gray-300 text-center">
           <p className="uppercase mb-4 text-2xl">
-            <strong>Educator</strong>
+            <strong>{name}</strong>
           </p>
-          <h3 className="text-md font-bold tracking-wide mb-6">
-            <p>FREE</p>
+          <h3 className="text-md font-bold uppercase tracking-wide mb-6">
+            <p>{pricing}</p>
           </h3>
 
           <button
@@ -24,12 +24,14 @@ const PricingCard = ({}) => {
         {/* map over this with the tags array */}
         <div className="p-6">
           <ol className="list-inside">
-            <li className="mb-4 gap-2 flex items-center">
-              <FcCheckmark />
-              Unlimited updates
-            </li>
-            <li className="mb-4 gap-2 flex items-center">Git repository</li>
-            <li className="mb-4 gap-2 items-center">npm installation</li>
+            {features.map((tags) => {
+              return (
+                <li className="mb-4 gap-2 flex items-center" key={tags}>
+                  <FcCheckmark />
+                  {tags}
+                </li>
+              );
+            })}
           </ol>
         </div>
       </div>

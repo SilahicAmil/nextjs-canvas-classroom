@@ -3,9 +3,36 @@ import PricingCard from "./PricingCard";
 const PRICING_DATA = [
   {
     id: 1,
-    name: "Educator",
+    name: "Independent Educator",
     pricing: "Free",
-    tags: [""],
+    features: [
+      "24/7 Customer Service Support",
+      "Create up to 5 courses",
+      "Real-Time Messaging with Students",
+    ],
+  },
+  {
+    id: 2,
+    name: "Corporate",
+    pricing: 54.99 + "/Month",
+    features: [
+      "24/7 Dedicated Success Manager",
+      "Unlimted number of courses",
+      "Real-Time Messaging with Students",
+      "Real Time Student Analytics",
+      "Unique Login Portal",
+    ],
+  },
+  {
+    id: 3,
+    name: "Educator",
+    pricing: 25.99 + "/Month",
+    features: [
+      "24/7 Private Email Support",
+      "Create up to 15 courses",
+      "Real-Time Messaging with Students",
+      "Real Time Student Analytics",
+    ],
   },
 ];
 
@@ -27,9 +54,9 @@ const LandingPricing = ({}) => {
         </h2>
 
         <div className="grid lg:grid-cols-3  gap-6 lg:gap-x-12">
-          <PricingCard />
-          <PricingCard />
-          <PricingCard />
+          {PRICING_DATA.map((card) => {
+            return <PricingCard key={card.id} {...card} />;
+          })}
         </div>
       </section>
     </>

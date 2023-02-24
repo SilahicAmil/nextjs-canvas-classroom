@@ -63,3 +63,4 @@ term: "2023-2024" -->
 - Student can only download files from modules and cant edit the course or create courses
 - Ability for two way messaging between students and teachers - kind of like an email
 - Calendar should show due dates of modules for students
+- Students should be able to upload assignments for teacher to view
