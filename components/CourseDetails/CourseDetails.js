@@ -62,7 +62,7 @@ const CourseDetails = ({ courseData, onAddModule }) => {
       {openModal &&
         createPortal(
           <ModuleModal courseData={courseData} onAddModule={onAddModule}>
-            <button onClick={() => setOpenModal(false)}>Close</button>
+            <button onClick={() => setOpenModal(false)}>X</button>
           </ModuleModal>,
           document.getElementById("module-modal")
         )}
