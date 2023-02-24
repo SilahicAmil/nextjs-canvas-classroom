@@ -17,9 +17,9 @@ const LandingContent = ({}) => {
             <p className="text-gray-600 mb-8 ">
               Our solutions make educators more effective and students more
               successful, both in school and beyond. Your students want
-              consistent standards across courses—and to know their school is
+              consistent standards across courses and to know their school is
               prepared for anything. Whether you’re all together in person or
-              all over the place, our platform keeps everyone connected,
+              all over the world, our platform keeps everyone connected,
               learning, and communicating with consistency.
             </p>
           </div>
@@ -49,10 +49,11 @@ const LandingContent = ({}) => {
               Independent Ed
             </h4>
             <p className="text-gray-600 mb-8 ">
-              Every lesson has the power to change lives. Even more so with our
-              teaching and learning solutions in your corner. We’ll help you
-              create a digital classroom for all aspects of Independent
-              teaching, whether you’re in person, blended, or online.
+              Every lesson has the power to change lives. Even more so with your
+              teaching and our learning solutions in your corner. We’ll help you
+              create a digital classroom for all aspects of independent
+              teaching, whether you’re in person, blended, or online. We have
+              your back.
             </p>
           </div>
         </div>
@@ -67,7 +68,7 @@ const LandingContent = ({}) => {
               development tools that helps companies deliver employee training
               and engagement at any scale. With Scholar, trainers and learning
               developers can easily create courses they need to support
-              employees across the entire organization.
+              employees across an entire organization.
             </p>
           </div>
           <div className="w-full  md:w-1/2">
