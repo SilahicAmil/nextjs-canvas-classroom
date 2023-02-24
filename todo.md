@@ -27,18 +27,20 @@ term: "2023-2024" -->
 -- Use Supabase for the files - File structure something like below
 
 -- modules -> courseName -> moduleName -> fileData -->
+<!-- -- Nicer Module Name form -->
 
 <!-- ---------------------------------TODO BELOW--------------------------------- -->
 
 -- Form shouldn't allow for spaces in the name only "-" between words (makes routing look nicer)
 
--- Nicer Module Name form
 -- Create upload module modal or something (not really sure what I want to do with)
 
--- Figure out auth with next auth
--- Add Hooks - mainly for the supabase stuf probably
+-- Add helpers for mongoDB connecting and etc to DRY up code
 
--- Add Calendar component to display assignments due( fetch from supabase probably make a field like DueDate)
+-- Figure out auth with next auth
+-- Add Hooks - mainly for the supabase stuf probably (idk for this one)
+
+-- Add Calendar component to display assignments due (fetch from DB probably make a field like DueDate)
 -- Inboxing will probably be the hardest thing (so save best for last lol)
 -- Also update avatar for profile based on auth name so everyone has a unique avatar
 
@@ -55,11 +57,9 @@ term: "2023-2024" -->
 
 - Able to Login as a Teacher or Student and switch modes
 - Able to create student acount
-  - Able to create a course as a teacher
-  - Within the course have the ability to add/delete modules (as a teacher)
+- Able to create a course as a teacher
+- Within the course have the ability to add/delete modules (as a teacher)
 - Students can view the courses and enroll into it
-- Student can only download files from modules and cant edit the course/create any
+- Student can only download files from modules and cant edit the course or create courses
 - Ability for two way messaging between students and teachers - kind of like an email
-- Calendar should be modifiable by students to organize their time
-- Able to publish/unpublish courses
-- Minimum 3 Courses that are always there and unable to be deleted
+- Calendar should show due dates of modules for students
