@@ -45,8 +45,6 @@ const ModuleModal = ({ children, courseData, onAddModule }) => {
             Submit
           </button>
         </form>
-
-        {/* {children} */}
       </div>
     </>
   );

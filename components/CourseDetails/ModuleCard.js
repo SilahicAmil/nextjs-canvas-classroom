@@ -9,6 +9,7 @@ const ModuleCard = ({ moduleName, courseData }) => {
   const [openContent, setOpenContent] = useState(true);
   const [isUploading, setIsUploading] = useState(false);
   const [fileContent, setFileContent] = useState([]);
+  const [isError, setIsError] = useState(false);
 
   const fileRef = useRef();
   const router = useRouter();
@@ -38,26 +39,37 @@ const ModuleCard = ({ moduleName, courseData }) => {
 
       setIsUploading(false);
     } catch (error) {
+      setIsError(true);
       console.log(error);
     }
 
-    router.push(`/courses/${courseData.name}`);
+    // router.push(`/courses/${courseData.name}`);
   };
 
   useEffect(() => {
-    const fetchFiles = async () => {
-      const { data, error } = await supabase.storage
-        .from("modules")
-        .list(`${courseData.name}/${moduleName}`, {
-          limit: 100,
-          offset: 0,
-          sortBy: { column: "name", order: "asc" },
-        });
-      setFileContent(data);
+    const supabaseFetchFiles = async () => {
+      try {
+        const { data, error } = await supabase.storage
+          .from("modules")
+          .list(`${courseData.name}/${moduleName}`, {
+            limit: 100,
+            offset: 0,
+          });
+        setFileContent(data);
+      } catch (error) {
+        console.log(error);
+        setIsError(true);
+      }
     };
-    fetchFiles();
-    // dont think I need the dependency array but YOLO
+    supabaseFetchFiles();
+    // dont think I need the dependency array so YOLO
   });
+
+  if (isError === true) {
+    return (
+      <h1 className="text-3xl">An Error has Ocurred. Please try again!</h1>
+    );
+  }
 
   return (
     <>
