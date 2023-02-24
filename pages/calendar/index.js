@@ -1,3 +1,4 @@
+import CalendarWrapper from "@/components/Calendar/CalendarWrapper";
 import Head from "next/head";
 
 const CalendarPage = ({}) => {
@@ -6,8 +7,10 @@ const CalendarPage = ({}) => {
       <Head>
         <title>Scholar - Calendar</title>
       </Head>
-      <div>
+      <div className="w-full h-screen flex flex-col justify-center items-center">
         <h1>Calendar Page</h1>
+
+        <CalendarWrapper />
       </div>
     </>
   );

@@ -41,7 +41,8 @@ const Dashboard = ({ courseData }) => {
           </div>
         </div>
 
-        {/* unpublished courses - not sure how to handle this */}
+        {/* unpublished courses - not sure how to handle this -
+         Might just get rid of this idk */}
         <div className="m-6">
           <div className="mb-2">
             <h1 className="text-2xl">Unpublished Courses (1)</h1>
