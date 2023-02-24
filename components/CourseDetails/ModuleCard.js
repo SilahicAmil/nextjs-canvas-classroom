@@ -43,7 +43,7 @@ const ModuleCard = ({ moduleName, courseData }) => {
       console.log(error);
     }
 
-    // router.push(`/courses/${courseData.name}`);
+    router.push(`/courses/${courseData.name}`);
   };
 
   useEffect(() => {
@@ -62,8 +62,8 @@ const ModuleCard = ({ moduleName, courseData }) => {
       }
     };
     supabaseFetchFiles();
-    // dont think I need the dependency array so YOLO
-  });
+    // actually do need dependency array or else will endlessly fetch
+  }, [courseData.name, moduleName]);
 
   if (isError === true) {
     return (
