@@ -1,5 +1,14 @@
 import PricingCard from "./PricingCard";
 
+const PRICING_DATA = [
+  {
+    id: 1,
+    name: "Educator",
+    pricing: "Free",
+    tags: [""],
+  },
+];
+
 const LandingPricing = ({}) => {
   return (
     <>

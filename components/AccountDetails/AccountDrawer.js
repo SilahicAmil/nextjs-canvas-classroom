@@ -5,7 +5,7 @@ const AccountDrawer = ({}) => {
   const router = useRouter();
 
   const logoutHandler = () => {
-    router.push("/login");
+    router.push("/");
   };
 
   return (
