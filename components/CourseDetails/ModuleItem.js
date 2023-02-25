@@ -13,7 +13,6 @@ const ModuleItem = ({ name, courseData, moduleName }) => {
         download: true,
       });
     setDownloadFileLink(data["publicUrl"]);
-    console.log(data);
   };
 
   return (
