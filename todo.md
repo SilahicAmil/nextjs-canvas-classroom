@@ -34,6 +34,7 @@ term: "2023-2024" -->
 <!-- ---------------------------------TODO BELOW--------------------------------- -->
 
 -- Add helpers for mongoDB connecting and etc to DRY up code
+-- Update README.md to show what the project is and etc
 
 -- Figure out auth with next auth
 -- Add Hooks - mainly for the supabase stuf probably (idk for this one)
