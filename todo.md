@@ -28,10 +28,10 @@ term: "2023-2024" -->
 
 -- modules -> courseName -> moduleName -> fileData -->
 <!-- -- Nicer Module Name form -->
+<!-- -- Add descriptions for Who We Help
+-- Update Pricing Cards to reflect Who We Help -->
 
 <!-- ---------------------------------TODO BELOW--------------------------------- -->
-
--- Create upload module modal or something (not really sure what I want to do with)
 
 -- Add helpers for mongoDB connecting and etc to DRY up code
 
@@ -39,11 +39,9 @@ term: "2023-2024" -->
 -- Add Hooks - mainly for the supabase stuf probably (idk for this one)
 
 -- Add Calendar component to display assignments due (fetch from DB probably make a field like DueDate)
+
 -- Inboxing will probably be the hardest thing (so save best for last lol)
 -- Also update avatar for profile based on auth name so everyone has a unique avatar
-
--- Add descriptions for Who We Help
--- Update Pricing Cards to reflect Who We Help
 
 -- Find a better logo for the nav bar OmegaLUL
 

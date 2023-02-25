@@ -27,7 +27,7 @@ const Navigation = ({ children }) => {
               {/* need a better image for this or make it into an icon or something */}
               <Image
                 src="/images/logo-color.png"
-                alt="Scholar Logo"
+                alt="Scholar Logo Color"
                 width={1000}
                 height={1000}
                 className="rounded-md"
