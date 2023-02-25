@@ -44,18 +44,16 @@ const CourseDetails = ({ courseData, onAddModule }) => {
             })}
           </div>
 
-          <div className="flex flex-col h-96 flex-3 items-center gap-4 bg-red-300 w-64 text-xl">
-            <h1>To Do :</h1>
+          <div className="flex flex-col h-96 flex-3 items-center gap-4 bg-slate-400 w-64 text-xl">
+            <h1 className="mt-4">Upcoming Modules</h1>
             <div className="flex flex-col">
               {/* Should open the related module drop down (idk about this) */}
               <ul>
-                <li>Assignment 32 *</li>
-                <li>Assignment 12</li>
-                <li>Assignment 22</li>
-                <li>Assignment 42</li>
+                {moduleData.map((item, idx) => {
+                  return <li key={idx}>-{item.moduleName}</li>;
+                })}
               </ul>
             </div>
-            <span className="mt-auto mb-2 underline">* = Recently Updated</span>
           </div>
         </div>
       </div>

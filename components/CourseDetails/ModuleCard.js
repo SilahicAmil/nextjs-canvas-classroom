@@ -91,6 +91,7 @@ const ModuleCard = ({ moduleName, courseData }) => {
             </div>
           )}
           <h1 className="ml-8 text-2xl mr-auto">{moduleName}</h1>
+          {/* just show this whole div conditionally based off of auth */}
           <div className="flex gap-8 items-center justify-center h-full ">
             <form
               className="flex items-center"

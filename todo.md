@@ -31,8 +31,6 @@ term: "2023-2024" -->
 
 <!-- ---------------------------------TODO BELOW--------------------------------- -->
 
--- Form shouldn't allow for spaces in the name only "-" between words (makes routing look nicer)
-
 -- Create upload module modal or something (not really sure what I want to do with)
 
 -- Add helpers for mongoDB connecting and etc to DRY up code
