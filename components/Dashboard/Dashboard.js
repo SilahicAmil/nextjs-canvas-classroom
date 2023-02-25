@@ -5,7 +5,6 @@ import { HiEllipsisVertical } from "react-icons/hi2";
 const Dashboard = ({ courseData }) => {
   return (
     <>
-      {/* dashboard title */}
       <div className="flex flex-col w-10/12 md:w-11/12 m-6 h-full">
         <div className="flex text-2xl mb-4">
           <Header>Dashboard</Header>
@@ -32,7 +31,6 @@ const Dashboard = ({ courseData }) => {
                     courseName={card.courseName}
                     description={card.description}
                     tag={card.tag}
-                    // course link will be courseName also but to lowercase (maybe)
                     courseLink={card.courseName}
                   />
                 );

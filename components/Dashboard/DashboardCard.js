@@ -12,8 +12,6 @@ const DashboardCard = ({ courseName, description, tag }) => {
       return (~~(Math.random() * 16)).toString(16);
     });
     setColorChanger(randomColor);
-    // dont need to add dependency since useState is automatically used as a dependency
-    // but YOLO I suppose
   }, [setColorChanger]);
 
   return (

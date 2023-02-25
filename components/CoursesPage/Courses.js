@@ -22,7 +22,6 @@ const Courses = ({ onAddCourse, courseData }) => {
             <button className="p-4 h-full flex items-center bg-gray-300 rounded-md border border-black">
               Browse More Courses
             </button>
-            {/* this should create a supabase DB of the name of the course */}
             <button
               className="p-4 h-full flex items-center bg-gray-300 rounded-md border border-black"
               onClick={() => setOpenCoursesModal(true)}
