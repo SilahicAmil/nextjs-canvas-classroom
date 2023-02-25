@@ -7,7 +7,6 @@ import { useState } from "react";
 
 const CourseDetails = ({ courseData, onAddModule }) => {
   const [openModal, setOpenModal] = useState(false);
-  const [moduleData, setModuleData] = useState(courseData.modules);
 
   return (
     <>
@@ -33,7 +32,7 @@ const CourseDetails = ({ courseData, onAddModule }) => {
 
         <div className="flex gap-12 flex-1  m-auto h-full w-full">
           <div className=" flex-1 flex flex-col h-full ">
-            {moduleData.map((module, idx) => {
+            {courseData.modules.map((module, idx) => {
               return (
                 <ModuleCard
                   key={idx}
@@ -47,10 +46,9 @@ const CourseDetails = ({ courseData, onAddModule }) => {
           <div className="flex flex-col h-96 flex-3 items-center gap-4 bg-slate-400 w-64 text-xl">
             <h1 className="mt-4">Upcoming Modules</h1>
             <div className="flex flex-col">
-              {/* Should open the related module drop down (idk about this) */}
               <ul>
-                {moduleData.map((item, idx) => {
-                  return <li key={idx}>-{item.moduleName}</li>;
+                {courseData.modules.map((item, idx) => {
+                  return <li key={idx}>-&nbsp;{item.moduleName}</li>;
                 })}
               </ul>
             </div>
