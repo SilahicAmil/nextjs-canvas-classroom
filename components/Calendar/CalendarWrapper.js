@@ -10,8 +10,13 @@ const CalendarWrapper = () => {
 
   return (
     <>
-      <div className="w-full h-full flex items-center justify-center">
-        <Calendar onChange={setDate} showWeekNumbers value={date} />
+      <div className="w-3/4 border-2 h-1/2">
+        <Calendar
+          onChange={setDate}
+          showWeekNumbers
+          value={date}
+          className=" h-full items-center flex flex-col justify-center"
+        />
       </div>
     </>
   );

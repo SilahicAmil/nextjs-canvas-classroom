@@ -7,8 +7,8 @@ const CalendarPage = ({}) => {
       <Head>
         <title>Scholar - Calendar</title>
       </Head>
-      <div className="w-full h-screen flex flex-col justify-center items-center">
-        <h1>Calendar Page</h1>
+      <div className="w-screen h-screen justify-center items-center">
+        <h1 className="text-4xl">Calendar Page - WORK IN PROGRESS</h1>
 
         <CalendarWrapper />
       </div>
