@@ -2,7 +2,7 @@ import { useRef, useState } from "react";
 
 import CourseTable from "./CourseTable";
 import CoursesModal from "./CoursesModal/CoursesModal";
-import Header from "../Header/Header";
+import Header from "../UI/Header";
 import { createPortal } from "react-dom";
 import { useOnClickOutside } from "@/hooks/onClickOutside";
 

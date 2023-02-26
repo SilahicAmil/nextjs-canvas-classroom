@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 
 import { AiOutlinePlus } from "react-icons/ai";
-import Header from "../Header/Header";
+import Header from "../UI/Header";
 import ModuleCard from "./ModuleCard";
 import ModuleModal from "./ModuleModal/ModuleModal";
 import { createPortal } from "react-dom";

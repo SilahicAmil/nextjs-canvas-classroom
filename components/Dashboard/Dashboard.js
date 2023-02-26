@@ -1,5 +1,5 @@
 import DashboardCard from "./DashboardCard";
-import Header from "../Header/Header";
+import Header from "../UI/Header";
 import { HiEllipsisVertical } from "react-icons/hi2";
 
 const Dashboard = ({ courseData }) => {

@@ -2,6 +2,7 @@ import { AiOutlineDelete, AiOutlineLine, AiOutlinePlus } from "react-icons/ai";
 import { useEffect, useRef, useState } from "react";
 
 import ModuleContent from "./ModuleContent";
+import ModuleItem from "./ModuleItem";
 import { supabase } from "@/lib/supabaseClient";
 import { useRouter } from "next/router";
 
@@ -103,7 +104,7 @@ const ModuleCard = ({ moduleName, courseData }) => {
               </button>
             ) : (
               <button onClick={openFileUploadHanlder}>
-                <AiOutlinePlus className="text-white text-xl" />
+                <AiOutlinePlus className="text-white text-xl " />
               </button>
             )}
 
@@ -120,7 +121,7 @@ const ModuleCard = ({ moduleName, courseData }) => {
             courseData={courseData}
             moduleName={moduleName}
           />
-        ) : null}
+        ) : undefined}
 
         {openFileUpload ? (
           <form
@@ -135,13 +136,13 @@ const ModuleCard = ({ moduleName, courseData }) => {
               Submit
             </button>
           </form>
-        ) : null}
+        ) : undefined}
 
         {openContent && isUploading ? (
           <p className="flex animate-pulse h-16 items-center justify-center text-xl">
             Uploading File...
           </p>
-        ) : null}
+        ) : undefined}
       </div>
     </>
   );
