@@ -30,6 +30,7 @@ const Navigation = ({ children }) => {
                 alt="Scholar Logo Color"
                 width={1000}
                 height={1000}
+                priority
                 className="rounded-md"
               />
             </Link>

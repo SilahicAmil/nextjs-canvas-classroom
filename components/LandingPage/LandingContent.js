@@ -27,8 +27,9 @@ const LandingContent = ({}) => {
             <Image
               src="/images/education-cap.jpeg"
               alt="Education"
-              width={500}
+              width={1000}
               height={1000}
+              priority
               className="w-full rounded-md ml-8 h-1/2 flex  items-center justify-center"
             />
           </div>
@@ -41,6 +42,7 @@ const LandingContent = ({}) => {
               alt="Education"
               width={1000}
               height={1000}
+              priority
               className="w-full  rounded-md mr-8 h-1/2 flex  items-center justify-center"
             />
           </div>
@@ -75,8 +77,9 @@ const LandingContent = ({}) => {
             <Image
               src="/images/corp-education.jpeg"
               alt="Education"
-              width={500}
+              width={1000}
               height={1000}
+              priority
               className="w-full rounded-md ml-8 h-1/2 flex  items-center justify-center"
             />
           </div>
