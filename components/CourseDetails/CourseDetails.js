@@ -43,10 +43,10 @@ const CourseDetails = ({ courseData, onAddModule }) => {
             })}
           </div>
 
-          <div className="flex flex-col h-full pb-4 flex-3 items-center gap-4 rounded-md bg-slate-500 w-72 text-xl">
+          <div className="flex flex-col h-full  flex-3 items-center gap-4 rounded-md bg-slate-500 w-72 text-xl">
             <h1 className="mt-4 text-gray-200">Quote of the Day</h1>
             <div className="w-3/4 tracking-wider h-full text-gray-200">
-              <p>
+              <p className="mb-4">
                 Nothing is more pathetic than people who run around in circles,
                 ‘delving into the things that lie beneath,’ and conducting
                 investigations into the souls of the people around them. -
