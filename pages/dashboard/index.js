@@ -1,4 +1,3 @@
-import DashboadFooter from "@/components/Dashboard/DashboardFooter";
 import Dashboard from "@/components/Dashboard/Dashboard";
 import Head from "next/head";
 import { MongoClient } from "mongodb";
@@ -11,7 +10,6 @@ const DashboardPage = ({ courseData }) => {
       </Head>
       <div className="w-full h-full">
         <Dashboard courseData={courseData} />
-        <DashboadFooter />
       </div>
     </>
   );

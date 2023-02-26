@@ -1,3 +1,4 @@
+import DashboadFooter from "../Dashboard/DashboardFooter";
 import Navigation from "../Navigation/Navigation";
 
 const Layout = ({ children }) => {
@@ -6,6 +7,7 @@ const Layout = ({ children }) => {
       <Navigation>
         <main className="text-mainText font-lato">{children}</main>
       </Navigation>
+      <DashboadFooter />
     </>
   );
 };

@@ -3,9 +3,9 @@ import Link from "next/link";
 const DashboadFooter = ({}) => {
   return (
     <>
-      <div className="h-full w-full">
-        <div className="flex justify-between items-center ">
-          <div className="gap-4 flex mr-4 ml-auto">
+      <div className="h-10 w-full bg-navbar flex ">
+        <div className="flex ml-auto justify-between items-center ">
+          <div className="gap-4 flex mr-4 ml-auto text-white">
             <span>Privacy Policy</span>
             <Link href="https://github.com/silahicamil" target="_blank">
               Github
