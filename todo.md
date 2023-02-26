@@ -37,6 +37,9 @@ term: "2023-2024" -->
 -- Update README.md to show what the project is and etc
 -- Error handling for the not allowing same module name
 
+-- Update Modals with backdrop that you can click out of to close
+(https://www.npmjs.com/package/react-modal)
+
 -- Figure out auth with next auth
 -- Add Hooks - mainly for the supabase stuf probably (idk for this one)
 
