@@ -18,7 +18,6 @@ const ModuleCard = ({ moduleName, courseData }) => {
     setOpenContent((prevState) => !prevState);
   };
 
-  // HANDLE SUPBASE UPLOAD HERE
   const supabaseFileUploadHandler = async (e) => {
     e.preventDefault();
     const fileRefValue = fileRef.current.files[0];
@@ -104,7 +103,7 @@ const ModuleCard = ({ moduleName, courseData }) => {
                 <AiOutlinePlus className="text-white text-xl" />
               </button>
             </form>
-
+            {/* will implement this way later */}
             <button className="mr-6">
               <AiOutlineDelete className="text-xl text-white" />
             </button>
@@ -116,17 +115,18 @@ const ModuleCard = ({ moduleName, courseData }) => {
             that says "loading", "finished", "error" and etc
          */}
 
-        {openContent && !isUploading ? (
+        {openContent ? (
           <ModuleContent
             fileName={fileContent}
             courseData={courseData}
             moduleName={moduleName}
           />
-        ) : (
+        ) : null}
+        {openContent && isUploading ? (
           <p className="flex animate-pulse h-16 items-center justify-center text-xl">
             Uploading File...
           </p>
-        )}
+        ) : null}
       </div>
     </>
   );

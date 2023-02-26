@@ -15,7 +15,7 @@ const CourseDetails = ({ courseData, onAddModule }) => {
           openModal ? "opacity-50 pointer-events-none" : "opacity-100"
         }`}
       >
-        <div className="ml-12 flex mb-6 gap-4 items-center">
+        <div className="ml-12 flex mb-6 gap-4 items-center ">
           <Header>Course: {courseData.name}</Header>
           <span className="text-lg ">&gt;</span>
           <span className="text-lg"> {courseData.term}</span>
@@ -30,7 +30,7 @@ const CourseDetails = ({ courseData, onAddModule }) => {
           <hr className="mt-4 mb-12 border-t border-black" />
         </div>
 
-        <div className="flex gap-12 flex-1  m-auto h-full w-full">
+        <div className="flex gap-12 flex-1 m-auto h-full w-full">
           <div className=" flex-1 flex flex-col h-full ">
             {courseData.modules.map((module, idx) => {
               return (

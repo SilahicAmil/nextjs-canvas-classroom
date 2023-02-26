@@ -5,7 +5,7 @@ const ModuleContent = ({ courseData, moduleName, fileName }) => {
   if (moduleName === "Sample Module") {
     return (
       <>
-        <div className="flex gap-4 bg-[#FEFFFE] h-16 items-center shadow-2xl border-t border-black w-full">
+        <div className="flex gap-4 h-16 items-center shadow-2xl  border-black w-full">
           <div className="flex w-full gap-4 border-b h-full items-center border-black">
             <span className="ml-2 text-xl">::</span>
             <p className="text-xl text-gray-400">
@@ -35,7 +35,7 @@ const ModuleContent = ({ courseData, moduleName, fileName }) => {
 
   if (fileName.length === 0) {
     return (
-      <p className="h-16 text-lg flex items-center justify-center">
+      <p className="h-16 text-lg flex items-center justify-center border-b border-black">
         Files will be displayed here
       </p>
     );
