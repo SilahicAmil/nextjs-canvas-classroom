@@ -30,25 +30,24 @@ term: "2023-2024" -->
 <!-- -- Nicer Module Name form -->
 <!-- -- Add descriptions for Who We Help
 -- Update Pricing Cards to reflect Who We Help -->
+<!-- -- Update README.md to show what the project is and etc -->
+<!-- -- Add Hooks  -->
 
 <!-- ---------------------------------TODO BELOW--------------------------------- -->
 
 -- Add helpers for mongoDB connecting and etc to DRY up code
--- Update README.md to show what the project is and etc
+
 -- Error handling for the not allowing same module name
 
 -- Update Modals with backdrop that you can click out of to close
 (https://www.npmjs.com/package/react-modal)
 
 -- Figure out auth with next auth
--- Add Hooks - mainly for the supabase stuf probably (idk for this one)
 
 -- Add Calendar component to display assignments due (fetch from DB probably make a field like DueDate)
 
 -- Inboxing will probably be the hardest thing (so save best for last lol)
 -- Also update avatar for profile based on auth name so everyone has a unique avatar
-
--- Find a better logo for the nav bar OmegaLUL
 
 <!--  #####################################################-->
 
