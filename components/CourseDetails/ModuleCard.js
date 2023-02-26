@@ -1,4 +1,4 @@
-import { AiOutlineDelete, AiOutlinePlus } from "react-icons/ai";
+import { AiOutlineDelete, AiOutlineLine, AiOutlinePlus } from "react-icons/ai";
 import { useEffect, useRef, useState } from "react";
 
 import ModuleContent from "./ModuleContent";
@@ -9,6 +9,7 @@ const ModuleCard = ({ moduleName, courseData }) => {
   const [openContent, setOpenContent] = useState(true);
   const [isUploading, setIsUploading] = useState(false);
   const [fileContent, setFileContent] = useState([]);
+  const [openFileUpload, setOpenFileUpload] = useState(false);
   const [isError, setIsError] = useState(false);
 
   const fileRef = useRef();
@@ -16,6 +17,10 @@ const ModuleCard = ({ moduleName, courseData }) => {
 
   const openContentHandler = () => {
     setOpenContent((prevState) => !prevState);
+  };
+
+  const openFileUploadHanlder = () => {
+    setOpenFileUpload((prevState) => !prevState);
   };
 
   const supabaseFileUploadHandler = async (e) => {
@@ -92,28 +97,22 @@ const ModuleCard = ({ moduleName, courseData }) => {
           <h1 className="ml-8 text-2xl mr-auto">{moduleName}</h1>
           {/* just show this whole div conditionally based off of auth */}
           <div className="flex gap-8 items-center justify-center h-full ">
-            <form
-              className="flex items-center"
-              onSubmit={supabaseFileUploadHandler}
-            >
-              {/* eventually have this pop up as a modal or something  */}
-              {/* if teacher show this only */}
-              <input type="file" ref={fileRef} />
-              <button type="submit">
+            {openFileUpload ? (
+              <button onClick={openFileUploadHanlder}>
+                <AiOutlineLine className="text-white text-xl" />
+              </button>
+            ) : (
+              <button onClick={openFileUploadHanlder}>
                 <AiOutlinePlus className="text-white text-xl" />
               </button>
-            </form>
+            )}
+
             {/* will implement this way later */}
             <button className="mr-6">
               <AiOutlineDelete className="text-xl text-white" />
             </button>
           </div>
         </div>
-        {/* !isUploading kinda of doesnt make sense
-            basically saying if isUploading is true
-            probably change loading to a string eventually
-            that says "loading", "finished", "error" and etc
-         */}
 
         {openContent ? (
           <ModuleContent
@@ -122,6 +121,19 @@ const ModuleCard = ({ moduleName, courseData }) => {
             moduleName={moduleName}
           />
         ) : null}
+
+        {openFileUpload ? (
+          <form
+            className="flex items-center h-16 justify-center w-full "
+            onSubmit={supabaseFileUploadHandler}
+          >
+            <input type="file" ref={fileRef} />
+            <button className="rounded-md bg-green-300 p-2" type="submit">
+              Submit
+            </button>
+          </form>
+        ) : null}
+
         {openContent && isUploading ? (
           <p className="flex animate-pulse h-16 items-center justify-center text-xl">
             Uploading File...
