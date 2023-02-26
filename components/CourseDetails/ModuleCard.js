@@ -124,11 +124,14 @@ const ModuleCard = ({ moduleName, courseData }) => {
 
         {openFileUpload ? (
           <form
-            className="flex items-center h-16 justify-center w-full "
+            className="flex items-center h-16 justify-center w-full bg-[#FEFFFE] gap-4"
             onSubmit={supabaseFileUploadHandler}
           >
-            <input type="file" ref={fileRef} />
-            <button className="rounded-md bg-green-300 p-2" type="submit">
+            <input type="file" ref={fileRef} className="" />
+            <button
+              className="rounded-md bg-blue-100 text-black w-24 p-2"
+              type="submit"
+            >
               Submit
             </button>
           </form>
