@@ -20,7 +20,7 @@ const ModuleModal = ({ children, courseData, onAddModule }) => {
   return (
     <>
       <div className="flex-col flex top-0 m-auto z-50 shadow-2xl rounded-md left-0 bottom-0 right-0 items-center  absolute w-1/2 h-1/2 bg-[#FAF9F6] border border-black font-lato">
-        <div className="flex mr-auto mt-4  ml-4 p-2 w-6 h-6 bg-red-500 items-center justify-center rounded-full ">
+        <div className="flex mr-auto mt-4  ml-4 p-2 w-12 h-6 bg-red-500 items-center justify-center rounded-full ">
           {children}
         </div>
         <form

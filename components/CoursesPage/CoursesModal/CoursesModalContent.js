@@ -33,7 +33,7 @@ const CoursesModalContent = ({ children, onAddCourse }) => {
     <>
       <div className="h-full w-full flex flex-col font-lato bg-[#FAF9F6]">
         <div className="flex justify-center items-center h-12 w-full bg-[#424B54] border-b border-black">
-          <div className="flex mr-auto w-6 ml-1 p-1 bg-red-500 items-center justify-center rounded-full h-6">
+          <div className="flex mr-auto  ml-4 w-12 p-1 bg-red-500 items-center justify-center rounded-full h-6">
             {children}
           </div>
           <h1 className="text-2xl text-white w-full items-center justify-center flex font-semibold tracking-wide">
@@ -98,7 +98,7 @@ const CoursesModalContent = ({ children, onAddCourse }) => {
           <div className="mt-4 flex  items-center justify-center w-24  ">
             <button
               type="submit"
-              className="w-full h-full p-3 bg-sky-500 rounded-md"
+              className="w-full h-full p-3 bg-sky-500 rounded-md text-white"
             >
               Create
             </button>

@@ -1,11 +1,16 @@
+import { useRef, useState } from "react";
+
 import CourseTable from "./CourseTable";
 import CoursesModal from "./CoursesModal/CoursesModal";
 import Header from "../Header/Header";
 import { createPortal } from "react-dom";
-import { useState } from "react";
+import { useOnClickOutside } from "@/hooks/onClickOutside";
 
 const Courses = ({ onAddCourse, courseData }) => {
+  const modalRef = useRef();
   const [openCoursesModal, setOpenCoursesModal] = useState(false);
+
+  useOnClickOutside(modalRef, () => setOpenCoursesModal(false));
 
   return (
     <>
@@ -36,12 +41,16 @@ const Courses = ({ onAddCourse, courseData }) => {
 
       {openCoursesModal
         ? createPortal(
-            <CoursesModal
-              onAddCourse={onAddCourse}
-              onClick={() => setOpenCoursesModal(false)}
-            >
-              <button onClick={() => setOpenCoursesModal(false)}>X</button>
-            </CoursesModal>,
+            <div ref={modalRef}>
+              <CoursesModal
+                onAddCourse={onAddCourse}
+                onClick={() => setOpenCoursesModal(false)}
+              >
+                <button onClick={() => setOpenCoursesModal(false)}>
+                  Close
+                </button>
+              </CoursesModal>
+            </div>,
             document.getElementById("courses-modal")
           )
         : null}

@@ -1,12 +1,17 @@
+import { useRef, useState } from "react";
+
 import { AiOutlinePlus } from "react-icons/ai";
 import Header from "../Header/Header";
 import ModuleCard from "./ModuleCard";
 import ModuleModal from "./ModuleModal/ModuleModal";
 import { createPortal } from "react-dom";
-import { useState } from "react";
+import { useOnClickOutside } from "@/hooks/onClickOutside";
 
 const CourseDetails = ({ courseData, onAddModule }) => {
+  const modalRef = useRef();
   const [openModal, setOpenModal] = useState(false);
+
+  useOnClickOutside(modalRef, () => setOpenModal(false));
 
   return (
     <>
@@ -26,10 +31,10 @@ const CourseDetails = ({ courseData, onAddModule }) => {
             <AiOutlinePlus className="text-black" /> Module
           </button>
         </div>
+
         <div>
           <hr className="mt-4 mb-12 border-t border-black" />
         </div>
-
         <div className="flex gap-12 flex-1 m-auto h-full w-full">
           <div className=" flex-1 flex flex-col h-full ">
             {courseData.modules.map((module, idx) => {
@@ -55,14 +60,16 @@ const CourseDetails = ({ courseData, onAddModule }) => {
             </div>
           </div>
         </div>
+        {openModal &&
+          createPortal(
+            <div ref={modalRef}>
+              <ModuleModal courseData={courseData} onAddModule={onAddModule}>
+                <button onClick={() => setOpenModal(false)}>Close</button>
+              </ModuleModal>
+            </div>,
+            document.getElementById("module-modal")
+          )}
       </div>
-      {openModal &&
-        createPortal(
-          <ModuleModal courseData={courseData} onAddModule={onAddModule}>
-            <button onClick={() => setOpenModal(false)}>X</button>
-          </ModuleModal>,
-          document.getElementById("module-modal")
-        )}
     </>
   );
 };
