@@ -43,16 +43,17 @@ const CourseDetails = ({ courseData, onAddModule }) => {
             })}
           </div>
 
-          {/* <div className="flex flex-col h-96 flex-3 items-center gap-4 bg-slate-400 w-64 text-xl">
-            <h1 className="mt-4">Upcoming Modules</h1>
-            <div className="flex flex-col">
-              <ul>
-                {courseData.modules.map((item, idx) => {
-                  return <li key={idx}>-&nbsp;{item.moduleName}</li>;
-                })}
-              </ul>
+          <div className="flex flex-col h-full pb-4 flex-3 items-center gap-4 bg-slate-400 w-72 text-xl">
+            <h1 className="mt-4">Quote of the Day</h1>
+            <div className="w-3/4 tracking-wider h-full">
+              <p>
+                Nothing is more pathetic than people who run around in circles,
+                ‘delving into the things that lie beneath,’ and conducting
+                investigations into the souls of the people around them. -
+                [Marcus Aurelius]
+              </p>
             </div>
-          </div> */}
+          </div>
         </div>
       </div>
       {openModal &&
