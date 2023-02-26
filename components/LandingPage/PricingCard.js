@@ -11,15 +11,15 @@ const PricingCard = ({ name, pricing, features }) => {
           <h3 className="text-md font-bold uppercase tracking-wide mb-6">
             <p>{pricing}</p>
           </h3>
-
-          <button
+          {/* removing this for now */}
+          {/* <button
             type="button"
             className="inline-block bg-sky-600 px-6 py-2 text-black uppercase tracking-wide font-bold w-full"
             data-mdb-ripple="true"
             data-ripple-color="primary"
           >
             Sign Up
-          </button>
+          </button> */}
         </div>
         <div className="p-6">
           <ol className="list-inside">

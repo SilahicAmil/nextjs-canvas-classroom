@@ -43,7 +43,7 @@ const CourseDetails = ({ courseData, onAddModule }) => {
             })}
           </div>
 
-          <div className="flex flex-col h-96 flex-3 items-center gap-4 bg-slate-400 w-64 text-xl">
+          {/* <div className="flex flex-col h-96 flex-3 items-center gap-4 bg-slate-400 w-64 text-xl">
             <h1 className="mt-4">Upcoming Modules</h1>
             <div className="flex flex-col">
               <ul>
@@ -52,7 +52,7 @@ const CourseDetails = ({ courseData, onAddModule }) => {
                 })}
               </ul>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
       {openModal &&
