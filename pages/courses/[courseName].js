@@ -1,6 +1,5 @@
 import CourseDetails from "@/components/CourseDetails/CourseDetails";
 import Head from "next/head";
-import { MongoClient } from "mongodb";
 import { connectToDB } from "@/lib/db";
 
 const CourseDetailsPage = ({ courseData }) => {

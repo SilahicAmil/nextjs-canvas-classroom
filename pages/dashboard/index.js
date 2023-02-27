@@ -1,6 +1,5 @@
 import Dashboard from "@/components/Dashboard/Dashboard";
 import Head from "next/head";
-import { MongoClient } from "mongodb";
 import { connectToDB } from "@/lib/db";
 
 const DashboardPage = ({ courseData }) => {
