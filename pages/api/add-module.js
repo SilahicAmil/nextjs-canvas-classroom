@@ -1,4 +1,3 @@
-import { MongoClient } from "mongodb";
 import { connectToDB } from "@/lib/db";
 
 const helper = async (req, res) => {
