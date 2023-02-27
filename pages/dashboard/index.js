@@ -1,6 +1,7 @@
 import Dashboard from "@/components/Dashboard/Dashboard";
 import Head from "next/head";
 import { MongoClient } from "mongodb";
+import { connectToDB } from "@/lib/db";
 
 const DashboardPage = ({ courseData }) => {
   return (
@@ -16,7 +17,7 @@ const DashboardPage = ({ courseData }) => {
 };
 
 export const getStaticProps = async () => {
-  const client = await MongoClient.connect(process.env.NEXT_PUBLIC_DB_URL);
+  const client = await connectToDB();
 
   const db = client.db();
 

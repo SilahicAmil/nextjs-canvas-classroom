@@ -1,4 +1,5 @@
 import { MongoClient } from "mongodb";
+import { connectToDB } from "@/lib/db";
 
 const helper = async (req, res) => {
   if (req.method === "PUT") {
@@ -6,7 +7,7 @@ const helper = async (req, res) => {
       const moduleData = req.body;
       console.log(moduleData);
 
-      const client = await MongoClient.connect(process.env.NEXT_PUBLIC_DB_URL);
+      const client = await connectToDB();
 
       const db = client.db();
 

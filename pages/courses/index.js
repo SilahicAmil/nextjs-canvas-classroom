@@ -1,6 +1,7 @@
 import Courses from "@/components/CoursesPage/Courses";
 import Head from "next/head";
 import { MongoClient } from "mongodb";
+import { connectToDB } from "@/lib/db";
 
 const CoursesPage = ({ courseData }) => {
   const addNewCourseHandler = async (enteredCourseData) => {
@@ -29,7 +30,7 @@ const CoursesPage = ({ courseData }) => {
 };
 
 export const getStaticProps = async () => {
-  const client = await MongoClient.connect(process.env.NEXT_PUBLIC_DB_URL);
+  const client = await connectToDB();
 
   const db = client.db();
 

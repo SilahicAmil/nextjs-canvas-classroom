@@ -1,6 +1,7 @@
 import CourseDetails from "@/components/CourseDetails/CourseDetails";
 import Head from "next/head";
 import { MongoClient } from "mongodb";
+import { connectToDB } from "@/lib/db";
 
 const CourseDetailsPage = ({ courseData }) => {
   const addModuleHandler = async (enteredModuleName) => {
@@ -29,7 +30,7 @@ const CourseDetailsPage = ({ courseData }) => {
 };
 
 export const getStaticPaths = async () => {
-  const client = await MongoClient.connect(process.env.NEXT_PUBLIC_DB_URL);
+  const client = await connectToDB();
 
   const db = client.db();
 
@@ -48,7 +49,7 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async (context) => {
   const courseName = context.params.courseName;
 
-  const client = await MongoClient.connect(process.env.NEXT_PUBLIC_DB_URL);
+  const client = await connectToDB();
 
   const db = client.db();
 
