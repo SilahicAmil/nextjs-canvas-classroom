@@ -33,16 +33,17 @@ term: "2023-2024" -->
 <!-- -- Update README.md to show what the project is and etc -->
 <!-- -- Add Hooks  -->
 
+<!-- -- Update Modals with backdrop that you can click out of to close -->
+
 <!-- ---------------------------------TODO BELOW--------------------------------- -->
 
 -- Add helpers for mongoDB connecting and etc to DRY up code
 
--- Error handling for the not allowing same module name
+-- Error handling for the not allowing same module name - handle in API route
 
--- Update Modals with backdrop that you can click out of to close
-(https://www.npmjs.com/package/react-modal)
-
--- Figure out auth with next auth
+-- Add Next Auth with credentials
+-- Add singup route for nextauth
+-- useSessions for auth (!auth redirect to /login)
 
 -- Add Calendar component to display assignments due (fetch from DB probably make a field like DueDate)
 
