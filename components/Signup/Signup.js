@@ -90,6 +90,16 @@ const Signup = ({}) => {
               />
             </div>
           </div>
+          <div className="flex items-center justify-around ">
+            <div className="flex gap-2">
+              <label htmlFor="teacher">Teacher</label>
+              <input type="checkbox" />
+            </div>
+            <div className="flex gap-2">
+              <label htmlFor="teacher">Student</label>
+              <input type="checkbox" />
+            </div>
+          </div>
 
           <div>
             <button
