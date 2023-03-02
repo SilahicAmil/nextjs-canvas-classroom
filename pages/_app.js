@@ -39,18 +39,10 @@ export default function App({ Component, pageProps }) {
       );
 
     case "SignUpPage":
-      return (
-        <SessionProvider session={pageProps.session}>
-          <Component {...pageProps} />
-        </SessionProvider>
-      );
+      return <Component {...pageProps} />;
 
     case "HomePage":
-      return (
-        <SessionProvider session={pageProps.session}>
-          <Component {...pageProps} />
-        </SessionProvider>
-      );
+      return <Component {...pageProps} />;
 
     case "ErrorPage":
       return (
@@ -67,7 +59,7 @@ export default function App({ Component, pageProps }) {
           </Layout>
         </SessionProvider>
       ) : (
-        <SessionProvider session={pageProps.session}>
+        <SessionProvider session={pageProps.session} refetchInterval={5 * 60}>
           <Layout>
             <Component {...pageProps} />
           </Layout>

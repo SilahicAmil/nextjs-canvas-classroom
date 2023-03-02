@@ -16,7 +16,7 @@ const AccountDrawer = ({ userData }) => {
               <Avatar
                 size={40}
                 variant="beam"
-                name={userData.user.email}
+                name={userData}
                 square={false}
                 colors={["#92A1C6", "#146A7C", "#F0AB3D", "#C271B4", "#C20D90"]}
               />
