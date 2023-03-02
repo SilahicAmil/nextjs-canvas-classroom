@@ -2,12 +2,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-const Login = ({}) => {
+const Signup = ({}) => {
   const router = useRouter();
 
   const formSubmitHandler = (e) => {
     e.preventDefault();
-    router.push("/dashboard");
+    router.push("/login");
   };
 
   return (
@@ -22,7 +22,7 @@ const Login = ({}) => {
             height={1000}
           />
           <h2 className="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">
-            Sign in to your account
+            Create your account
           </h2>
         </div>
         <form className="mt-8 space-y-6" onSubmit={formSubmitHandler}>
@@ -60,31 +60,12 @@ const Login = ({}) => {
             </div>
           </div>
 
-          <div className="flex items-center justify-between">
-            <div className="text-sm ">
-              <Link
-                href="/signup"
-                className="font-medium text-indigo-600 hover:text-indigo-500"
-              >
-                Create Account
-              </Link>
-            </div>
-            <div className="text-sm ">
-              <a
-                href="#"
-                className="font-medium text-indigo-600 hover:text-indigo-500"
-              >
-                Forgot your password?
-              </a>
-            </div>
-          </div>
-
           <div>
             <button
               type="submit"
               className="group relative flex w-full justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
             >
-              Sign In
+              Create Account
             </button>
           </div>
         </form>
@@ -93,4 +74,4 @@ const Login = ({}) => {
   );
 };
 
-export default Login;
+export default Signup;

@@ -33,6 +33,9 @@ export default function App({ Component, pageProps }) {
     case "LoginPage":
       return <Component {...pageProps} />;
 
+    case "SignUpPage":
+      return <Component {...pageProps} />;
+
     case "HomePage":
       return <Component {...pageProps} />;
 
