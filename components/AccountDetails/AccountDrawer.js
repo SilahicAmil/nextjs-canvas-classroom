@@ -1,7 +1,8 @@
 import { Avatar } from "@boringer-avatars/react";
+import { getSession } from "next-auth/react";
 import { signOut } from "next-auth/react";
 
-const AccountDrawer = ({}) => {
+const AccountDrawer = ({ userData }) => {
   const logoutHandler = () => {
     signOut();
   };
@@ -15,12 +16,12 @@ const AccountDrawer = ({}) => {
               <Avatar
                 size={40}
                 variant="beam"
-                name="account avatar"
+                name={userData.user.email}
                 square={false}
                 colors={["#92A1C6", "#146A7C", "#F0AB3D", "#C271B4", "#C20D90"]}
               />
 
-              <p>Amil Silahic</p>
+              <p>{userData.user.email}</p>
               <button type="button" onClick={logoutHandler}>
                 Logout
               </button>

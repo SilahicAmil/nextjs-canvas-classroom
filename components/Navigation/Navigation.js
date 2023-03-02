@@ -1,4 +1,5 @@
 import { AiOutlineDashboard, AiOutlineInbox } from "react-icons/ai";
+import { getSession, useSession } from "next-auth/react";
 
 import AccountDrawer from "../AccountDetails/AccountDrawer";
 import { Avatar } from "@boringer-avatars/react";
@@ -11,6 +12,8 @@ import { useState } from "react";
 
 const Navigation = ({ children }) => {
   const router = useRouter();
+  const { data: session, status } = useSession();
+  console.log(session);
 
   const [openDrawer, setOpenDrawer] = useState(false);
 
@@ -47,7 +50,7 @@ const Navigation = ({ children }) => {
                     <Avatar
                       size={40}
                       variant="beam"
-                      name="account avatar"
+                      name={session.user.email}
                       square={false}
                       colors={[
                         "#92A1C6",
@@ -120,7 +123,7 @@ const Navigation = ({ children }) => {
         </div>
         {openDrawer ? (
           <div className={`w-64 z-50 bg-blend-overlay`}>
-            <AccountDrawer />
+            <AccountDrawer userData={session} />
           </div>
         ) : null}
         <div className="h-full overflow-y-auto  w-full z-50">{children}</div>
