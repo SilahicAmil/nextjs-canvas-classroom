@@ -1,11 +1,13 @@
-import Login from "@/components/Login/Login";
+import Head from "next/head";
 import Signup from "@/components/Signup/Signup";
 
 const SignUpPage = () => {
   return (
     <>
+      <Head>
+        <title>Scholar - Create Account</title>
+      </Head>
       <div>
-        <h1>Sign Up Page</h1>
         <Signup />
       </div>
     </>

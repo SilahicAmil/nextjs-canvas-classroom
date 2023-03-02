@@ -31,7 +31,7 @@ const Signup = ({}) => {
       const result = await createUserCredentialsHandler(
         emailRefValue,
         passwordRefValue,
-        "teacher"
+        "student"
       );
       console.log(result);
     } catch (err) {
