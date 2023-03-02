@@ -37,13 +37,14 @@ export default NextAuth({
 
         client.close();
 
-        const userInfo = {
-          email: user.email,
-          role: user.role,
-        };
-
-        return userInfo;
+        return { email: user.email, name: user.role };
       },
     }),
   ],
+  callbacks: {
+    session: (props) => {
+      console.log(props.session);
+      return props.session;
+    },
+  },
 });
