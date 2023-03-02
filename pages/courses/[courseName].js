@@ -29,25 +29,19 @@ const CourseDetailsPage = ({ courseData }) => {
   );
 };
 
-export const getStaticPaths = async () => {
-  const client = await connectToDB();
-
-  const db = client.db();
-
-  const coursesCollection = db.collection("courses");
-
-  const courses = await coursesCollection.find({}, { _id: 1 }).toArray();
-
-  return {
-    fallback: false,
-    paths: courses.map((course) => ({
-      params: { courseName: course.courseName },
-    })),
-  };
-};
-
-export const getStaticProps = async (context) => {
+export const getServerSideProps = async (context) => {
   const courseName = context.params.courseName;
+
+  const session = await getSession({ req: context.req });
+
+  if (!session) {
+    return {
+      redirect: {
+        destination: "/login",
+        permanent: false,
+      },
+    };
+  }
 
   const client = await connectToDB();
 
