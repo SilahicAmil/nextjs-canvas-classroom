@@ -13,6 +13,7 @@
     "@next/font": "13.1.4",
     "@supabase/supabase-js": "^2.8.0",
     "@tabler/icons": "^1.119.0",
+    "bcryptjs": "^2.4.3",
     "daisyui": "^2.49.0",
     "eslint": "8.32.0",
     "eslint-config-next": "13.1.4",
