@@ -1,13 +1,15 @@
+import { useRef, useState } from "react";
+
 import Image from "next/image";
 import Link from "next/link";
 import { signIn } from "next-auth/react";
-import { useRef } from "react";
 import { useRouter } from "next/router";
 
 const Login = ({}) => {
   const router = useRouter();
   const emailRef = useRef();
   const passwordRef = useRef();
+  const [isError, setIsError] = useState();
 
   const formSubmitHandler = async (e) => {
     e.preventDefault();
@@ -22,6 +24,8 @@ const Login = ({}) => {
     console.log(result);
     if (!result.error) {
       router.replace("/dashboard");
+    } else {
+      setIsError(true);
     }
   };
 
@@ -102,6 +106,11 @@ const Login = ({}) => {
               Sign In
             </button>
           </div>
+          {isError ? (
+            <p className="text-red-500 flex justify-center">
+              Email or Password is Incorrect!
+            </p>
+          ) : null}
         </form>
       </div>
     </div>

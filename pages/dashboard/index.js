@@ -1,6 +1,7 @@
 import Dashboard from "@/components/Dashboard/Dashboard";
 import Head from "next/head";
 import { connectToDB } from "@/lib/db";
+import { getSession } from "next-auth/react";
 
 const DashboardPage = ({ courseData }) => {
   return (
@@ -15,7 +16,17 @@ const DashboardPage = ({ courseData }) => {
   );
 };
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async (context) => {
+  const session = await getSession({ req: context.req });
+
+  if (!session) {
+    return {
+      redirect: {
+        destination: "/login",
+      },
+    };
+  }
+
   const client = await connectToDB();
 
   const db = client.db();
@@ -35,8 +46,8 @@ export const getStaticProps = async () => {
         term: course.term,
         courseId: course._id.toString(),
       })),
+      session,
     },
-    revalidate: 3600,
   };
 };
 

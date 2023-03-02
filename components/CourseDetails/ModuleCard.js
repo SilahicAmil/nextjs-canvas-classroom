@@ -2,9 +2,9 @@ import { AiOutlineDelete, AiOutlineLine, AiOutlinePlus } from "react-icons/ai";
 import { useEffect, useRef, useState } from "react";
 
 import ModuleContent from "./ModuleContent";
-import ModuleItem from "./ModuleItem";
 import { supabase } from "@/lib/supabaseClient";
 import { useRouter } from "next/router";
+import { useSession } from "next-auth/react";
 
 const ModuleCard = ({ moduleName, courseData }) => {
   const [openContent, setOpenContent] = useState(true);
@@ -12,6 +12,8 @@ const ModuleCard = ({ moduleName, courseData }) => {
   const [fileContent, setFileContent] = useState([]);
   const [openFileUpload, setOpenFileUpload] = useState(false);
   const [isError, setIsError] = useState(false);
+
+  const { data: session, status } = useSession();
 
   const fileRef = useRef();
   const router = useRouter();
@@ -97,22 +99,24 @@ const ModuleCard = ({ moduleName, courseData }) => {
           )}
           <h1 className="ml-8 text-2xl mr-auto">{moduleName}</h1>
           {/* just show this whole div conditionally based off of auth */}
-          <div className="flex gap-8 items-center justify-center h-full ">
-            {openFileUpload ? (
-              <button onClick={openFileUploadHanlder}>
-                <AiOutlineLine className="text-white text-xl" />
-              </button>
-            ) : (
-              <button onClick={openFileUploadHanlder}>
-                <AiOutlinePlus className="text-white text-xl " />
-              </button>
-            )}
+          {session && status === "authenticated" ? (
+            <div className="flex gap-8 items-center justify-center h-full ">
+              {openFileUpload ? (
+                <button onClick={openFileUploadHanlder}>
+                  <AiOutlineLine className="text-white text-xl" />
+                </button>
+              ) : (
+                <button onClick={openFileUploadHanlder}>
+                  <AiOutlinePlus className="text-white text-xl " />
+                </button>
+              )}
 
-            {/* will implement this way later */}
-            <button className="mr-6">
-              <AiOutlineDelete className="text-xl text-white" />
-            </button>
-          </div>
+              {/* will implement this way later */}
+              <button className="mr-6">
+                <AiOutlineDelete className="text-xl text-white" />
+              </button>
+            </div>
+          ) : undefined}
         </div>
 
         {openContent ? (

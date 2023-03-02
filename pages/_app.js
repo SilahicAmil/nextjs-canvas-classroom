@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import Layout from "@/components/Layout/Layout";
 import Loading from "@/components/Loading/Loading";
 import Router from "next/router";
+import { SessionProvider } from "next-auth/react";
 
 export default function App({ Component, pageProps }) {
   const [isLoading, setIsLoading] = useState(null);
@@ -31,26 +32,46 @@ export default function App({ Component, pageProps }) {
 
   switch (Component.displayName) {
     case "LoginPage":
-      return <Component {...pageProps} />;
+      return (
+        <SessionProvider session={pageProps.session}>
+          <Component {...pageProps} />
+        </SessionProvider>
+      );
 
     case "SignUpPage":
-      return <Component {...pageProps} />;
+      return (
+        <SessionProvider session={pageProps.session}>
+          <Component {...pageProps} />
+        </SessionProvider>
+      );
 
     case "HomePage":
-      return <Component {...pageProps} />;
+      return (
+        <SessionProvider session={pageProps.session}>
+          <Component {...pageProps} />
+        </SessionProvider>
+      );
 
     case "ErrorPage":
-      return <Component {...pageProps} />;
+      return (
+        <SessionProvider session={pageProps.session}>
+          <Component {...pageProps} />
+        </SessionProvider>
+      );
 
     default: {
       return isLoading ? (
-        <Layout>
-          <Loading />
-        </Layout>
+        <SessionProvider session={pageProps.session}>
+          <Layout>
+            <Loading />
+          </Layout>
+        </SessionProvider>
       ) : (
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
+        <SessionProvider session={pageProps.session}>
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        </SessionProvider>
       );
     }
   }

@@ -1,6 +1,7 @@
 import CourseDetails from "@/components/CourseDetails/CourseDetails";
 import Head from "next/head";
 import { connectToDB } from "@/lib/db";
+import { getSession } from "next-auth/react";
 
 const CourseDetailsPage = ({ courseData }) => {
   const addModuleHandler = async (enteredModuleName) => {

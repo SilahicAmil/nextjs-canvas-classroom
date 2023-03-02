@@ -6,10 +6,12 @@ import ModuleCard from "./ModuleCard";
 import ModuleModal from "./ModuleModal/ModuleModal";
 import { createPortal } from "react-dom";
 import { useOnClickOutside } from "@/hooks/onClickOutside";
+import { useSession } from "next-auth/react";
 
 const CourseDetails = ({ courseData, onAddModule }) => {
   const modalRef = useRef();
   const [openModal, setOpenModal] = useState(false);
+  const { data: session, status } = useSession();
 
   useOnClickOutside(modalRef, () => setOpenModal(false));
 
@@ -24,12 +26,14 @@ const CourseDetails = ({ courseData, onAddModule }) => {
           <Header>Course: {courseData.name}</Header>
           <span className="text-lg ">&gt;</span>
           <span className="text-lg"> {courseData.term}</span>
-          <button
-            className="bg-green-500 text-black flex items-center justify-center ml-auto w-32 p-2 rounded-lg gap-4 text-md"
-            onClick={() => setOpenModal(true)}
-          >
-            <AiOutlinePlus className="text-black" /> Module
-          </button>
+          {status === "authenticated" && (
+            <button
+              className="bg-green-500 text-black flex items-center justify-center ml-auto w-32 p-2 rounded-lg gap-4 text-md"
+              onClick={() => setOpenModal(true)}
+            >
+              <AiOutlinePlus className="text-black" /> Module
+            </button>
+          )}
         </div>
 
         <div>
