@@ -15,6 +15,8 @@ const ModuleCard = ({ moduleName, courseData }) => {
 
   const { data: session, status } = useSession();
 
+  console.log(session);
+
   const fileRef = useRef();
   const router = useRouter();
 
@@ -99,7 +101,7 @@ const ModuleCard = ({ moduleName, courseData }) => {
           )}
           <h1 className="ml-8 text-2xl mr-auto">{moduleName}</h1>
           {/* just show this whole div conditionally based off of auth */}
-          {session && status === "authenticated" ? (
+          {session.user.name === "teacher" ? (
             <div className="flex gap-8 items-center justify-center h-full ">
               {openFileUpload ? (
                 <button onClick={openFileUploadHanlder}>

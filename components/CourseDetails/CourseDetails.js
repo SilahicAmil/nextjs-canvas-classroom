@@ -26,14 +26,14 @@ const CourseDetails = ({ courseData, onAddModule }) => {
           <Header>Course: {courseData.name}</Header>
           <span className="text-lg ">&gt;</span>
           <span className="text-lg"> {courseData.term}</span>
-          {status === "authenticated" && (
+          {session.user.name === "teacher" ? (
             <button
               className="bg-green-500 text-black flex items-center justify-center ml-auto w-32 p-2 rounded-lg gap-4 text-md"
               onClick={() => setOpenModal(true)}
             >
               <AiOutlinePlus className="text-black" /> Module
             </button>
-          )}
+          ) : undefined}
         </div>
 
         <div>

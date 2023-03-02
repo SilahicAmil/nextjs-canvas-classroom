@@ -5,8 +5,10 @@ import CoursesModal from "./CoursesModal/CoursesModal";
 import Header from "../UI/Header";
 import { createPortal } from "react-dom";
 import { useOnClickOutside } from "@/hooks/onClickOutside";
+import { useSession } from "next-auth/react";
 
 const Courses = ({ onAddCourse, courseData }) => {
+  const { data: session, status } = useSession();
   const modalRef = useRef();
   const [openCoursesModal, setOpenCoursesModal] = useState(false);
 
@@ -27,12 +29,14 @@ const Courses = ({ onAddCourse, courseData }) => {
             <button className="p-4 h-full flex items-center bg-gray-300 rounded-md border border-black">
               Browse More Courses
             </button>
-            <button
-              className="p-4 h-full flex items-center bg-gray-300 rounded-md border border-black"
-              onClick={() => setOpenCoursesModal(true)}
-            >
-              + Create Course
-            </button>
+            {session.user.name === "teacher" ? (
+              <button
+                className="p-4 h-full flex items-center bg-gray-300 rounded-md border border-black"
+                onClick={() => setOpenCoursesModal(true)}
+              >
+                + Create Course
+              </button>
+            ) : null}
           </div>
         </div>
 

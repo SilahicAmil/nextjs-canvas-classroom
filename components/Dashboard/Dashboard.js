@@ -1,8 +1,11 @@
 import DashboardCard from "./DashboardCard";
 import Header from "../UI/Header";
 import { HiEllipsisVertical } from "react-icons/hi2";
+import { useSession } from "next-auth/react";
 
 const Dashboard = ({ courseData }) => {
+  const { data: session, status } = useSession();
+
   return (
     <>
       <div className="flex flex-col w-10/12 md:w-11/12 m-6 h-full">
@@ -17,9 +20,13 @@ const Dashboard = ({ courseData }) => {
         {/* maybe xtract into own component idk */}
         <div className="m-6">
           <div className="mb-2">
-            <h1 className="text-2xl">
-              Published Courses ({courseData.length})
-            </h1>
+            {session.user.name === "teacher" ? (
+              <h1 className="text-2xl">
+                Published Courses ({courseData.length})
+              </h1>
+            ) : (
+              <h1 className="text-2xl">Enrolled Courses</h1>
+            )}
           </div>
           <hr className="w-11/12" />
           <div className="">
@@ -41,15 +48,17 @@ const Dashboard = ({ courseData }) => {
 
         {/* unpublished courses - not sure how to handle this -
          Might just get rid of this idk */}
-        <div className="m-6">
-          <div className="mb-2">
-            <h1 className="text-2xl">Unpublished Courses (1)</h1>
+        {session.user.name === "teacher" && (
+          <div className="m-6">
+            <div className="mb-2">
+              <h1 className="text-2xl">Unpublished Courses (1)</h1>
+            </div>
+            <hr className="w-11/12" />
+            <div>
+              <DashboardCard />
+            </div>
           </div>
-          <hr className="w-11/12" />
-          <div>
-            <DashboardCard />
-          </div>
-        </div>
+        )}
       </div>
     </>
   );
