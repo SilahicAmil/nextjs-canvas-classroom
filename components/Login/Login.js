@@ -1,13 +1,28 @@
 import Image from "next/image";
 import Link from "next/link";
+import { signIn } from "next-auth/react";
+import { useRef } from "react";
 import { useRouter } from "next/router";
 
 const Login = ({}) => {
   const router = useRouter();
+  const emailRef = useRef();
+  const passwordRef = useRef();
 
-  const formSubmitHandler = (e) => {
+  const formSubmitHandler = async (e) => {
     e.preventDefault();
-    router.push("/dashboard");
+    const emailRefValue = emailRef.current.value;
+    const passwordRefValue = passwordRef.current.value;
+
+    const result = await signIn("credentials", {
+      redirect: false,
+      email: emailRefValue,
+      password: passwordRefValue,
+    });
+    console.log(result);
+    if (!result.error) {
+      router.replace("/dashboard");
+    }
   };
 
   return (
@@ -37,8 +52,8 @@ const Login = ({}) => {
                 name="email"
                 type="email"
                 autoComplete="email"
-                // required
-
+                required
+                ref={emailRef}
                 className="relative block w-full appearance-none rounded-none rounded-t-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm bg-white "
                 placeholder="Email address"
               />
@@ -52,8 +67,8 @@ const Login = ({}) => {
                 name="password"
                 type="password"
                 autoComplete="current-password"
-                // required
-
+                required
+                ref={passwordRef}
                 className="bg-white relative block w-full appearance-none rounded-none rounded-b-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
                 placeholder="Password"
               />

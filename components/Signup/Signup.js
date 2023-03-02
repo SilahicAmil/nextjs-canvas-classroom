@@ -1,12 +1,43 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useRef } from "react";
 import { useRouter } from "next/router";
+
+const createUserCredentialsHandler = async (email, password, role) => {
+  const response = await fetch("/api/auth/signup", {
+    method: "POST",
+    body: JSON.stringify({ email, password, role }),
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+  const data = await response.json();
+
+  return data;
+};
 
 const Signup = ({}) => {
   const router = useRouter();
+  const emailRef = useRef();
+  const passwordRef = useRef();
 
-  const formSubmitHandler = (e) => {
+  const formSubmitHandler = async (e) => {
     e.preventDefault();
+
+    const emailRefValue = emailRef.current.value;
+    const passwordRefValue = passwordRef.current.value;
+
+    try {
+      const result = await createUserCredentialsHandler(
+        emailRefValue,
+        passwordRefValue,
+        "teacher"
+      );
+      console.log(result);
+    } catch (err) {
+      console.log(err);
+    }
+
     router.push("/login");
   };
 
@@ -38,7 +69,7 @@ const Signup = ({}) => {
                 type="email"
                 autoComplete="email"
                 // required
-
+                ref={emailRef}
                 className="relative block w-full appearance-none rounded-none rounded-t-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm bg-white "
                 placeholder="Email address"
               />
@@ -53,7 +84,7 @@ const Signup = ({}) => {
                 type="password"
                 autoComplete="current-password"
                 // required
-
+                ref={passwordRef}
                 className="bg-white relative block w-full appearance-none rounded-none rounded-b-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
                 placeholder="Password"
               />

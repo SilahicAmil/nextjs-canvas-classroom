@@ -1,7 +1,8 @@
+import { verifyPass, verifyPassword } from "../../../lib/auth";
+
 import CredentialsProvider from "next-auth/providers/credentials";
 import NextAuth from "next-auth";
 import { connectToDB } from "../../../lib/db";
-import { verifyPass } from "../../../lib/auth";
 
 export default NextAuth({
   session: {
@@ -25,7 +26,10 @@ export default NextAuth({
           throw new Error("No User Found!");
         }
 
-        const isValid = await verifyPass(credentials.password, user.password);
+        const isValid = await verifyPassword(
+          credentials.password,
+          user.password
+        );
 
         if (!isValid) {
           client.close();
