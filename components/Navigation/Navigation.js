@@ -50,7 +50,7 @@ const Navigation = ({ children }) => {
                     <Avatar
                       size={40}
                       variant="beam"
-                      name={session}
+                      name={session.user.email}
                       square={false}
                       colors={[
                         "#92A1C6",

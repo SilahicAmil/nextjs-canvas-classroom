@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import { useRef } from "react";
 import { useRouter } from "next/router";
 
@@ -14,6 +13,7 @@ const createUserCredentialsHandler = async (email, password, role) => {
   const data = await response.json();
 
   return data;
+  s;
 };
 
 const Signup = ({}) => {
