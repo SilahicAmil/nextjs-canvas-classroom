@@ -38,7 +38,10 @@ term: "2023-2024" -->
 <!-- -- Add Next Auth with credentials
 -- Add singup route for nextauth
 -- useSessions for auth (!auth redirect to /login) -->
+
 <!-- -- Add helpers for mongoDB connecting and etc to DRY up code -->
+
+<!-- -- Also update avatar for profile based on auth name so everyone has a unique avatar -->
 
 <!-- ---------------------------------TODO BELOW--------------------------------- -->
 
@@ -47,7 +50,6 @@ term: "2023-2024" -->
 -- Add Calendar component to display assignments due (fetch from DB probably make a field like DueDate)
 
 -- Inboxing will probably be the hardest thing (so save best for last lol)
--- Also update avatar for profile based on auth name so everyone has a unique avatar
 
 <!--  #####################################################-->
 

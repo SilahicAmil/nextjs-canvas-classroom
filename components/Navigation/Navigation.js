@@ -14,6 +14,7 @@ const Navigation = ({ children }) => {
   const router = useRouter();
   const { data: session, status } = useSession();
   console.log(session);
+  console.log(status);
 
   const [openDrawer, setOpenDrawer] = useState(false);
 

@@ -4,7 +4,7 @@ import { HiEllipsisVertical } from "react-icons/hi2";
 import Link from "next/link";
 
 const DashboardCard = ({ courseName, description, tag }) => {
-  const [colorChanger, setColorChanger] = useState("");
+  const [colorChanger, setColorChanger] = useState();
 
   useEffect(() => {
     let randomColor = "#000000".replace(/0/g, function () {

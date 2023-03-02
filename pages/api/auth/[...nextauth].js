@@ -1,8 +1,7 @@
-import { verifyPass, verifyPassword } from "../../../lib/auth";
-
 import CredentialsProvider from "next-auth/providers/credentials";
 import NextAuth from "next-auth";
 import { connectToDB } from "../../../lib/db";
+import { verifyPassword } from "../../../lib/auth";
 
 export default NextAuth({
   session: {
@@ -37,7 +36,13 @@ export default NextAuth({
         }
 
         client.close();
-        return { email: user.email };
+
+        const userInfo = {
+          email: user.email,
+          role: user.role,
+        };
+
+        return userInfo;
       },
     }),
   ],
