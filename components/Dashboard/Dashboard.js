@@ -20,7 +20,7 @@ const Dashboard = ({ courseData }) => {
         {/* maybe xtract into own component idk */}
         <div className="m-6">
           <div className="mb-2">
-            {session.user.name === "teacher" ? (
+            {session?.user.name === "teacher" ? (
               <h1 className="text-2xl">
                 Published Courses ({courseData.length})
               </h1>
@@ -48,7 +48,7 @@ const Dashboard = ({ courseData }) => {
 
         {/* unpublished courses - not sure how to handle this -
          Might just get rid of this idk */}
-        {session.user.name === "teacher" && (
+        {session?.user.name === "teacher" && (
           <div className="m-6">
             <div className="mb-2">
               <h1 className="text-2xl">Unpublished Courses (1)</h1>

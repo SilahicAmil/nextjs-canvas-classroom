@@ -5,7 +5,8 @@ import { verifyPassword } from "../../../lib/auth";
 
 export default NextAuth({
   session: {
-    jwt: true,
+    strategy: "jwt",
+    maxAge: 30 * 24 * 60 * 60,
   },
   providers: [
     CredentialsProvider({
@@ -42,9 +43,19 @@ export default NextAuth({
     }),
   ],
   callbacks: {
-    session: (props) => {
-      console.log(props.session);
-      return props.session;
+    async jwt({ token, user, profile }) {
+      if (user) {
+        token.accessToken = user.access_token;
+        token.id = user.id;
+      }
+      return token;
+    },
+    async session({ session, token, user }) {
+      // Send properties to the client, like an access_token and user id from a provider.
+      session.accessToken = token.accessToken;
+      session.user.id = token.id;
+
+      return session;
     },
   },
 });

@@ -7,7 +7,10 @@ import Loading from "@/components/Loading/Loading";
 import Router from "next/router";
 import { SessionProvider } from "next-auth/react";
 
-export default function App({ Component, pageProps }) {
+export default function App({
+  Component,
+  pageProps: { session, ...pageProps },
+}) {
   const [isLoading, setIsLoading] = useState(null);
 
   useEffect(() => {
@@ -33,7 +36,7 @@ export default function App({ Component, pageProps }) {
   switch (Component.displayName) {
     case "LoginPage":
       return (
-        <SessionProvider session={pageProps.session}>
+        <SessionProvider session={session}>
           <Component {...pageProps} />
         </SessionProvider>
       );
@@ -46,20 +49,20 @@ export default function App({ Component, pageProps }) {
 
     case "ErrorPage":
       return (
-        <SessionProvider session={pageProps.session}>
+        <SessionProvider session={session}>
           <Component {...pageProps} />
         </SessionProvider>
       );
 
     default: {
       return isLoading ? (
-        <SessionProvider session={pageProps.session}>
+        <SessionProvider session={session}>
           <Layout>
             <Loading />
           </Layout>
         </SessionProvider>
       ) : (
-        <SessionProvider session={pageProps.session} refetchInterval={5 * 60}>
+        <SessionProvider session={session}>
           <Layout>
             <Component {...pageProps} />
           </Layout>

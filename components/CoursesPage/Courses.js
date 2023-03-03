@@ -8,7 +8,7 @@ import { useOnClickOutside } from "@/hooks/onClickOutside";
 import { useSession } from "next-auth/react";
 
 const Courses = ({ onAddCourse, courseData }) => {
-  const { data: session, status } = useSession();
+  const { data: session } = useSession();
   const modalRef = useRef();
   const [openCoursesModal, setOpenCoursesModal] = useState(false);
 
@@ -29,7 +29,7 @@ const Courses = ({ onAddCourse, courseData }) => {
             <button className="p-4 h-full flex items-center bg-gray-300 rounded-md border border-black">
               Browse More Courses
             </button>
-            {session.user.name === "teacher" ? (
+            {session?.user.name === "teacher" ? (
               <button
                 className="p-4 h-full flex items-center bg-gray-300 rounded-md border border-black"
                 onClick={() => setOpenCoursesModal(true)}

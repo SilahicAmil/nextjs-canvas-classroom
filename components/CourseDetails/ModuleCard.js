@@ -13,9 +13,7 @@ const ModuleCard = ({ moduleName, courseData }) => {
   const [openFileUpload, setOpenFileUpload] = useState(false);
   const [isError, setIsError] = useState(false);
 
-  const { data: session, status } = useSession();
-
-  console.log(session);
+  const { data: session } = useSession();
 
   const fileRef = useRef();
   const router = useRouter();
@@ -101,7 +99,7 @@ const ModuleCard = ({ moduleName, courseData }) => {
           )}
           <h1 className="ml-8 text-2xl mr-auto">{moduleName}</h1>
           {/* just show this whole div conditionally based off of auth */}
-          {session.user.name === "teacher" ? (
+          {session?.user.name !== "teacher" ? undefined : (
             <div className="flex gap-8 items-center justify-center h-full ">
               {openFileUpload ? (
                 <button onClick={openFileUploadHanlder}>
@@ -118,7 +116,7 @@ const ModuleCard = ({ moduleName, courseData }) => {
                 <AiOutlineDelete className="text-xl text-white" />
               </button>
             </div>
-          ) : undefined}
+          )}
         </div>
 
         {openContent ? (

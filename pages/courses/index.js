@@ -57,7 +57,7 @@ export const getServerSideProps = async (context) => {
         term: course.term,
         courseId: course._id.toString(),
       })),
-      session,
+      data: { session },
     },
   };
 };
