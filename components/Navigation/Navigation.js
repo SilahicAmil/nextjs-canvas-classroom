@@ -12,8 +12,7 @@ import { useState } from "react";
 
 const Navigation = ({ children }) => {
   const router = useRouter();
-  const { data: session, status } = useSession();
-  console.log(session);
+  const { data: session } = useSession();
 
   const [openDrawer, setOpenDrawer] = useState(false);
 

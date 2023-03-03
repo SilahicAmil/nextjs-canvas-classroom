@@ -21,7 +21,7 @@ const Login = ({}) => {
       email: emailRefValue,
       password: passwordRefValue,
     });
-    console.log(result);
+
     if (!result.error) {
       router.replace("/dashboard");
     } else {

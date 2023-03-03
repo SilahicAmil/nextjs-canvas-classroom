@@ -1,5 +1,4 @@
 import { Avatar } from "@boringer-avatars/react";
-import { getSession } from "next-auth/react";
 import { signOut } from "next-auth/react";
 
 const AccountDrawer = ({ userData }) => {
