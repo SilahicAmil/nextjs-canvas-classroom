@@ -14,6 +14,10 @@ module.exports = {
       fontFamily: {
         lato: ["Lato", "sans-serif"],
       },
+      screens: {
+        xsm: "350px",
+        tablet: "750px",
+      },
     },
   },
   plugins: [require("daisyui")],

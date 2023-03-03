@@ -39,7 +39,7 @@ const CourseDetails = ({ courseData, onAddModule }) => {
         <div>
           <hr className="mt-4 mb-12 border-t border-black" />
         </div>
-        <div className="flex gap-12 flex-1 m-auto h-full w-full">
+        <div className="flex gap-12 flex-1 m-auto h-full w-full md:w-[100vw] xsm:w-[100vw] sm:w-[100w]">
           <div className=" flex-1 flex flex-col h-full ">
             {courseData.modules.map((module, idx) => {
               return (
@@ -52,7 +52,7 @@ const CourseDetails = ({ courseData, onAddModule }) => {
             })}
           </div>
 
-          <div className="flex flex-col h-full  flex-3 items-center gap-4 rounded-md bg-slate-500 w-72 text-xl">
+          <div className="flex flex-col h-full  flex-3 items-center gap-4 rounded-md bg-slate-500 w-72 text-xl  md:invisible tablet:invisble xsm:invisible lg:visible sm:invisible">
             <h1 className="mt-4 text-gray-200">Quote of the Day</h1>
             <div className="w-3/4 tracking-wider h-full text-gray-200">
               <p className="mb-4">
