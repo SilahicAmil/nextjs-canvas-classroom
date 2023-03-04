@@ -14,7 +14,7 @@ const ModuleModal = ({ children, courseData, onAddModule }) => {
       courseName: courseData.name,
     });
 
-    // router.reload();
+    router.replace(`/courses/${courseData.name}`);
   };
 
   return (
