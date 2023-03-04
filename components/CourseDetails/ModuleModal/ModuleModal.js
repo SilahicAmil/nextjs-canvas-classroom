@@ -14,7 +14,7 @@ const ModuleModal = ({ children, courseData, onAddModule }) => {
       courseName: courseData.name,
     });
 
-    router.push(`/courses/${courseData.name}`);
+    // router.reload();
   };
 
   return (
@@ -33,6 +33,7 @@ const ModuleModal = ({ children, courseData, onAddModule }) => {
           <input
             type="text"
             id="name"
+            required
             ref={moduleNameRef}
             className="h-12 text-2xl p-4 bg-gray-300 text-black"
           />
