@@ -4,7 +4,18 @@ const helper = async (req, res) => {
   if (req.method === "POST") {
     try {
       const data = req.body;
+
       const client = await connectToDB();
+
+      if (
+        data.courseName === "" ||
+        data.description === "" ||
+        data.tag === ""
+      ) {
+        client.close();
+        res.status(422).json({ message: "Invalid Input" });
+        return;
+      }
 
       const db = client.db();
 

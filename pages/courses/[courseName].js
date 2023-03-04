@@ -2,8 +2,11 @@ import CourseDetails from "@/components/CourseDetails/CourseDetails";
 import Head from "next/head";
 import { connectToDB } from "@/lib/db";
 import { getSession } from "next-auth/react";
+import { useState } from "react";
 
 const CourseDetailsPage = ({ courseData }) => {
+  const [isError, setIsError] = useState(false);
+
   const addModuleHandler = async (enteredModuleName) => {
     const response = await fetch("/api/add-module", {
       method: "PUT",
@@ -12,6 +15,11 @@ const CourseDetailsPage = ({ courseData }) => {
         "Content-Type": "application/json",
       },
     });
+    const data = await response.json();
+
+    if (!response.ok) {
+      setIsError(true);
+    }
   };
 
   return (
@@ -22,6 +30,7 @@ const CourseDetailsPage = ({ courseData }) => {
 
       <div className="h-full w-full">
         <CourseDetails courseData={courseData} onAddModule={addModuleHandler} />
+        {isError ? <p>Invalid Input!</p> : null}
       </div>
     </>
   );

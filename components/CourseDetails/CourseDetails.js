@@ -39,7 +39,7 @@ const CourseDetails = ({ courseData, onAddModule }) => {
         <div>
           <hr className="mt-4 mb-12 border-t border-black" />
         </div>
-        <div className="flex gap-12 flex-1 m-auto h-full w-full md:w-[100vw] xsm:w-[100vw] sm:w-[100w]">
+        <div className="flex gap-12 flex-1 m-auto h-full lg:w-full md:w-[100vw] xsm:w-[100vw] sm:w-[100w]">
           <div className=" flex-1 flex flex-col h-full ">
             {courseData.modules.map((module, idx) => {
               return (

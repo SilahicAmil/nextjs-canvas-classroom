@@ -4,9 +4,14 @@ const helper = async (req, res) => {
   if (req.method === "PUT") {
     try {
       const moduleData = req.body;
-      console.log(moduleData);
 
       const client = await connectToDB();
+
+      if (moduleData.moduleName.trim() === "") {
+        client.close();
+        res.status(422).json({ message: "Invalid Input" });
+        return;
+      }
 
       const db = client.db();
 

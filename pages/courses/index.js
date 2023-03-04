@@ -1,20 +1,29 @@
+import { use, useState } from "react";
+
 import Courses from "@/components/CoursesPage/Courses";
 import Head from "next/head";
 import { connectToDB } from "@/lib/db";
 import { getSession } from "next-auth/react";
 
 const CoursesPage = ({ courseData }) => {
-  const addNewCourseHandler = async (enteredCourseData) => {
-    const response = await fetch("/api/create-course", {
-      method: "POST",
-      body: JSON.stringify(enteredCourseData),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+  const [isError, setIsError] = useState(false);
 
-    const data = await response.json();
-    console.log(data);
+  const addNewCourseHandler = async (enteredCourseData) => {
+    try {
+      const response = await fetch("/api/create-course", {
+        method: "POST",
+        body: JSON.stringify(enteredCourseData),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      const data = await response.json();
+    } catch (error) {
+      if (error === 422) {
+        setIsError(true);
+      }
+    }
   };
 
   return (
@@ -24,6 +33,7 @@ const CoursesPage = ({ courseData }) => {
       </Head>
       <div className="w-full h-full">
         <Courses onAddCourse={addNewCourseHandler} courseData={courseData} />
+        {isError ? <p>Invalid Input</p> : null}
       </div>
     </>
   );
