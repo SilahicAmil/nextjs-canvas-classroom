@@ -47,6 +47,10 @@ term: "2023-2024" -->
 
 -- Error handling for the not allowing same module name - handle in API route
 
+-- Add React Hot Toast for uploading files and creating modules/courses
+
+-- Reset DBs
+
 -- Add Calendar component to display assignments due (fetch from DB probably make a field like DueDate)
 
 -- Inboxing will probably be the hardest thing (so save best for last lol)
