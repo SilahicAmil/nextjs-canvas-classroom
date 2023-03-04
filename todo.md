@@ -43,9 +43,9 @@ term: "2023-2024" -->
 
 <!-- -- Also update avatar for profile based on auth name so everyone has a unique avatar -->
 
-<!-- ---------------------------------TODO BELOW--------------------------------- -->
+<!-- -- Error handling for the not allowing same module name - handle in API route -->
 
--- Error handling for the not allowing same module name - handle in API route
+<!-- ---------------------------------TODO BELOW--------------------------------- -->
 
 -- Add React Hot Toast for uploading files and creating modules/courses
 
