@@ -1,4 +1,5 @@
 import { AiOutlineDelete, AiOutlineLine, AiOutlinePlus } from "react-icons/ai";
+import toast, { Toaster } from "react-hot-toast";
 import { useEffect, useRef, useState } from "react";
 
 import ModuleContent from "./ModuleContent";
@@ -8,7 +9,7 @@ import { useSession } from "next-auth/react";
 
 const ModuleCard = ({ moduleName, courseData }) => {
   const [openContent, setOpenContent] = useState(true);
-  const [isUploading, setIsUploading] = useState(false);
+
   const [fileContent, setFileContent] = useState([]);
   const [openFileUpload, setOpenFileUpload] = useState(false);
   const [isError, setIsError] = useState(false);
@@ -31,26 +32,20 @@ const ModuleCard = ({ moduleName, courseData }) => {
     const fileRefValue = fileRef.current.files[0];
     const fileRefName = fileRef.current.files[0].name;
 
-    try {
-      setIsUploading(true);
-      const { data, error } = await supabase.storage
-        .from("modules")
-        .upload(
-          `${courseData.name}/${moduleName}/${fileRefName}`,
-          fileRefValue,
-          {
-            cacheControl: "3600",
-            upsert: false,
-          }
-        );
+    const { data, error } = await supabase.storage
+      .from("modules")
+      .upload(`${courseData.name}/${moduleName}/${fileRefName}`, fileRefValue, {
+        cacheControl: "3600",
+        upsert: false,
+      });
 
-      setIsUploading(false);
-    } catch (error) {
-      setIsError(true);
-      console.log(error);
+    setTimeout(function () {
+      router.push(`/courses/${courseData.name}`);
+    }, 6000);
+
+    if (!error) {
+      return toast.success("Uploading File to Module!");
     }
-
-    router.push(`/courses/${courseData.name}`);
   };
 
   useEffect(() => {
@@ -72,14 +67,13 @@ const ModuleCard = ({ moduleName, courseData }) => {
     // actually do need dependency array or else will endlessly fetch
   }, [courseData.name, moduleName]);
 
-  if (isError === true) {
-    return (
-      <h1 className="text-3xl">An Error has Ocurred. Please try again!</h1>
-    );
-  }
-
   return (
     <>
+      <Toaster
+        toastOptions={{
+          duration: 5000,
+        }}
+      />
       <div className="w-full h-full rounded-lg flex flex-col  mb-12 shadow-xl ">
         <div className="flex w-full justify-between rounded-sm h-12 bg-slate-500 items-center">
           {openContent ? (
@@ -132,7 +126,7 @@ const ModuleCard = ({ moduleName, courseData }) => {
             className="flex items-center h-16 justify-center w-full bg-[#FEFFFE] gap-4"
             onSubmit={supabaseFileUploadHandler}
           >
-            <input type="file" ref={fileRef} className="" />
+            <input type="file" ref={fileRef} />
             <button
               className="rounded-md bg-blue-100 text-black w-24 p-2"
               type="submit"
@@ -140,12 +134,6 @@ const ModuleCard = ({ moduleName, courseData }) => {
               Submit
             </button>
           </form>
-        ) : undefined}
-
-        {openContent && isUploading ? (
-          <p className="flex animate-pulse h-16 items-center justify-center text-xl">
-            Uploading File...
-          </p>
         ) : undefined}
       </div>
     </>
