@@ -1,3 +1,5 @@
+import toast, { Toaster } from "react-hot-toast";
+
 import { useRef } from "react";
 import { useRouter } from "next/router";
 
@@ -26,11 +28,29 @@ const CoursesModalContent = ({ children, onAddCourse }) => {
     e.target.reset();
 
     onAddCourse(courseData);
-    router.push(`/courses/${courseNameRefValue}`);
+
+    setTimeout(function () {
+      router.replace(`/courses/${courseNameRefValue}`);
+    }, 6000);
+
+    if (
+      courseNameRefValue.trim() === "" ||
+      tagRefValue === "" ||
+      descriptionRefValue === ""
+    ) {
+      return toast.error("Invalid Input(s)");
+    } else {
+      return toast.success("Creating Course!");
+    }
   };
 
   return (
     <>
+      <Toaster
+        toastOptions={{
+          duration: 5000,
+        }}
+      />
       <div className="h-full w-full flex flex-col font-lato bg-[#FAF9F6]">
         <div className="flex justify-center items-center h-12 w-full bg-[#424B54] border-b border-black">
           <div className="flex mr-auto  ml-4 w-12 p-1 bg-red-500 items-center justify-center rounded-full h-6">
@@ -55,7 +75,7 @@ const CoursesModalContent = ({ children, onAddCourse }) => {
             <input
               type="text"
               id="name"
-              required
+              // required
               ref={courseNameRef}
               placeholder="Intro-To-Science"
               className="w-1/3 h-9 bg-[#555358] text-white text-lg rounded-md"
@@ -67,7 +87,7 @@ const CoursesModalContent = ({ children, onAddCourse }) => {
             </label>
             <select
               id="tag"
-              required
+              // required
               ref={tagRef}
               className="w-1/3 h-9 bg-[#555358] text-white  rounded-md"
             >
@@ -89,7 +109,7 @@ const CoursesModalContent = ({ children, onAddCourse }) => {
               id="description"
               cols="30"
               rows="5"
-              required
+              // required
               ref={descriptionRef}
               placeholder="Description..."
               className="w-1/3 h-full bg-[#555358] text-white  text-lg rounded-md appearance-none"

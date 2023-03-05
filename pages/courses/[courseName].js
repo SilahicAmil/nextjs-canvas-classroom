@@ -1,11 +1,13 @@
+import toast, { Toaster } from "react-hot-toast";
+
 import CourseDetails from "@/components/CourseDetails/CourseDetails";
 import Head from "next/head";
 import { connectToDB } from "@/lib/db";
 import { getSession } from "next-auth/react";
-import { useState } from "react";
+import { useRouter } from "next/router";
 
 const CourseDetailsPage = ({ courseData }) => {
-  const [isError, setIsError] = useState(false);
+  const router = useRouter();
 
   const addModuleHandler = async (enteredModuleName) => {
     const response = await fetch("/api/add-module", {
@@ -16,10 +18,6 @@ const CourseDetailsPage = ({ courseData }) => {
       },
     });
     const data = await response.json();
-
-    if (!response.ok) {
-      setIsError(true);
-    }
   };
 
   return (
@@ -30,7 +28,6 @@ const CourseDetailsPage = ({ courseData }) => {
 
       <div className="h-full w-full">
         <CourseDetails courseData={courseData} onAddModule={addModuleHandler} />
-        {isError ? <p>Invalid Input!</p> : null}
       </div>
     </>
   );

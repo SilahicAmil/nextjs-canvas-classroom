@@ -1,4 +1,6 @@
-import { useRef } from "react";
+import toast, { Toaster } from "react-hot-toast";
+import { useRef, useState } from "react";
+
 import { useRouter } from "next/router";
 
 const ModuleModal = ({ children, courseData, onAddModule }) => {
@@ -14,11 +16,26 @@ const ModuleModal = ({ children, courseData, onAddModule }) => {
       courseName: courseData.name,
     });
 
-    router.replace(`/courses/${courseData.name}`);
+    e.target.reset();
+
+    setTimeout(function () {
+      router.replace(`/courses/${courseData.name}`);
+    }, 6000);
+
+    if (moduleNameRefValue.trim() === "") {
+      return toast.error("Invalid Input!");
+    } else {
+      return toast.success("Adding Module!");
+    }
   };
 
   return (
     <>
+      <Toaster
+        toastOptions={{
+          duration: 5000,
+        }}
+      />
       <div className="flex-col flex top-0 m-auto z-50 shadow-2xl rounded-md left-0 bottom-0 right-0 items-center  absolute w-1/2 h-1/2 bg-[#FAF9F6] border border-black font-lato">
         <div className="flex mr-auto mt-4  ml-4 p-2 w-12 h-6 bg-red-500 items-center justify-center rounded-full ">
           {children}
@@ -33,7 +50,7 @@ const ModuleModal = ({ children, courseData, onAddModule }) => {
           <input
             type="text"
             id="name"
-            required
+            // required
             ref={moduleNameRef}
             className="h-12 text-2xl p-4 bg-gray-300 text-black"
           />
