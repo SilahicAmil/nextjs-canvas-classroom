@@ -20,7 +20,7 @@ const ModuleModal = ({ children, courseData, onAddModule }) => {
 
     setTimeout(function () {
       router.replace(`/courses/${courseData.name}`);
-    }, 6000);
+    }, 5100);
 
     if (moduleNameRefValue.trim() === "") {
       return toast.error("Invalid Input!");

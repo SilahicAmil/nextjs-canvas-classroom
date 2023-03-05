@@ -41,7 +41,7 @@ const ModuleCard = ({ moduleName, courseData }) => {
 
     setTimeout(function () {
       router.push(`/courses/${courseData.name}`);
-    }, 6000);
+    }, 5100);
 
     if (!error) {
       return toast.success("Uploading File to Module!");

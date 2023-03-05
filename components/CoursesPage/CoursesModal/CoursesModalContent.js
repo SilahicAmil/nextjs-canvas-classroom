@@ -31,7 +31,7 @@ const CoursesModalContent = ({ children, onAddCourse }) => {
 
     setTimeout(function () {
       router.replace(`/courses/${courseNameRefValue}`);
-    }, 6000);
+    }, 5100);
 
     if (
       courseNameRefValue.trim() === "" ||
