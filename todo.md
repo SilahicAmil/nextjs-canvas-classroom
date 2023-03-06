@@ -51,6 +51,8 @@ term: "2023-2024" -->
 
 -- Reset DBs
 
+-- Posibly use Redux for the sending of HTTP request so we dont handle timeout in the component
+
 -- Look into students uploadng assignments
 -- Also have teachers look at uploaded assignments by students
 -- Idk for sure yet
