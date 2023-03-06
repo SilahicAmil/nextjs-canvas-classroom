@@ -45,11 +45,15 @@ term: "2023-2024" -->
 
 <!-- -- Error handling for the not allowing same module name - handle in API route -->
 
+<!-- -- Add React Hot Toast for uploading files and creating modules/courses -->
+
 <!-- ---------------------------------TODO BELOW--------------------------------- -->
 
--- Add React Hot Toast for uploading files and creating modules/courses
-
 -- Reset DBs
+
+-- Look into students uploadng assignments
+-- Also have teachers look at uploaded assignments by students
+-- Idk for sure yet
 
 -- Add Calendar component to display assignments due (fetch from DB probably make a field like DueDate)
 
