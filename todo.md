@@ -55,6 +55,9 @@ term: "2023-2024" -->
 -- Also have teachers look at uploaded assignments by students
 -- Idk for sure yet
 
+-- Supabase DB for file upload
+students -> studentName -> className -> moduleName -> fileName
+
 -- Add Calendar component to display assignments due (fetch from DB probably make a field like DueDate)
 
 -- Inboxing will probably be the hardest thing (so save best for last lol)
