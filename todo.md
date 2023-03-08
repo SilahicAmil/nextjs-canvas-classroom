@@ -73,11 +73,11 @@ students -> studentName -> className -> moduleName -> fileName
 <!--  --> = Done
 
 - Able to Login as a Teacher or Student and switch modes
-- Able to create student acount
-- Able to create a course as a teacher
-- Within the course have the ability to add/delete modules (as a teacher)
+- Able to create student acount - Done
+- Able to create a course as a teacher - Done
+- Within the course have the ability to add/delete modules (as a teacher) - Done
 - Students can view the courses and enroll into it
-- Student can only download files from modules and cant edit the course or create courses
+- Student can only download files from modules and cant edit the course or create courses - Done
 - Ability for two way messaging between students and teachers - kind of like an email
 - Calendar should show due dates of modules for students
 - Students should be able to upload assignments for teacher to view
