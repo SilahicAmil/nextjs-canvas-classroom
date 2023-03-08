@@ -51,13 +51,15 @@ term: "2023-2024" -->
 
 -- Reset DBs
 
+-- Add Basic Unit Tests (mainly for the data components being loaded)
+
 -- Posibly use Redux for the sending of HTTP request so we dont handle timeout in the component
 
 -- Look into students uploadng assignments
--- Also have teachers look at uploaded assignments by students
+-- Also have teachers look at uploaded assignments by students - secure route only for teachers
 -- Idk for sure yet
 
--- Supabase DB for file upload
+-- Supabase DB for student file upload
 students -> studentName -> className -> moduleName -> fileName
 
 -- Add Calendar component to display assignments due (fetch from DB probably make a field like DueDate)
