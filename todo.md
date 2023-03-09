@@ -53,7 +53,8 @@ term: "2023-2024" -->
 
 -- Add Basic Unit Tests (mainly for the data components being loaded)
 
--- Posibly use Redux for the sending of HTTP request so we dont handle timeout in the component
+-- Posibly use a hook for useTimeout
+-- Create custom Toaster component
 
 -- Look into students uploadng assignments
 -- Also have teachers look at uploaded assignments by students - secure route only for teachers
