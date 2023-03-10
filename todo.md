@@ -67,18 +67,17 @@ students -> studentName -> className -> moduleName -> fileName
 
 -- Inboxing will probably be the hardest thing (so save best for last lol)
 
-<!--  #####################################################-->
+-------- ##################################################### --------
 
 ## MVP (Minimum Viable Product)
 
-<!--  --> = Done
+- Ability for two way messaging between students and teachers - kind of like an email
+- Calendar should show due dates of modules for students (IDK about this one)
+- Students should be able to upload assignments for teacher to view
 
-- Able to Login as a Teacher or Student and switch modes
+--------- DONE ---------
+
 - Able to create student acount - Done
 - Able to create a course as a teacher - Done
 - Within the course have the ability to add/delete modules (as a teacher) - Done
-- Students can view the courses and enroll into it
-- Student can only download files from modules and cant edit the course or create courses - Done
-- Ability for two way messaging between students and teachers - kind of like an email
-- Calendar should show due dates of modules for students
-- Students should be able to upload assignments for teacher to view
+- - Student can only download files from modules and cant edit the course or create courses - Done
