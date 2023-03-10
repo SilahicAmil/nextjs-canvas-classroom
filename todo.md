@@ -55,6 +55,7 @@ term: "2023-2024" -->
 
 -- Posibly use a hook for useTimeout
 -- Create custom Toaster component
+-- Add Hooks for fetching data from supabase
 
 -- Look into students uploadng assignments
 -- Also have teachers look at uploaded assignments by students - secure route only for teachers
