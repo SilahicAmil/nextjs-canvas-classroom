@@ -68,7 +68,7 @@ const Signup = ({}) => {
                 name="email"
                 type="email"
                 autoComplete="email"
-                // required
+                required
                 ref={emailRef}
                 className="relative block w-full appearance-none rounded-none rounded-t-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm bg-white "
                 placeholder="Email address"
@@ -83,7 +83,7 @@ const Signup = ({}) => {
                 name="password"
                 type="password"
                 autoComplete="current-password"
-                // required
+                required
                 ref={passwordRef}
                 className="bg-white relative block w-full appearance-none rounded-none rounded-b-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
                 placeholder="Password"
