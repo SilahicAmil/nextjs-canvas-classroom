@@ -13,9 +13,8 @@ const ErrorPage = () => {
             </h6>
 
             <p className="mb-8 text-center text-gray-500 md:text-lg">
-              The page you’re looking for doesn’t exist.
+              The page you&#39;re looking for doesn&#39;t exist.
             </p>
-            {/* if logged in display this stuff ELSE just take back to "/" */}
             <Link
               href="/dashboard"
               className="px-6 py-2 text-lg font-bold tracking-widest text-black bg-blue-300"
