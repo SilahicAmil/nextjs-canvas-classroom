@@ -47,15 +47,12 @@ term: "2023-2024" -->
 
 <!-- -- Add React Hot Toast for uploading files and creating modules/courses -->
 
+<!-- -- Reset DBs -->
+<!-- -- Create custom Toaster component -->
+
 <!-- ---------------------------------TODO BELOW--------------------------------- -->
 
--- Reset DBs
-
 -- Add Basic Unit Tests (mainly for the data components being loaded)
-
--- Posibly use a hook for useTimeout
--- Create custom Toaster component
--- Add Hooks for fetching data from supabase
 
 -- Look into students uploadng assignments
 -- Also have teachers look at uploaded assignments by students - secure route only for teachers

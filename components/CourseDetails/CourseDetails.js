@@ -2,6 +2,7 @@ import { useRef, useState } from "react";
 
 import { AiOutlinePlus } from "react-icons/ai";
 import Header from "../UI/Header";
+import Link from "next/link";
 import ModuleCard from "./ModuleCard";
 import ModuleModal from "./ModuleModal/ModuleModal";
 import { createPortal } from "react-dom";
@@ -74,6 +75,7 @@ const CourseDetails = ({ courseData, onAddModule }) => {
             document.getElementById("module-modal")
           )}
       </div>
+      <Link href={`/courses/${courseData.name}/assignments`}>123</Link>
     </>
   );
 };

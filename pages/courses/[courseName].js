@@ -1,14 +1,10 @@
-import toast, { Toaster } from "react-hot-toast";
-
 import CourseDetails from "@/components/CourseDetails/CourseDetails";
 import Head from "next/head";
+import Link from "next/link";
 import { connectToDB } from "@/lib/db";
 import { getSession } from "next-auth/react";
-import { useRouter } from "next/router";
 
 const CourseDetailsPage = ({ courseData }) => {
-  const router = useRouter();
-
   const addModuleHandler = async (enteredModuleName) => {
     const response = await fetch("/api/add-module", {
       method: "PUT",
