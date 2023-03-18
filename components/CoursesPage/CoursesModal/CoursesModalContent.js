@@ -75,7 +75,6 @@ const CoursesModalContent = ({ children, onAddCourse }) => {
             <input
               type="text"
               id="name"
-              // required
               ref={courseNameRef}
               placeholder="Intro-To-Science"
               className="w-1/3 h-9 bg-[#555358] text-white text-lg rounded-md"
@@ -87,7 +86,6 @@ const CoursesModalContent = ({ children, onAddCourse }) => {
             </label>
             <select
               id="tag"
-              // required
               ref={tagRef}
               className="w-1/3 h-9 bg-[#555358] text-white  rounded-md"
             >
@@ -109,7 +107,6 @@ const CoursesModalContent = ({ children, onAddCourse }) => {
               id="description"
               cols="30"
               rows="5"
-              // required
               ref={descriptionRef}
               placeholder="Description..."
               className="w-1/3 h-full bg-[#555358] text-white  text-lg rounded-md appearance-none"

@@ -4,7 +4,7 @@ import { HiEllipsisVertical } from "react-icons/hi2";
 import { useSession } from "next-auth/react";
 
 const Dashboard = ({ courseData }) => {
-  const { data: session, status } = useSession();
+  const { data: session } = useSession();
 
   return (
     <>
@@ -17,7 +17,6 @@ const Dashboard = ({ courseData }) => {
         </div>
         <hr className="w-full" />
 
-        {/* maybe xtract into own component idk */}
         <div className="m-6">
           <div className="mb-2">
             {session?.user.name === "teacher" ? (

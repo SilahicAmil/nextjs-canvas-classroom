@@ -45,6 +45,8 @@ const ModuleCard = ({ moduleName, courseData }) => {
 
     if (!error) {
       return toast.success("Uploading File to Module!");
+    } else {
+      return toast.error("Upload has failed. Please Try Again!");
     }
   };
 
@@ -92,7 +94,7 @@ const ModuleCard = ({ moduleName, courseData }) => {
             </div>
           )}
           <h1 className="ml-8 text-2xl mr-auto">{moduleName}</h1>
-          {/* just show this whole div conditionally based off of auth */}
+
           {session?.user.name !== "teacher" ? undefined : (
             <div className="flex gap-8 items-center justify-center h-full ">
               {openFileUpload ? (
@@ -105,7 +107,7 @@ const ModuleCard = ({ moduleName, courseData }) => {
                 </button>
               )}
 
-              {/* will implement this way later */}
+              {/* will implement this WAY later */}
               <button className="mr-6">
                 <AiOutlineDelete className="text-xl text-white" />
               </button>

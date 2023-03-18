@@ -1,6 +1,5 @@
 import CourseDetails from "@/components/CourseDetails/CourseDetails";
 import Head from "next/head";
-import Link from "next/link";
 import { connectToDB } from "@/lib/db";
 import { getSession } from "next-auth/react";
 
