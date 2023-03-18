@@ -59,7 +59,7 @@ term: "2023-2024" -->
 -- Idk for sure yet
 
 -- Supabase DB for student file upload
-students -> studentName -> className -> moduleName -> fileName
+students -> studetName or studentEmail -> className -> moduleName -> completedAssignment
 
 -- Add Calendar component to display assignments due (fetch from DB probably make a field like DueDate)
 
