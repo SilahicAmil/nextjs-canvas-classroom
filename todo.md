@@ -54,9 +54,8 @@ term: "2023-2024" -->
 
 -- Add Basic Unit Tests (mainly for the data components being loaded)
 
--- Look into students uploadng assignments
+-- Look into students uploadng assignments (Idk for sure yet)
 -- Also have teachers look at uploaded assignments by students - secure route only for teachers
--- Idk for sure yet
 
 -- Supabase DB for student file upload
 students -> studetName or studentEmail -> className -> moduleName -> completedAssignment
