@@ -64,6 +64,8 @@ students -> studetName or studentEmail -> className -> moduleName -> completedAs
 
 -- Inboxing will probably be the hardest thing (so save best for last lol)
 
+-- Update Landing Page - Make it more modern
+
 -------- ##################################################### --------
 
 ## MVP (Minimum Viable Product)
