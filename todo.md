@@ -60,11 +60,11 @@ term: "2023-2024" -->
 -- Supabase DB for student file upload
 students -> studetName or studentEmail -> className -> moduleName -> completedAssignment
 
--- Add Calendar component to display assignments due (fetch from DB probably make a field like DueDate)
+-- Add Calendar component to display assignments due (fetch from DB probably make a field like DueDate) - might get rid of this
 
--- Inboxing will probably be the hardest thing (so save best for last lol)
+-- Inboxing will probably be the hardest thing (so save best for last lol or maybe never do it)
 
--- Update Landing Page - Make it more modern
+-- Update Landing Page - Make it more modern (PRIORITY RN)
 
 -------- ##################################################### --------
 
