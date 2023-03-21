@@ -4,7 +4,7 @@ import Link from "next/link";
 const LandingHeader = ({}) => {
   return (
     <>
-      <nav className="bg-[#003049] w-full sticky top-0 z-50 ">
+      <nav className="w-full ">
         <div className=" h-24  flex justify-between items-center">
           <div className="font-bold text-2xl w-32 h-full flex items-center ml-8">
             <Image
@@ -14,25 +14,11 @@ const LandingHeader = ({}) => {
               height={1000}
             />
           </div>
-          <div className="flex">
-            <ul className="flex gap-12 uppercase text-white invisible lg:visible md:visible sm:visible ">
-              <li>
-                <Link href="#who-we-help" scroll={false}>
-                  Who We Help
-                </Link>
-              </li>
-              <li>
-                <Link href="#pricing" scroll={false}>
-                  Pricing
-                </Link>
-              </li>
-            </ul>
-          </div>
           <div className="">
             <ul className="flex">
               <li>
                 <Link
-                  className="w-32 flex items-center justify-center mr-4 uppercase font-bold bg-sky-300 h-full p-3 rounded-md text-black"
+                  className="w-32 flex items-center justify-center mr-4 uppercase font-bold bg-[#171100] h-full p-3 rounded-sm text-white hover:rounded-2xl hover:duration-200"
                   href="/login"
                 >
                   Log In

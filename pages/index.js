@@ -1,8 +1,8 @@
 import Head from "next/head";
-import LandingContent from "@/components/LandingPage/LandingContent";
+import LandingFooter from "@/components/LandingPage/LandingFooter";
 import LandingHeader from "@/components/LandingPage/LandingHeader";
 import LandingHero from "@/components/LandingPage/LandingHero";
-import LandingPricing from "@/components/LandingPage/LandingPricing";
+import LandingTestimonials from "@/components/LandingPage/LandingTestimonials";
 
 const HomePage = ({}) => {
   return (
@@ -10,11 +10,11 @@ const HomePage = ({}) => {
       <Head>
         <title>Scholar - #1 Educator Platform </title>
       </Head>
-      <div className="font-lato w-full">
+      <div className="font-lato h-[100vh] bg-[#FFFCF4]">
         <LandingHeader />
         <LandingHero />
-        <LandingContent />
-        <LandingPricing />
+        <LandingTestimonials />
+        <LandingFooter />
       </div>
     </>
   );

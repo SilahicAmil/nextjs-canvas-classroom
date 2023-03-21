@@ -1,30 +1,54 @@
+import Image from "next/image";
+import Link from "next/link";
+
 const LandingHero = ({}) => {
   return (
     <>
-      <div className="lg:h-96 md:h-64 w-screen bg-gradient-to-l from-sky-600 to-sky-400">
-        <div className=" pt-24 flex flex-col items-center justify-center">
-          <h2 className="text-3xl font-bold mb-4 text-white text-center">
-            Scholar the #1 Educational Software
-          </h2>
+      <section>
+        <div className="mx-auto max-w-screen-xl px-4 py-8 sm:py-12 sm:px-6 lg:py-16 lg:px-8  ">
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
+            <div className="relative h-64 overflow-hidden rounded-lg sm:h-80 lg:order-last lg:h-full">
+              <Image
+                alt="Corp Education"
+                src="/images/corp-education.jpeg"
+                className="absolute inset-0 h-full w-full object-cover"
+                width={400}
+                height={400}
+              />
+            </div>
 
-          <h3 className="text-xl  text-gray-200 text-center">
-            Connecting educators and students since 2023.
-          </h3>
+            <div className="lg:py-24 ">
+              <h1 className="text-6xl font-bold sm:text-4xl">
+                Learn without limits and spread knowledge.
+              </h1>
+
+              <p className="mt-4 text-[#5F5B53] w-auto text-md">
+                Build new skills for that “this is my year” feeling with
+                courses, certificates, and degrees from world-class universities
+                and companies.
+              </p>
+
+              <Link
+                href="/login"
+                className="mt-8 inline-block  bg-[#FFB900] rounded-sm px-12 py-3 font-medium text-lg text-white  hover:rounded-xl hover:duration-200"
+              >
+                Get Started Today
+              </Link>
+              <h1 className="py-6 text-lg text-[#5F5B53]">Recent Engagement</h1>
+              <div className="flex gap-8">
+                <div className="flex gap-2 items-center">
+                  <p className="text-3xl">50K </p>
+                  <span className="text-md text-[#5F5B53]">Students</span>
+                </div>
+                <div className="flex gap-2 items-center">
+                  <p className="text-3xl ">25+ </p>
+                  <span className="text-[#5F5B53] text-md">Courses</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="w-full invisible lg:flex lg:h-full lg:visible bg-gradient-to-l from-sky-600 to-sky-400">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 1440 320"
-            className="w-full"
-          >
-            <path
-              fill="#A2D9FF"
-              fillOpacity=".8"
-              d="M0,160L48,138.7C96,117,192,75,288,85.3C384,96,480,160,576,160C672,160,768,96,864,74.7C960,53,1056,75,1152,85.3C1248,96,1344,96,1392,96L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-            ></path>
-          </svg>
-        </div>
-      </div>
+      </section>
     </>
   );
 };
