@@ -90,6 +90,7 @@ const Signup = ({}) => {
               />
             </div>
           </div>
+          {/* make this functional */}
           <div className="flex items-center justify-around ">
             <div className="flex gap-2">
               <label htmlFor="teacher">Teacher</label>
