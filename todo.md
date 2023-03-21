@@ -54,7 +54,7 @@ term: "2023-2024" -->
 
 -- Add Basic Unit Tests (mainly for the data components being loaded)
 
--- Look into students uploadng assignments (Idk for sure yet)
+-- Look into students uploadng assignments ((PRIORITY #2)
 -- Also have teachers look at uploaded assignments by students - secure route only for teachers
 
 -- Supabase DB for student file upload
@@ -64,7 +64,7 @@ students -> studetName or studentEmail -> className -> moduleName -> completedAs
 
 -- Inboxing will probably be the hardest thing (so save best for last lol or maybe never do it)
 
--- Update Landing Page - Make it more modern (PRIORITY RN)
+-- Update Landing Page - Make it more modern (PRIORITY #1)
 
 -------- ##################################################### --------
 
