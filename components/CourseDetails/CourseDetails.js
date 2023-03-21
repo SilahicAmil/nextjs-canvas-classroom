@@ -75,7 +75,9 @@ const CourseDetails = ({ courseData, onAddModule }) => {
             document.getElementById("module-modal")
           )}
       </div>
-      <Link href={`/courses/${courseData.name}/assignments`}>123</Link>
+      <Link href={`/courses/${courseData.name}/assignments`}>
+        Upload Assignment(s)
+      </Link>
     </>
   );
 };

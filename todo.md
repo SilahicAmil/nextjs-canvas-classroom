@@ -49,20 +49,17 @@ term: "2023-2024" -->
 
 <!-- -- Reset DBs -->
 <!-- -- Create custom Toaster component -->
+<!-- -- Update Landing Page - Make it more modern (PRIORITY #1) -->
 
 <!-- ---------------------------------TODO BELOW--------------------------------- -->
 
--- Add Basic Unit Tests (mainly for the data components being loaded)
+-- Add Basic Unit Tests ((Priority #2))
 
--- Update Landing Page - Make it more modern (PRIORITY #1)
-
--- Look into students uploadng assignments ((PRIORITY #2)
+-- Look into students uploadng assignments ((Priority #1))
 -- Also have teachers look at uploaded assignments by students - secure route only for teachers
 
 -- Supabase DB for student file upload
 students -> studetName or studentEmail -> className -> moduleName -> completedAssignment
-
--- Add Calendar component to display assignments due (fetch from DB probably make a field like DueDate) - might get rid of this
 
 -- Inboxing will probably be the hardest thing (so save best for last lol or maybe never do it)
 
@@ -71,7 +68,6 @@ students -> studetName or studentEmail -> className -> moduleName -> completedAs
 ## MVP (Minimum Viable Product)
 
 - Ability for two way messaging between students and teachers - kind of like an email
-- Calendar should show due dates of modules for students (IDK about this one)
 - Students should be able to upload assignments for teacher to view
 
 --------- DONE ---------

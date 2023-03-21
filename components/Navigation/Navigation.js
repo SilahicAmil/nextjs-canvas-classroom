@@ -90,19 +90,7 @@ const Navigation = ({ children }) => {
                     <span className="mx-4 ">Courses</span>
                   </Link>
                 </li>
-                <li>
-                  <Link
-                    className={`${
-                      router.pathname === "/calendar"
-                        ? "border-b-2 border-white rounded-md "
-                        : null
-                    } flex flex-col items-center  py-2 mt-5 text-white `}
-                    href="/calendar"
-                  >
-                    <BsCalendarDate className="text-3xl" />
-                    <span className="mx-4 ">Calendar</span>
-                  </Link>
-                </li>
+
                 <li>
                   <Link
                     className={`${
