@@ -54,6 +54,8 @@ term: "2023-2024" -->
 
 -- Add Basic Unit Tests (mainly for the data components being loaded)
 
+-- Update Landing Page - Make it more modern (PRIORITY #1)
+
 -- Look into students uploadng assignments ((PRIORITY #2)
 -- Also have teachers look at uploaded assignments by students - secure route only for teachers
 
@@ -63,8 +65,6 @@ students -> studetName or studentEmail -> className -> moduleName -> completedAs
 -- Add Calendar component to display assignments due (fetch from DB probably make a field like DueDate) - might get rid of this
 
 -- Inboxing will probably be the hardest thing (so save best for last lol or maybe never do it)
-
--- Update Landing Page - Make it more modern (PRIORITY #1)
 
 -------- ##################################################### --------
 
