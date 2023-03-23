@@ -9,7 +9,7 @@ const TestimonialItem = ({ name, title, description }) => {
 
       <div className="mt-4 flex items-center gap-4">
         <Image
-          alt="Woman"
+          alt={`${name} testimonial photo`}
           src="/images/education-cap.jpeg"
           className="h-12 w-12 rounded-full object-cover"
           width={200}
