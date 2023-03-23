@@ -44,7 +44,11 @@ const Login = ({}) => {
             Sign in to your account
           </h2>
         </div>
-        <form className="mt-8 space-y-6" onSubmit={formSubmitHandler}>
+        <form
+          className="mt-8 space-y-6"
+          onSubmit={formSubmitHandler}
+          data-testid="form-element"
+        >
           <input type="hidden" name="remember" defaultValue="true" />
           <div className="-space-y-px rounded-md shadow-sm">
             <div>

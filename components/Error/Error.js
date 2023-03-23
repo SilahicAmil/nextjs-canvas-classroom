@@ -19,7 +19,7 @@ const Error = () => {
             onClick={() => router.back()}
             className="px-6 py-2 text-lg font-bold tracking-widest text-black bg-blue-300"
           >
-            Go home
+            Go back
           </button>
         </div>
       </div>
