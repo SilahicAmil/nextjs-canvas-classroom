@@ -16,4 +16,12 @@ describe("Error Page", () => {
 
     expect(backButtonElement).toBeInTheDocument();
   });
+
+  test("renders back button", () => {
+    render(<Error />);
+
+    const backButtonElement = screen.getByRole("button", { name: "Go back" });
+
+    expect(backButtonElement).toBeInTheDocument();
+  });
 });
