@@ -10,7 +10,7 @@ My goal was to simulate and end-to-end SaaS project
 - Somewhat complex file fetching and uploading logic: [Example Code](https://github.com/SilahicAmil/nextjs-canvas-classroom/blob/main/components/CourseDetails/ModuleCard.js)
 - Responsive CSS using Tailwind CSS / Daisy UI: [Example Code](https://github.com/SilahicAmil/nextjs-canvas-classroom/blob/main/components/Dashboard/Dashboard.js)
 - Custom React Hooks: [Example Code](https://github.com/SilahicAmil/nextjs-canvas-classroom/tree/main/hooks)
-- Integration/Component Testing: [Example Code](https://github.com/SilahicAmil/nextjs-canvas-classroom)
+- Unit Testing: [Example Code](https://github.com/SilahicAmil/nextjs-canvas-classroom/tree/main/__tests__)
 
 # Why I built the project this way
 
@@ -30,6 +30,3 @@ In the project directory you can run
 
     npm i
     npm run dev
-    OR
-    yarn dev
-    OR pnpm dev
