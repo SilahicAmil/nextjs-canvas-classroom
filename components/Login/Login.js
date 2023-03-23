@@ -1,3 +1,4 @@
+import { Toaster, toast } from "react-hot-toast";
 import { useRef, useState } from "react";
 
 import Image from "next/image";
@@ -9,7 +10,6 @@ const Login = ({}) => {
   const router = useRouter();
   const emailRef = useRef();
   const passwordRef = useRef();
-  const [isError, setIsError] = useState();
 
   const formSubmitHandler = async (e) => {
     e.preventDefault();
@@ -25,7 +25,7 @@ const Login = ({}) => {
     if (!result.error) {
       router.replace("/dashboard");
     } else {
-      setIsError(true);
+      toast.error("Incorrect Email or Password! Try again.");
     }
   };
 
@@ -105,16 +105,13 @@ const Login = ({}) => {
           <div>
             <button
               type="submit"
+              data-testid="sign-in"
               className="group relative flex w-full justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
             >
               Sign In
             </button>
           </div>
-          {isError ? (
-            <p className="text-red-500 flex justify-center">
-              Email or Password is Incorrect!
-            </p>
-          ) : null}
+          <Toaster />
         </form>
       </div>
     </div>

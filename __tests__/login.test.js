@@ -20,10 +20,7 @@ describe("Login Page", () => {
   test("render sign in button", () => {
     render(<Login />);
 
-    const loginButton = screen.getByRole("button", {
-      name: "Sign In",
-      exact: false,
-    });
+    const loginButton = screen.getByTestId("sign-in");
 
     expect(loginButton).toBeInTheDocument();
   });
