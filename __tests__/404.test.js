@@ -13,6 +13,7 @@ describe("Error Page", () => {
     render(<Error />);
 
     const backButtonElement = screen.getByText("404");
+
     expect(backButtonElement).toBeInTheDocument();
   });
 });

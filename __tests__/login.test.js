@@ -13,6 +13,7 @@ describe("Login Page", () => {
     render(<Login />);
 
     const loginFormElement = screen.getByTestId("form-element");
+
     expect(loginFormElement).toBeInTheDocument();
   });
 
@@ -23,6 +24,7 @@ describe("Login Page", () => {
       name: "Sign In",
       exact: false,
     });
+
     expect(loginButton).toBeInTheDocument();
   });
 });
