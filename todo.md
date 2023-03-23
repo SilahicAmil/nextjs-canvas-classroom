@@ -53,9 +53,9 @@ term: "2023-2024" -->
 
 <!-- ---------------------------------TODO BELOW--------------------------------- -->
 
--- Add Basic Unit Tests ((Priority #1))
+-- Add Basic Unit Tests ((Priority #1)) - WIP
 
--- Look into students uploadng assignments ((Priority #2))
+-- Look into students uploadng assignments ((Priority #2)) - Figured out an easy way to implement this
 -- Also have teachers look at uploaded assignments by students - secure route only for teachers
 
 -- Supabase DB for student file upload
