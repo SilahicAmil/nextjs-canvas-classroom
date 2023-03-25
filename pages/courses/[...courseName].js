@@ -1,7 +1,7 @@
 const CourseAssignmentUploadPage = () => {
   return (
     <div>
-      <h1>123</h1>
+      <h1 className="bg-red-500 text-4xl">WORK IN PROGRESS</h1>
     </div>
   );
 };
