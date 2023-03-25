@@ -13,7 +13,7 @@ describe("Dashboard Page", () => {
     useSession.mockReturnValue({
       data: {
         user: {
-          name: "teacher",
+          name: "teacher" || "student",
           email: "a@a.com",
         },
       },
