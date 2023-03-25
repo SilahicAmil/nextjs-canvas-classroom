@@ -16,7 +16,7 @@ const DashboardCard = ({ courseName, description, tag }) => {
 
   return (
     <>
-      <div className="flex card w-72 h-72 bg-white shadow-2xl mt-6 rounded-lg  ">
+      <div className="flex card w-72 h-72 bg-white shadow-2xl mt-6 rounded-lg">
         <div
           className={` bg-red-500 w-full h-full flex`}
           style={{ backgroundColor: colorChanger }}

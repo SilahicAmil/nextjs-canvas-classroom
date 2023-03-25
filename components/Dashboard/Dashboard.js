@@ -29,7 +29,10 @@ const Dashboard = ({ courseData }) => {
           </div>
           <hr className="w-11/12" />
           <div className="">
-            <div className="lg:flex lg:flex-wrap lg:gap-4 md:grid md:grid-cols-2">
+            <div
+              className="lg:flex lg:flex-wrap lg:gap-4 md:grid md:grid-cols-2"
+              data-testid="dashboard-cards"
+            >
               {courseData.map((card) => {
                 return (
                   <DashboardCard
