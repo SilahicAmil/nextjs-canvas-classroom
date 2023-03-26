@@ -51,9 +51,9 @@ term: "2023-2024" -->
 <!-- -- Create custom Toaster component -->
 <!-- -- Update Landing Page - Make it more modern (PRIORITY #1) -->
 
-<!-- ---------------------------------TODO BELOW--------------------------------- -->
+<!-- -- Add Basic Unit Tests ((Priority #1))  -->
 
--- Add Basic Unit Tests ((Priority #1)) - WIP
+<!-- ---------------------------------TODO BELOW--------------------------------- -->
 
 -- Look into students uploadng assignments ((Priority #2)) - Figured out an easy way to implement this
 -- Also have teachers look at uploaded assignments by students - secure route only for teachers
