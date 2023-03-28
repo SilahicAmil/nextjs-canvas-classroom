@@ -2,7 +2,6 @@ import { useRef, useState } from "react";
 
 import { AiOutlinePlus } from "react-icons/ai";
 import Header from "../UI/Header";
-import Link from "next/link";
 import ModuleCard from "./ModuleCard";
 import ModuleModal from "./ModuleModal/ModuleModal";
 import { createPortal } from "react-dom";
@@ -12,6 +11,7 @@ import { useSession } from "next-auth/react";
 const CourseDetails = ({ courseData, onAddModule }) => {
   const modalRef = useRef();
   const [openModal, setOpenModal] = useState(false);
+
   const { data: session } = useSession();
 
   useOnClickOutside(modalRef, () => setOpenModal(false));
@@ -34,7 +34,7 @@ const CourseDetails = ({ courseData, onAddModule }) => {
             >
               <AiOutlinePlus className="text-black" /> Module
             </button>
-          ) : undefined}
+          ) : null}
         </div>
 
         <div>
@@ -75,9 +75,6 @@ const CourseDetails = ({ courseData, onAddModule }) => {
             document.getElementById("module-modal")
           )}
       </div>
-      <Link href={`/courses/${courseData.name}/assignments`}>
-        Upload Assignment(s)
-      </Link>
     </>
   );
 };

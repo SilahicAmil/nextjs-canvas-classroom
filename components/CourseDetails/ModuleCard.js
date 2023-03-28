@@ -12,11 +12,13 @@ const ModuleCard = ({ moduleName, courseData }) => {
 
   const [fileContent, setFileContent] = useState([]);
   const [openFileUpload, setOpenFileUpload] = useState(false);
+  const [openAssigmentUpload, setOpenAssigmentUpload] = useState(false);
   const [isError, setIsError] = useState(false);
 
   const { data: session } = useSession();
 
   const fileRef = useRef();
+  const assignmentRef = useRef();
   const router = useRouter();
 
   const openContentHandler = () => {
@@ -69,6 +71,34 @@ const ModuleCard = ({ moduleName, courseData }) => {
     // actually do need dependency array or else will endlessly fetch
   }, [courseData.name, moduleName]);
 
+  // Upload Assignment
+  const uploadAssignmentHandler = async (e) => {
+    e.preventDefault();
+    const assignmentRefValue = assignmentRef.current.files[0];
+    const assignmentRefname = assignmentRef.current.files[0].name;
+
+    const { data, error } = await supabase.storage
+      .from("assignments")
+      .upload(
+        `${courseData.name}/${moduleName}/${assignmentRefname}`,
+        assignmentRefValue,
+        {
+          cacheControl: "3600",
+          upsert: false,
+        }
+      );
+
+    setTimeout(function () {
+      router.push(`/courses/${courseData.name}`);
+    }, 5100);
+
+    if (!error) {
+      return toast.success("Uploading File to Module!");
+    } else {
+      return toast.error("Upload has failed. Please Try Again!");
+    }
+  };
+
   return (
     <>
       <Toaster
@@ -95,7 +125,18 @@ const ModuleCard = ({ moduleName, courseData }) => {
           )}
           <h1 className="ml-8 text-2xl mr-auto">{moduleName}</h1>
 
-          {session?.user.name !== "teacher" ? undefined : (
+          {session?.user.name !== "teacher" ? (
+            <div className="flex gap-8 items-center justify-center h-full ">
+              <button
+                className="mr-6 text-white"
+                onClick={() =>
+                  setOpenAssigmentUpload((prevState) => !prevState)
+                }
+              >
+                Upload Assignment
+              </button>
+            </div>
+          ) : (
             <div className="flex gap-8 items-center justify-center h-full ">
               {openFileUpload ? (
                 <button onClick={openFileUploadHanlder}>
@@ -129,6 +170,20 @@ const ModuleCard = ({ moduleName, courseData }) => {
             onSubmit={supabaseFileUploadHandler}
           >
             <input type="file" ref={fileRef} />
+            <button
+              className="rounded-md bg-blue-100 text-black w-24 p-2"
+              type="submit"
+            >
+              Submit
+            </button>
+          </form>
+        ) : undefined}
+        {openAssigmentUpload ? (
+          <form
+            className="flex items-center h-16 justify-center w-full bg-[#FEFFFE] gap-4"
+            onSubmit={uploadAssignmentHandler}
+          >
+            <input type="file" ref={assignmentRef} />
             <button
               className="rounded-md bg-blue-100 text-black w-24 p-2"
               type="submit"
