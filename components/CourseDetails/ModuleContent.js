@@ -35,7 +35,7 @@ const ModuleContent = ({ courseData, moduleName, fileName }) => {
 
   if (fileName.length === 0) {
     return (
-      <p className="h-16 text-lg flex items-center justify-center border-b border-black">
+      <p className="h-16 lg:text-lg flex items-center justify-center border-b border-black">
         Files will be displayed here
       </p>
     );

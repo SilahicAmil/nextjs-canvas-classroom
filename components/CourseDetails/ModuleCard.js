@@ -169,9 +169,9 @@ const ModuleCard = ({ moduleName, courseData }) => {
             className="flex items-center h-16 justify-center w-full bg-[#FEFFFE] gap-4"
             onSubmit={supabaseFileUploadHandler}
           >
-            <input type="file" ref={fileRef} />
+            <input type="file" ref={fileRef} className="ml-6" />
             <button
-              className="rounded-md bg-blue-100 text-black w-24 p-2"
+              className="rounded-md bg-blue-100 text-black w-24 p-1 mr-6"
               type="submit"
             >
               Submit
@@ -183,7 +183,7 @@ const ModuleCard = ({ moduleName, courseData }) => {
             className="flex items-center h-16 justify-center bg-[#FEFFFE] gap-4 "
             onSubmit={uploadAssignmentHandler}
           >
-            <input type="file" ref={assignmentRef} className="ml-6" />
+            <input type="file" ref={assignmentRef} />
             <button
               className="rounded-md bg-blue-100 text-black w-24 p-1 mr-6"
               type="submit"
