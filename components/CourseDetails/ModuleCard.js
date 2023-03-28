@@ -123,12 +123,12 @@ const ModuleCard = ({ moduleName, courseData }) => {
               &gt;
             </div>
           )}
-          <h1 className="ml-8 text-2xl mr-auto">{moduleName}</h1>
+          <h1 className="ml-8 lg:text-2xl md:text-xl mr-auto">{moduleName}</h1>
 
           {session?.user.name !== "teacher" ? (
             <div className="flex gap-8 items-center justify-center h-full ">
               <button
-                className="mr-6 text-white"
+                className="mr-6 text-white lg:text-xl md:text-lg sm:text-md"
                 onClick={() =>
                   setOpenAssigmentUpload((prevState) => !prevState)
                 }
@@ -180,12 +180,12 @@ const ModuleCard = ({ moduleName, courseData }) => {
         ) : undefined}
         {openAssigmentUpload ? (
           <form
-            className="flex items-center h-16 justify-center w-full bg-[#FEFFFE] gap-4"
+            className="flex items-center h-16 justify-center bg-[#FEFFFE] gap-4 "
             onSubmit={uploadAssignmentHandler}
           >
-            <input type="file" ref={assignmentRef} />
+            <input type="file" ref={assignmentRef} className="ml-6" />
             <button
-              className="rounded-md bg-blue-100 text-black w-24 p-2"
+              className="rounded-md bg-blue-100 text-black w-24 p-1 mr-6"
               type="submit"
             >
               Submit

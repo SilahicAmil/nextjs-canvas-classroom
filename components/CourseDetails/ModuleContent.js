@@ -8,7 +8,7 @@ const ModuleContent = ({ courseData, moduleName, fileName }) => {
         <div className="flex gap-4 h-16 items-center shadow-2xl  border-black w-full">
           <div className="flex w-full gap-4 border-b h-full items-center border-black">
             <span className="ml-2 text-xl">::</span>
-            <p className="text-xl text-gray-400">
+            <p className="lg:text-xl text-gray-400">
               A module is typically one unit or one week of content.
             </p>
 

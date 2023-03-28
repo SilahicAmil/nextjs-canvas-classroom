@@ -25,8 +25,10 @@ const CourseDetails = ({ courseData, onAddModule }) => {
       >
         <div className="ml-12 flex mb-6 gap-4 items-center ">
           <Header>Course: {courseData.name}</Header>
-          <span className="text-lg ">&gt;</span>
-          <span className="text-lg"> {courseData.term}</span>
+          <span className="lg:text-lg md:text-md sm:text-sm">&gt;</span>
+          <span className="lg:text-lg md:text-md sm:text-sm">
+            {courseData.term}
+          </span>
           {session?.user.name === "teacher" ? (
             <button
               className="bg-green-500 text-black flex items-center justify-center ml-auto w-32 p-2 rounded-lg gap-4 text-md"
