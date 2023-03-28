@@ -68,11 +68,12 @@ students -> studetName or studentEmail -> className -> moduleName -> completedAs
 ## MVP (Minimum Viable Product)
 
 - Ability for two way messaging between students and teachers - kind of like an email
-- Students should be able to upload assignments for teacher to view
+- Teacher should be able to view the assigments
 
 --------- DONE ---------
 
 - Able to create student acount - Done
 - Able to create a course as a teacher - Done
+- - Students should be able to upload assignments - Done
 - Within the course have the ability to add/delete modules (as a teacher) - Done
 - - Student can only download files from modules and cant edit the course or create courses - Done
