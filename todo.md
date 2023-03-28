@@ -53,13 +53,13 @@ term: "2023-2024" -->
 
 <!-- -- Add Basic Unit Tests ((Priority #1))  -->
 
+<!-- -- Look into students uploadng assignments ((Priority #2)) - Figured out an easy way to implement this -->
+<!-- -- Supabase DB for student file upload
+students -> studetName or studentEmail -> className -> moduleName -> completedAssignment -->
+
 <!-- ---------------------------------TODO BELOW--------------------------------- -->
 
--- Look into students uploadng assignments ((Priority #2)) - Figured out an easy way to implement this
 -- Also have teachers look at uploaded assignments by students - secure route only for teachers
-
--- Supabase DB for student file upload
-students -> studetName or studentEmail -> className -> moduleName -> completedAssignment
 
 -- Inboxing will probably be the hardest thing (so save best for last lol or maybe never do it)
 
