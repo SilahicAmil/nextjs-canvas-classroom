@@ -62,6 +62,7 @@ students -> studetName or studentEmail -> className -> moduleName -> completedAs
 -- Also have teachers look at uploaded assignments by students - secure route only for teachers
 
 -- Inboxing will probably be the hardest thing (so save best for last lol or maybe never do it)
+-- Update ReadMe to have \_blank for links
 
 -------- ##################################################### --------
 
