@@ -1,42 +1,5 @@
+import { TESTIMONIAL_DATA } from "@/data/testimonial-data";
 import TestimonialItem from "./TestimonialItem";
-
-const DUMMY_DATA = [
-  {
-    id: 1,
-    name: "John Smith",
-    title: "PhD Student",
-    review:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae pariatur nesciunt a accusantium. Sit est perferendis maiores! Tenetur, cupiditate quidem commodi illo molestiae consequatur eligendi ipsum dolorem placeat inventore error?",
-  },
-  {
-    id: 2,
-    name: "John Smith",
-    title: "PhD Student",
-    review:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae pariatur nesciunt a accusantium. Sit est perferendis maiores! Tenetur, cupiditate quidem commodi illo molestiae consequatur eligendi ipsum dolorem placeat inventore error?",
-  },
-  {
-    id: 3,
-    name: "John Smith",
-    title: "PhD Student",
-    review:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae pariatur nesciunt a accusantium. Sit est perferendis maiores! Tenetur, cupiditate quidem commodi illo molestiae consequatur eligendi ipsum dolorem placeat inventore error?",
-  },
-  {
-    id: 4,
-    name: "John Smith",
-    title: "PhD Student",
-    review:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae pariatur nesciunt a accusantium. Sit est perferendis maiores! Tenetur, cupiditate quidem commodi illo molestiae consequatur eligendi ipsum dolorem placeat inventore error?",
-  },
-  {
-    id: 5,
-    name: "John Smith",
-    title: "PhD Student",
-    review:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae pariatur nesciunt a accusantium. Sit est perferendis maiores! Tenetur, cupiditate quidem commodi illo molestiae consequatur eligendi ipsum dolorem placeat inventore error?",
-  },
-];
 
 const LandingTestimonials = () => {
   return (
@@ -46,8 +9,7 @@ const LandingTestimonials = () => {
           Dont believe us? Read some reviews from our students
         </h1>
         <div className=" sm:columns-2 sm:gap-6 lg:columns-3 lg:gap-8">
-          {/*  */}
-          {DUMMY_DATA.map((review) => {
+          {TESTIMONIAL_DATA.map((review) => {
             return (
               <TestimonialItem
                 key={review.id}
@@ -57,7 +19,6 @@ const LandingTestimonials = () => {
               />
             );
           })}
-          {/*  */}
         </div>
       </div>
     </section>

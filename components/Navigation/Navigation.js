@@ -2,7 +2,6 @@ import { AiOutlineDashboard, AiOutlineInbox } from "react-icons/ai";
 
 import AccountDrawer from "../AccountDetails/AccountDrawer";
 import { Avatar } from "@boringer-avatars/react";
-import { BsCalendarDate } from "react-icons/bs";
 import Image from "next/image";
 import Link from "next/link";
 import { VscLibrary } from "react-icons/vsc";

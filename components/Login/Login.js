@@ -1,9 +1,9 @@
 import { Toaster, toast } from "react-hot-toast";
-import { useRef, useState } from "react";
 
 import Image from "next/image";
 import Link from "next/link";
 import { signIn } from "next-auth/react";
+import { useRef } from "react";
 import { useRouter } from "next/router";
 
 const Login = ({}) => {
