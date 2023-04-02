@@ -61,6 +61,8 @@ students -> studetName or studentEmail -> className -> moduleName -> completedAs
 
 -- Also have teachers look at uploaded assignments by students - secure route only for teachers
 
+-- Uploaded assignmens should have the student email/name. Within that should have a dropdown for each module that shows the assignments
+
 -- Inboxing will probably be the hardest thing (so save best for last lol or maybe never do it)
 
 -------- ##################################################### --------
