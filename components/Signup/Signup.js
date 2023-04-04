@@ -32,7 +32,6 @@ const Signup = ({}) => {
         passwordRefValue,
         "student"
       );
-      console.log(result);
     } catch (err) {
       console.log(err);
     }

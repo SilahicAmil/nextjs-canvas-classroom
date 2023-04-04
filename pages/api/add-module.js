@@ -33,7 +33,6 @@ const helper = async (req, res) => {
         options
       );
 
-      console.log(result);
       client.close();
     } catch (error) {
       console.log(error);

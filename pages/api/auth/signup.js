@@ -7,7 +7,7 @@ const handler = async (req, res) => {
   }
 
   const data = req.body;
-  console.log(data);
+
   const { email, password, role } = data;
 
   if (
@@ -40,7 +40,6 @@ const handler = async (req, res) => {
     role,
   });
 
-  console.log(result);
   res.status(201).json({
     message: "added user",
   });

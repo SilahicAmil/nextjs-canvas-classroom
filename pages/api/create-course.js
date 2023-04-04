@@ -23,7 +23,6 @@ const helper = async (req, res) => {
 
       const result = await coursesCollection.insertOne(data);
 
-      console.log(result);
       client.close();
       res.status(201).json({ message: "data posted", result });
     } catch (error) {

@@ -63,7 +63,6 @@ const ModuleCard = ({ moduleName, courseData }) => {
           });
         setFileContent(data);
       } catch (error) {
-        console.log(error);
         setIsError(true);
       }
     };
