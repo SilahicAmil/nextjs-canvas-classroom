@@ -1,5 +1,7 @@
 # How I worked on this project
 
+Live Demo: https://nextjs-canvas-classroom.vercel.app/
+
 My goal was to simulate and end-to-end SaaS project
 
 - I built this website based off of Canvas by Instructure: [Instructure Website](https://www.instructure.com/)
