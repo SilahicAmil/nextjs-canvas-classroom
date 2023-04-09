@@ -56,12 +56,13 @@ term: "2023-2024" -->
 <!-- -- Look into students uploadng assignments ((Priority #2)) - Figured out an easy way to implement this -->
 <!-- -- Supabase DB for student file upload
 students -> studetName or studentEmail -> className -> moduleName -> completedAssignment -->
+<!-- -- Also have teachers look at uploaded assignments by students - secure route only for teachers -->
 
 <!-- ---------------------------------TODO BELOW--------------------------------- -->
 
--- Also have teachers look at uploaded assignments by students - secure route only for teachers
+-- Uploaded assignments should have the student email/name. Within that should have a dropdown for each module that shows the assignments.
 
--- Uploaded assignmens should have the student email/name. Within that should have a dropdown for each module that shows the assignments
+Ex: test@test.com -> courseName -> moduleName -> assignment
 
 -- Inboxing will probably be the hardest thing (so save best for last lol or maybe never do it)
 
