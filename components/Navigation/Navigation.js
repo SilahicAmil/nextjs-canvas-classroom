@@ -21,7 +21,7 @@ const Navigation = ({ children }) => {
 
   return (
     <>
-      <div className="flex h-screen ">
+      <div className="flex h-screen">
         <div className="flex flex-col lg:w-24 tablet:w-16 xsm:w-14 px-4 py-8 bg-navbar font-lato">
           <h2 className="text-md font-semibold justify-center items-center flex">
             <Link href="/dashboard">
