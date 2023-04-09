@@ -2,6 +2,7 @@ import { useRef, useState } from "react";
 
 import { AiOutlinePlus } from "react-icons/ai";
 import Header from "../UI/Header";
+import Link from "next/link";
 import ModuleCard from "./ModuleCard";
 import ModuleModal from "./ModuleModal/ModuleModal";
 import { createPortal } from "react-dom";
@@ -53,18 +54,6 @@ const CourseDetails = ({ courseData, onAddModule }) => {
                 />
               );
             })}
-          </div>
-
-          <div className="flex flex-col h-full  flex-3 items-center gap-4 rounded-md bg-slate-500 w-72 text-xl  md:invisible tablet:invisble xsm:invisible lg:visible sm:invisible">
-            <h1 className="mt-4 text-gray-200">Quote of the Day</h1>
-            <div className="lg:w-3/4 tracking-wider h-full text-gray-200">
-              <p className="mb-4">
-                Nothing is more pathetic than people who run around in circles,
-                ‘delving into the things that lie beneath,’ and conducting
-                investigations into the souls of the people around them. -
-                [Marcus Aurelius]
-              </p>
-            </div>
           </div>
         </div>
         {openModal &&
