@@ -24,7 +24,7 @@ const CourseDetails = ({ courseData, onAddModule }) => {
           openModal ? "opacity-50 pointer-events-none" : "opacity-100"
         }`}
       >
-        <div className="ml-12 flex mb-6 gap-4 items-center ">
+        <div className="ml-12 lg:flex mb-6 gap-4 items-center ">
           <Header>Course: {courseData.name}</Header>
           <span className="lg:text-lg md:text-md sm:text-sm">&gt;</span>
           <span className="lg:text-lg md:text-md sm:text-sm">
@@ -43,8 +43,8 @@ const CourseDetails = ({ courseData, onAddModule }) => {
         <div>
           <hr className="mt-4 mb-12 border-t border-black" />
         </div>
-        <div className="flex gap-12 flex-1 m-auto h-full lg:w-full md:w-[100vw] xsm:w-[100vw] sm:w-[100w]">
-          <div className=" flex-1 flex flex-col h-full ">
+        <div className="lg:flex gap-12 flex-1 m-auto h-full lg:w-full md:w-[100vw] xsm:w-[100vw] sm:w-[100w]">
+          <div className="flex-1 flex flex-col h-full ">
             {courseData.modules.map((module, idx) => {
               return (
                 <ModuleCard
@@ -55,6 +55,11 @@ const CourseDetails = ({ courseData, onAddModule }) => {
               );
             })}
           </div>
+        </div>
+        <div>
+          <Link href={`${courseData.name}/assignments`}>
+            View Uploaded Assignments
+          </Link>
         </div>
         {openModal &&
           createPortal(

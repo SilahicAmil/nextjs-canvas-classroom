@@ -21,8 +21,8 @@ const Navigation = ({ children }) => {
 
   return (
     <>
-      <div className="flex h-screen">
-        <div className="flex flex-col w-24  px-4 py-8 bg-navbar font-lato ">
+      <div className="flex h-screen ">
+        <div className="flex flex-col lg:w-24 tablet:w-16 xsm:w-14 px-4 py-8 bg-navbar font-lato">
           <h2 className="text-md font-semibold justify-center items-center flex">
             <Link href="/dashboard">
               {/* need a better image for this or make it into an icon or something */}
@@ -32,7 +32,7 @@ const Navigation = ({ children }) => {
                 width={1000}
                 height={1000}
                 priority
-                className="rounded-md"
+                className="rounded-md xsm:invisible lg:visible tablet:visible"
               />
             </Link>
           </h2>
@@ -58,7 +58,9 @@ const Navigation = ({ children }) => {
                         "#C20D90",
                       ]}
                     />
-                    <span>Account</span>
+                    <span className="xsm:invisible lg:visible tablet:visible">
+                      Account
+                    </span>
                   </div>
                 </li>
 
@@ -72,7 +74,9 @@ const Navigation = ({ children }) => {
                     href="/dashboard"
                   >
                     <AiOutlineDashboard className="text-4xl" />
-                    <span className="text-md">Dashboard</span>
+                    <span className="text-md xsm:invisible lg:visible tablet:visible">
+                      Dashboard
+                    </span>
                   </Link>
                 </li>
 
@@ -86,7 +90,9 @@ const Navigation = ({ children }) => {
                     href="/courses"
                   >
                     <VscLibrary className="text-3xl " />
-                    <span className="mx-4 ">Courses</span>
+                    <span className="mx-4 xsm:invisible lg:visible tablet:visible">
+                      Courses
+                    </span>
                   </Link>
                 </li>
 
@@ -100,7 +106,9 @@ const Navigation = ({ children }) => {
                     href="/inbox"
                   >
                     <AiOutlineInbox className="text-3xl" />
-                    <span className="mx-4 ">Inbox</span>
+                    <span className="mx-4 xsm:invisible lg:visible tablet:visible">
+                      Inbox
+                    </span>
                   </Link>
                 </li>
               </ul>

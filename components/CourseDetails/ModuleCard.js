@@ -105,8 +105,8 @@ const ModuleCard = ({ moduleName, courseData }) => {
           duration: 5000,
         }}
       />
-      <div className="w-full h-full rounded-lg flex flex-col  mb-12 shadow-xl ">
-        <div className="flex w-full justify-between rounded-sm h-12 bg-slate-500 items-center">
+      <div className="w-full h-full rounded-lg flex flex-col mb-12 shadow-xl ">
+        <div className="flex  justify-between rounded-sm h-12 bg-slate-500 items-center">
           {openContent ? (
             <div
               className="rotate-180 ml-2 text-xl cursor-pointer"
