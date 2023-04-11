@@ -17,6 +17,8 @@ const CourseDetails = ({ courseData, onAddModule }) => {
 
   useOnClickOutside(modalRef, () => setOpenModal(false));
 
+  const modulesArray = courseData.modules.map((module) => module);
+
   return (
     <>
       <div
@@ -63,7 +65,7 @@ const CourseDetails = ({ courseData, onAddModule }) => {
                 pathname: `${courseData.name}/assignments`,
                 query: {
                   courseName: courseData.name,
-                  modules: "Module 1",
+                  modules: modulesArray.moduleName,
                 },
               }}
             >

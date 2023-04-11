@@ -18,7 +18,10 @@ const CourseAssignmentPage = ({}) => {
     const fetchAssignmentData = async () => {
       const { data, error } = await supabase.storage
         .from("assignments")
-        .list(`test@test.com/${courseName}/${moduleName}`);
+        .list(`test@test.com/${courseName}/${moduleName}`, {
+          limit: 100,
+          offset: 0,
+        });
 
       console.log("data", data);
       setAssignmentData(data);
@@ -30,7 +33,7 @@ const CourseAssignmentPage = ({}) => {
     <div className="m-8">
       <Header>Assignments</Header>
       {assignmentData.map((item) => {
-        return <h1 key={item.id}>{item.name}</h1>;
+        return <h1 key={item.name}>{item.name}</h1>;
       })}
     </div>
   );
