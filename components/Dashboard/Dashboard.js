@@ -8,7 +8,7 @@ const Dashboard = ({ courseData }) => {
 
   return (
     <>
-      <div className="flex flex-col w-10/12 md:w-11/12 m-6 h-full">
+      <div className="flex flex-col w-10/12 md:w-11/12 m-8 h-full">
         <div className="flex text-2xl mb-4">
           <Header>Dashboard</Header>
           <button className="ml-auto">
