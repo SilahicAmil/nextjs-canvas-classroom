@@ -63,6 +63,7 @@ const CourseDetails = ({ courseData, onAddModule }) => {
                 pathname: `${courseData.name}/assignments`,
                 query: {
                   courseName: courseData.name,
+                  modules: "Module 1",
                 },
               }}
             >

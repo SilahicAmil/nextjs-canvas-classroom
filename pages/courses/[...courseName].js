@@ -9,8 +9,8 @@ const CourseAssignmentPage = ({}) => {
   const router = useRouter();
   const [assignmentData, setAssignmentData] = useState([]);
   const courseName = router.query.courseName[0];
+  const moduleName = router.query.modules;
 
-  console.log(assignmentData);
   useEffect(() => {
     // fetch data from supabase
     // might need to check if moduleName is in supabase return that one
@@ -18,19 +18,19 @@ const CourseAssignmentPage = ({}) => {
     const fetchAssignmentData = async () => {
       const { data, error } = await supabase.storage
         .from("assignments")
-        .list(`test@test.com/${courseName}/Module 1`);
+        .list(`test@test.com/${courseName}/${moduleName}`);
 
       console.log("data", data);
       setAssignmentData(data);
     };
     fetchAssignmentData();
-  }, [courseName]);
+  }, [courseName, moduleName]);
 
   return (
     <div className="m-8">
       <Header>Assignments</Header>
       {assignmentData.map((item) => {
-        return <h1 key={item.name}>{item.name}</h1>;
+        return <h1 key={item.id}>{item.name}</h1>;
       })}
     </div>
   );
