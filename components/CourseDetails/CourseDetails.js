@@ -58,7 +58,14 @@ const CourseDetails = ({ courseData, onAddModule }) => {
         </div>
         <div>
           {session?.user.name === "teacher" ? (
-            <Link href={`${courseData.name}/assignments`}>
+            <Link
+              href={{
+                pathname: `${courseData.name}/assignments`,
+                query: {
+                  courseName: courseData.name,
+                },
+              }}
+            >
               View Uploaded Assignments
             </Link>
           ) : null}
