@@ -79,7 +79,7 @@ const ModuleCard = ({ moduleName, courseData }) => {
     const { data, error } = await supabase.storage
       .from("assignments")
       .upload(
-        `/assignments/${session?.user.email}/${courseData.name}/${moduleName}/${assignmentRefname}`,
+        `${session?.user.email}/${courseData.name}/${moduleName}/${assignmentRefname}`,
         assignmentRefValue,
         {
           cacheControl: "3600",
