@@ -58,7 +58,9 @@ const CourseDetails = ({ courseData, onAddModule }) => {
         </div>
         <div>
           {session?.user.name === "teacher" ? (
-            <Link href="/assignments">View Uploaded Assignments</Link>
+            <Link href={`${courseData.name}/assignments`}>
+              View Uploaded Assignments
+            </Link>
           ) : null}
         </div>
         {openModal &&

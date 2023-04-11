@@ -1,6 +1,6 @@
 import { getSession } from "next-auth/react";
 
-const CourseAssignmentUploadPage = () => {
+const CourseAssignmentPage = () => {
   return (
     <div>
       <h1 className="bg-red-500 text-4xl">WORK IN PROGRESS</h1>
@@ -25,4 +25,4 @@ export const getServerSideProps = async (context) => {
   };
 };
 
-export default CourseAssignmentUploadPage;
+export default CourseAssignmentPage;
