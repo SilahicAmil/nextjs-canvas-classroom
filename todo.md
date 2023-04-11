@@ -62,8 +62,6 @@ students -> studetName or studentEmail -> className -> moduleName -> completedAs
 
 -- Uploaded assignments should have the student email/name. Within that should have a dropdown for each module that shows the assignments.
 
-Ex: test@test.com -> courseName -> moduleName -> assignment
-
 -- Inboxing will probably be the hardest thing (so save best for last lol or maybe never do it)
 
 -------- ##################################################### --------
