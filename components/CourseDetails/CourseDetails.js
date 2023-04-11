@@ -17,7 +17,6 @@ const CourseDetails = ({ courseData, onAddModule }) => {
 
   useOnClickOutside(modalRef, () => setOpenModal(false));
 
-  // conver courseData to array
   const modules = courseData.modules.map((item) => item.moduleName);
 
   return (
