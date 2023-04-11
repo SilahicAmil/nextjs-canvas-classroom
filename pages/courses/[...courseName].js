@@ -11,6 +11,9 @@ const CourseAssignmentPage = ({}) => {
   const courseName = router.query.courseName[0];
   const moduleName = router.query.modules;
 
+  console.log("modules", moduleName);
+  console.log(router.query.courseName);
+
   useEffect(() => {
     // fetch data from supabase
     // might need to check if moduleName is in supabase return that one
@@ -18,7 +21,7 @@ const CourseAssignmentPage = ({}) => {
     const fetchAssignmentData = async () => {
       const { data, error } = await supabase.storage
         .from("assignments")
-        .list(`test@test.com/${courseName}/${moduleName}`, {
+        .list(`test@test.com/${courseName}/${moduleName[0]}`, {
           limit: 100,
           offset: 0,
         });

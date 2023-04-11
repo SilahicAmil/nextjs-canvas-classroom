@@ -17,7 +17,8 @@ const CourseDetails = ({ courseData, onAddModule }) => {
 
   useOnClickOutside(modalRef, () => setOpenModal(false));
 
-  const modulesArray = courseData.modules.map((module) => module);
+  // conver courseData to array
+  const modules = courseData.modules.map((item) => item.moduleName);
 
   return (
     <>
@@ -65,7 +66,7 @@ const CourseDetails = ({ courseData, onAddModule }) => {
                 pathname: `${courseData.name}/assignments`,
                 query: {
                   courseName: courseData.name,
-                  modules: modulesArray.moduleName,
+                  modules: modules,
                 },
               }}
             >
