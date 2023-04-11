@@ -18,7 +18,7 @@ const CourseAssignmentPage = ({}) => {
     const fetchAssignmentData = async () => {
       const { data, error } = await supabase.storage
         .from("assignments")
-        .list(`test@test.com/${courseName}`);
+        .list(`test@test.com/${courseName}/Module 1`);
 
       console.log("data", data);
       setAssignmentData(data);
