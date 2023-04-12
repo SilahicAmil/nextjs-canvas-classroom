@@ -11,9 +11,6 @@ const CourseAssignmentPage = ({}) => {
   const courseName = router.query.courseName[0];
   const moduleName = router.query.modules;
 
-  console.log("modules", moduleName);
-  console.log(router.query.courseName);
-
   useEffect(() => {
     // fetch data from supabase
     // might need to check if moduleName is in supabase return that one
@@ -26,7 +23,6 @@ const CourseAssignmentPage = ({}) => {
           offset: 0,
         });
 
-      console.log("data", data);
       setAssignmentData(data);
     };
     fetchAssignmentData();
@@ -54,7 +50,7 @@ export const getServerSideProps = async (context) => {
       },
     };
   }
-
+  // might be easier to just fetch the data here and handle it
   return {
     props: {},
   };

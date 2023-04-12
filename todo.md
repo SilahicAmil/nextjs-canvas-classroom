@@ -64,6 +64,8 @@ students -> studetName or studentEmail -> className -> moduleName -> completedAs
 
 -- Inboxing will probably be the hardest thing (so save best for last lol or maybe never do it)
 
+-- Figure out how to get rid of this "?courseName=Math-101&modules=Sample+Module&modules=Module+1&modules=Module+2" when passing query stuff to slug page
+
 -------- ##################################################### --------
 
 ## MVP (Minimum Viable Product)
