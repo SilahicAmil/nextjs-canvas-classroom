@@ -62,6 +62,8 @@ students -> studetName or studentEmail -> className -> moduleName -> completedAs
 
 -- Uploaded assignments should have the student email/name. Within that should have a dropdown for each module that shows the assignments.
 
+-- Look at using Jotai for state across app
+
 -- Inboxing will probably be the hardest thing (so save best for last lol or maybe never do it)
 
 -- Figure out how to get rid of this "?courseName=Math-101&modules=Sample+Module&modules=Module+1&modules=Module+2" when passing query stuff to slug page
