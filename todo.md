@@ -68,7 +68,7 @@ students -> studetName or studentEmail -> className -> moduleName -> completedAs
 
 -- Figure out how to get rid of this "?courseName=Math-101&modules=Sample+Module&modules=Module+1&modules=Module+2" when passing query stuff to slug page
 
--- Figure out how to get all modules to load in slug page ((maybe jsut fetch data again in slug page))
+-- Figure out how to get all modules to load in slug page ((maybe just fetch data again in slug page))
 
 -------- ##################################################### --------
 
