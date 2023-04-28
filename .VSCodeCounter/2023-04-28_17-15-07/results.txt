@@ -1,0 +1,130 @@
+Date : 2023-04-28 17:15:07
+Directory : /Users/amilsilahic/projects/nextjs-canvas-classroom
+Total : 67 files,  16933 codes, 65 comments, 413 blanks, all 17411 lines
+
+Languages
++--------------------+------------+------------+------------+------------+------------+
+| language           | files      | code       | comment    | blank      | total      |
++--------------------+------------+------------+------------+------------+------------+
+| JSON               |          2 |     14,746 |          0 |          2 |     14,748 |
+| JavaScript         |         57 |      2,108 |         17 |        361 |      2,486 |
+| Markdown           |          2 |         38 |         44 |         42 |        124 |
+| CSS                |          1 |         30 |          0 |          7 |         37 |
+| JSON with Comments |          2 |          8 |          4 |          1 |         13 |
+| XML                |          3 |          3 |          0 |          0 |          3 |
++--------------------+------------+------------+------------+------------+------------+
+
+Directories
++----------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                           | files      | code       | comment    | blank      | total      |
++----------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                              |         67 |     16,933 |         65 |        413 |     17,411 |
+| . (Files)                                                                                                      |         10 |     14,833 |         57 |         54 |     14,944 |
+| __tests__                                                                                                      |          5 |        104 |          0 |         43 |        147 |
+| components                                                                                                     |         28 |      1,381 |          4 |        173 |      1,558 |
+| components/AccountDetails                                                                                      |          1 |         31 |          0 |          5 |         36 |
+| components/CourseDetails                                                                                       |          5 |        411 |          3 |         55 |        469 |
+| components/CourseDetails (Files)                                                                               |          4 |        352 |          2 |         44 |        398 |
+| components/CourseDetails/ModuleModal                                                                           |          1 |         59 |          1 |         11 |         71 |
+| components/CoursesPage                                                                                         |          6 |        255 |          0 |         32 |        287 |
+| components/CoursesPage (Files)                                                                                 |          4 |        126 |          0 |         17 |        143 |
+| components/CoursesPage/CoursesModal                                                                            |          2 |        129 |          0 |         15 |        144 |
+| components/Dashboard                                                                                           |          3 |        125 |          1 |         15 |        141 |
+| components/Error                                                                                               |          1 |         26 |          0 |          5 |         31 |
+| components/LandingPage                                                                                         |          6 |        173 |          0 |         22 |        195 |
+| components/Layout                                                                                              |          1 |         13 |          0 |          3 |         16 |
+| components/Loading                                                                                             |          1 |         11 |          0 |          2 |         13 |
+| components/Login                                                                                               |          1 |        112 |          0 |         10 |        122 |
+| components/Navigation                                                                                          |          1 |        119 |          0 |         11 |        130 |
+| components/Signup                                                                                              |          1 |        101 |          0 |         11 |        112 |
+| components/UI                                                                                                  |          1 |          4 |          0 |          2 |          6 |
+| data                                                                                                           |          1 |         37 |          0 |          1 |         38 |
+| hooks                                                                                                          |          1 |         17 |          0 |          3 |         20 |
+| lib                                                                                                            |          3 |         19 |          0 |          7 |         26 |
+| pages                                                                                                          |         15 |        509 |          4 |        125 |        638 |
+| pages (Files)                                                                                                  |          4 |        101 |          0 |         23 |        124 |
+| pages/api                                                                                                      |          4 |        132 |          0 |         43 |        175 |
+| pages/api (Files)                                                                                              |          2 |         58 |          0 |         21 |         79 |
+| pages/api/auth                                                                                                 |          2 |         74 |          0 |         22 |         96 |
+| pages/courses                                                                                                  |          3 |        158 |          4 |         34 |        196 |
+| pages/dashboard                                                                                                |          1 |         44 |          0 |         11 |         55 |
+| pages/inbox                                                                                                    |          1 |         29 |          0 |          6 |         35 |
+| pages/login                                                                                                    |          1 |         29 |          0 |          4 |         33 |
+| pages/signup                                                                                                   |          1 |         16 |          0 |          4 |         20 |
+| public                                                                                                         |          3 |          3 |          0 |          0 |          3 |
+| styles                                                                                                         |          1 |         30 |          0 |          7 |         37 |
++----------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++----------------------------------------------------------------------------------------------------------------+--------------------+------------+------------+------------+------------+
+| filename                                                                                                       | language           | code       | comment    | blank      | total      |
++----------------------------------------------------------------------------------------------------------------+--------------------+------------+------------+------------+------------+
+| /Users/amilsilahic/projects/nextjs-canvas-classroom/.eslintrc.json                                             | JSON with Comments |          3 |          0 |          1 |          4 |
+| /Users/amilsilahic/projects/nextjs-canvas-classroom/README.md                                                  | Markdown           |         22 |          0 |         13 |         35 |
+| /Users/amilsilahic/projects/nextjs-canvas-classroom/__tests__/404.test.js                                      | JavaScript         |         18 |          0 |         10 |         28 |
+| /Users/amilsilahic/projects/nextjs-canvas-classroom/__tests__/dashboard.test.js                                | JavaScript         |         37 |          0 |          8 |         45 |
+| /Users/amilsilahic/projects/nextjs-canvas-classroom/__tests__/index.test.js                                    | JavaScript         |         13 |          0 |          6 |         19 |
+| /Users/amilsilahic/projects/nextjs-canvas-classroom/__tests__/login.test.js                                    | JavaScript         |         18 |          0 |         10 |         28 |
+| /Users/amilsilahic/projects/nextjs-canvas-classroom/__tests__/signup.test.js                                   | JavaScript         |         18 |          0 |          9 |         27 |
+| /Users/amilsilahic/projects/nextjs-canvas-classroom/components/AccountDetails/AccountDrawer.js                 | JavaScript         |         31 |          0 |          5 |         36 |
+| /Users/amilsilahic/projects/nextjs-canvas-classroom/components/CourseDetails/CourseDetails.js                  | JavaScript         |         82 |          0 |          9 |         91 |
+| /Users/amilsilahic/projects/nextjs-canvas-classroom/components/CourseDetails/ModuleCard.js                     | JavaScript         |        175 |          2 |         23 |        200 |
+| /Users/amilsilahic/projects/nextjs-canvas-classroom/components/CourseDetails/ModuleContent.js                  | JavaScript         |         55 |          0 |          6 |         61 |
+| /Users/amilsilahic/projects/nextjs-canvas-classroom/components/CourseDetails/ModuleItem.js                     | JavaScript         |         40 |          0 |          6 |         46 |
+| /Users/amilsilahic/projects/nextjs-canvas-classroom/components/CourseDetails/ModuleModal/ModuleModal.js        | JavaScript         |         59 |          1 |         11 |         71 |
+| /Users/amilsilahic/projects/nextjs-canvas-classroom/components/CoursesPage/CourseTable.js                      | JavaScript         |         23 |          0 |          3 |         26 |
+| /Users/amilsilahic/projects/nextjs-canvas-classroom/components/CoursesPage/CourseTableHeaders.js               | JavaScript         |         25 |          0 |          2 |         27 |
+| /Users/amilsilahic/projects/nextjs-canvas-classroom/components/CoursesPage/CourseTableRows.js                  | JavaScript         |         21 |          0 |          3 |         24 |
+| /Users/amilsilahic/projects/nextjs-canvas-classroom/components/CoursesPage/Courses.js                          | JavaScript         |         57 |          0 |          9 |         66 |
+| /Users/amilsilahic/projects/nextjs-canvas-classroom/components/CoursesPage/CoursesModal/CoursesModal.js        | JavaScript         |         11 |          0 |          3 |         14 |
+| /Users/amilsilahic/projects/nextjs-canvas-classroom/components/CoursesPage/CoursesModal/CoursesModalContent.js | JavaScript         |        118 |          0 |         12 |        130 |
+| /Users/amilsilahic/projects/nextjs-canvas-classroom/components/Dashboard/Dashboard.js                          | JavaScript         |         64 |          0 |          6 |         70 |
+| /Users/amilsilahic/projects/nextjs-canvas-classroom/components/Dashboard/DashboardCard.js                      | JavaScript         |         40 |          1 |          6 |         47 |
+| /Users/amilsilahic/projects/nextjs-canvas-classroom/components/Dashboard/DashboardFooter.js                    | JavaScript         |         21 |          0 |          3 |         24 |
+| /Users/amilsilahic/projects/nextjs-canvas-classroom/components/Error/Error.js                                  | JavaScript         |         26 |          0 |          5 |         31 |
+| /Users/amilsilahic/projects/nextjs-canvas-classroom/components/LandingPage/Landing.js                          | JavaScript         |         15 |          0 |          3 |         18 |
+| /Users/amilsilahic/projects/nextjs-canvas-classroom/components/LandingPage/LandingFooter.js                    | JavaScript         |         24 |          0 |          2 |         26 |
+| /Users/amilsilahic/projects/nextjs-canvas-classroom/components/LandingPage/LandingHeader.js                    | JavaScript         |         33 |          0 |          3 |         36 |
+| /Users/amilsilahic/projects/nextjs-canvas-classroom/components/LandingPage/LandingHero.js                      | JavaScript         |         51 |          0 |          6 |         57 |
+| /Users/amilsilahic/projects/nextjs-canvas-classroom/components/LandingPage/LandingTestimonials.js              | JavaScript         |         26 |          0 |          3 |         29 |
+| /Users/amilsilahic/projects/nextjs-canvas-classroom/components/LandingPage/TestimonialItem.js                  | JavaScript         |         24 |          0 |          5 |         29 |
+| /Users/amilsilahic/projects/nextjs-canvas-classroom/components/Layout/Layout.js                                | JavaScript         |         13 |          0 |          3 |         16 |
+| /Users/amilsilahic/projects/nextjs-canvas-classroom/components/Loading/Loading.js                              | JavaScript         |         11 |          0 |          2 |         13 |
+| /Users/amilsilahic/projects/nextjs-canvas-classroom/components/Login/Login.js                                  | JavaScript         |        112 |          0 |         10 |        122 |
+| /Users/amilsilahic/projects/nextjs-canvas-classroom/components/Navigation/Navigation.js                        | JavaScript         |        119 |          0 |         11 |        130 |
+| /Users/amilsilahic/projects/nextjs-canvas-classroom/components/Signup/Signup.js                                | JavaScript         |        101 |          0 |         11 |        112 |
+| /Users/amilsilahic/projects/nextjs-canvas-classroom/components/UI/Header.js                                    | JavaScript         |          4 |          0 |          2 |          6 |
+| /Users/amilsilahic/projects/nextjs-canvas-classroom/data/testimonial-data.js                                   | JavaScript         |         37 |          0 |          1 |         38 |
+| /Users/amilsilahic/projects/nextjs-canvas-classroom/hooks/onClickOutside.js                                    | JavaScript         |         17 |          0 |          3 |         20 |
+| /Users/amilsilahic/projects/nextjs-canvas-classroom/jest.config.js                                             | JavaScript         |          8 |          7 |          5 |         20 |
+| /Users/amilsilahic/projects/nextjs-canvas-classroom/jsconfig.json                                              | JSON with Comments |          5 |          4 |          0 |          9 |
+| /Users/amilsilahic/projects/nextjs-canvas-classroom/lib/auth.js                                                | JavaScript         |          9 |          0 |          3 |         12 |
+| /Users/amilsilahic/projects/nextjs-canvas-classroom/lib/db.js                                                  | JavaScript         |          5 |          0 |          2 |          7 |
+| /Users/amilsilahic/projects/nextjs-canvas-classroom/lib/supabaseClient.js                                      | JavaScript         |          5 |          0 |          2 |          7 |
+| /Users/amilsilahic/projects/nextjs-canvas-classroom/next.config.js                                             | JavaScript         |          4 |          1 |          2 |          7 |
+| /Users/amilsilahic/projects/nextjs-canvas-classroom/package-lock.json                                          | JSON               |     14,706 |          0 |          1 |     14,707 |
+| /Users/amilsilahic/projects/nextjs-canvas-classroom/package.json                                               | JSON               |         40 |          0 |          1 |         41 |
+| /Users/amilsilahic/projects/nextjs-canvas-classroom/pages/404.js                                               | JavaScript         |         10 |          0 |          4 |         14 |
+| /Users/amilsilahic/projects/nextjs-canvas-classroom/pages/_app.js                                              | JavaScript         |         61 |          0 |         13 |         74 |
+| /Users/amilsilahic/projects/nextjs-canvas-classroom/pages/_document.js                                         | JavaScript         |         14 |          0 |          2 |         16 |
+| /Users/amilsilahic/projects/nextjs-canvas-classroom/pages/api/add-module.js                                    | JavaScript         |         32 |          0 |         12 |         44 |
+| /Users/amilsilahic/projects/nextjs-canvas-classroom/pages/api/auth/[...nextauth].js                            | JavaScript         |         37 |          0 |          9 |         46 |
+| /Users/amilsilahic/projects/nextjs-canvas-classroom/pages/api/auth/signup.js                                   | JavaScript         |         37 |          0 |         13 |         50 |
+| /Users/amilsilahic/projects/nextjs-canvas-classroom/pages/api/create-course.js                                 | JavaScript         |         26 |          0 |          9 |         35 |
+| /Users/amilsilahic/projects/nextjs-canvas-classroom/pages/courses/[...courseName].js                           | JavaScript         |         48 |          4 |          8 |         60 |
+| /Users/amilsilahic/projects/nextjs-canvas-classroom/pages/courses/[courseName].js                              | JavaScript         |         57 |          0 |         14 |         71 |
+| /Users/amilsilahic/projects/nextjs-canvas-classroom/pages/courses/index.js                                     | JavaScript         |         53 |          0 |         12 |         65 |
+| /Users/amilsilahic/projects/nextjs-canvas-classroom/pages/dashboard/index.js                                   | JavaScript         |         44 |          0 |         11 |         55 |
+| /Users/amilsilahic/projects/nextjs-canvas-classroom/pages/inbox/index.js                                       | JavaScript         |         29 |          0 |          6 |         35 |
+| /Users/amilsilahic/projects/nextjs-canvas-classroom/pages/index.js                                             | JavaScript         |         16 |          0 |          4 |         20 |
+| /Users/amilsilahic/projects/nextjs-canvas-classroom/pages/login/index.js                                       | JavaScript         |         29 |          0 |          4 |         33 |
+| /Users/amilsilahic/projects/nextjs-canvas-classroom/pages/signup/index.js                                      | JavaScript         |         16 |          0 |          4 |         20 |
+| /Users/amilsilahic/projects/nextjs-canvas-classroom/postcss.config.js                                          | JavaScript         |          6 |          0 |          1 |          7 |
+| /Users/amilsilahic/projects/nextjs-canvas-classroom/public/next.svg                                            | XML                |          1 |          0 |          0 |          1 |
+| /Users/amilsilahic/projects/nextjs-canvas-classroom/public/thirteen.svg                                        | XML                |          1 |          0 |          0 |          1 |
+| /Users/amilsilahic/projects/nextjs-canvas-classroom/public/vercel.svg                                          | XML                |          1 |          0 |          0 |          1 |
+| /Users/amilsilahic/projects/nextjs-canvas-classroom/styles/globals.css                                         | CSS                |         30 |          0 |          7 |         37 |
+| /Users/amilsilahic/projects/nextjs-canvas-classroom/tailwind.config.js                                         | JavaScript         |         23 |          1 |          1 |         25 |
+| /Users/amilsilahic/projects/nextjs-canvas-classroom/todo.md                                                    | Markdown           |         16 |         44 |         29 |         89 |
+| Total                                                                                                          |                    |     16,933 |         65 |        413 |     17,411 |
++----------------------------------------------------------------------------------------------------------------+--------------------+------------+------------+------------+------------+
