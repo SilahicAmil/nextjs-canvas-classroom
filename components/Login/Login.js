@@ -23,6 +23,7 @@ const Login = ({}) => {
     });
 
     if (!result.error) {
+      //
       router.replace("/dashboard");
     } else {
       toast.error("Incorrect Email or Password! Try again.");
@@ -31,6 +32,7 @@ const Login = ({}) => {
 
   return (
     <div className="flex min-h-full items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+      <Toaster />
       <div className="w-full max-w-md space-y-8 ">
         <div>
           <Image
@@ -111,7 +113,6 @@ const Login = ({}) => {
               Sign In
             </button>
           </div>
-          <Toaster />
         </form>
       </div>
     </div>
