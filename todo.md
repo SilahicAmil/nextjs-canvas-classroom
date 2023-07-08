@@ -66,7 +66,7 @@ students -> studetName or studentEmail -> className -> moduleName -> completedAs
 
 -- Add Data Caching
 
--- Add Error Handling((instead of just console.log))
+-- Add Error States and UI
 
 -- Inboxing will probably be the hardest thing (so save best for last lol or maybe never do it)
 
