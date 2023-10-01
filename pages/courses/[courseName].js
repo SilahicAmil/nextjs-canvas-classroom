@@ -12,7 +12,6 @@ const CourseDetailsPage = ({ courseData }) => {
         "Content-Type": "application/json",
       },
     });
-    const data = await response.json();
   };
 
   return (
